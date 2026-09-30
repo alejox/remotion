@@ -4,7 +4,7 @@
  *  - "classic": faithful recreation - white card, grape-blue logo ring, Montserrat
  *    ExtraBold caps, red button, grey bell.
  *  - "clean": the same timing in DNA v2 - flat #0E0E12 panel with the slash, LogoDisc,
- *    Geist, white line icons. The button stays red (YouTube convention, the one exception).
+ *    Geist, white line icons, and a restrained cyan-edged liquid-glass button.
  *
  * Choreography (30 fps, t = 0 at `start`): card rises from a thin bar (0-0.5s) -> logo
  * ring draws, mark scales in (0.4-1.1s) -> name types letter by letter (1.2-2.4s), tagline
@@ -253,7 +253,7 @@ export const SubscribeCard: React.FC<SubscribeCardProps> = ({
   const pressed = frame >= T.press && frame < T.release;
   const done = frame >= T.press;
   const btnLabel = done ? "SUSCRITO" : "SUSCRIBIRSE";
-  const btnBg = pressed ? PRESSED[variant] : CLASSIC_RED;
+  const btnBg = classic ? (pressed ? PRESSED.classic : CLASSIC_RED) : pressed ? "rgba(37,161,220,0.22)" : "rgba(44,44,46,0.72)";
   const pressScale = pressed ? 0.965 : 1;
 
   const nameFont = classic
@@ -338,8 +338,17 @@ export const SubscribeCard: React.FC<SubscribeCardProps> = ({
               top: CY - BTN.h / 2,
               width: BTN.w,
               height: BTN.h,
-              borderRadius: classic ? 8 : 10,
+              borderRadius: classic ? 8 : 38,
               background: btnBg,
+              ...(classic
+                ? {}
+                : {
+                    border: `1px solid ${pressed ? "rgba(37,161,220,0.72)" : "rgba(37,161,220,0.42)"}`,
+                    boxSizing: "border-box" as const,
+                    backdropFilter: "blur(18px) saturate(160%)",
+                    WebkitBackdropFilter: "blur(18px) saturate(160%)",
+                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22), inset 0 -1px 0 rgba(0,0,0,0.24)",
+                  }),
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -352,6 +361,18 @@ export const SubscribeCard: React.FC<SubscribeCardProps> = ({
               letterSpacing: classic ? "0.04em" : "0.14em",
             }}
           >
+            {!classic ? (
+              <div
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  inset: 1,
+                  borderRadius: 37,
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.035) 42%, rgba(37,161,220,0.035) 100%)",
+                  pointerEvents: "none",
+                }}
+              />
+            ) : null}
             {btnLabel}
           </div>
           <Bell frame={frame} classic={classic} />
