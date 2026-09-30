@@ -1,7 +1,8 @@
 /**
  * Source - the footage file(s) a template plays. The template reads them from its config
  * (`source.file`, plus a light `source.preview` proxy for the Studio) and provides them
- * through context, so nothing below hard-codes a file name.
+ * through context, so nothing below hard-codes a file name. Without a file, pictures are
+ * solid black and there is no footage audio.
  *
  * AUDIO INVARIANT: every picture is muted; the only audible instances are the delayed
  * `<Audio>` elements in `Footage.tsx`, one per segment and never two at once.
@@ -11,10 +12,10 @@ import { OffthreadVideo, staticFile, useRemotionEnvironment } from "remotion";
 import { Video as MediaVideo } from "@remotion/media";
 
 export type SourceInfo = {
-  /** File in `public/` used for rendering (the full-resolution master). */
-  file: string;
+  /** File in `public/` used for rendering (the full-resolution master). Omit for black. */
+  file?: string;
   /** File in `public/` used in the Studio (a light proxy with the same timestamps). */
-  preview: string;
+  preview?: string;
   /** Master pixel size. */
   width: number;
   height: number;
@@ -35,11 +36,15 @@ export const useSource = (): SourceInfo => {
   return source;
 };
 
-/** Public URL of the file that backs the footage (master when rendering, proxy in the Studio). */
-export const useSourceFile = (): string => {
+/**
+ * Public URL of the file that backs the footage (master when rendering, proxy in the Studio),
+ * or `null` when the config has no footage.
+ */
+export const useSourceFile = (): string | null => {
   const env = useRemotionEnvironment();
   const source = useSource();
-  return staticFile(env.isRendering ? source.file : source.preview);
+  const file = env.isRendering ? source.file : (source.preview ?? source.file);
+  return file ? staticFile(file) : null;
 };
 
 /**
@@ -53,6 +58,10 @@ export const SourcePicture: React.FC<{
 }> = ({ trimBefore, style }) => {
   const env = useRemotionEnvironment();
   const src = useSourceFile();
+
+  if (!src) {
+    return <div style={{ ...style, backgroundColor: "#000" }} />;
+  }
 
   if (env.isRendering) {
     return (

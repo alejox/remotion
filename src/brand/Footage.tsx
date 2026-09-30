@@ -19,6 +19,9 @@ export const FootageAudio: React.FC<{ segments: BuiltSegment[]; audioDelayFrames
   audioDelayFrames = MOTION.defaultAudioDelayFrames,
 }) => {
   const src = useSourceFile();
+  if (!src) {
+    return null;
+  }
   return (
     <>
       {segments.map((s, i) => {

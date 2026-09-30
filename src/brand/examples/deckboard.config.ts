@@ -7,8 +7,6 @@ import type { VideoConfig } from "../config";
 
 export const deckboardConfig: VideoConfig = {
   source: {
-    file: "deckboard.mp4",
-    preview: "deckboard-preview.mp4",
     width: 3840,
     height: 2160,
   },

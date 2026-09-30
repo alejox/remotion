@@ -19,8 +19,6 @@ const words = (transcript as { words: { w: string; start: number; end: number }[
 
 export const deckboardShortConfig: ShortConfig = {
   source: {
-    file: "deckboard.mp4",
-    preview: "deckboard-preview.mp4",
     width: 3840,
     height: 2160,
   },

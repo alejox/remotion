@@ -100,10 +100,10 @@ export const itemSchema = z.union([segmentItem, sectionItem]);
 export type ConfigItem = z.infer<typeof itemSchema>;
 
 export const sourceSchema = z.object({
-  /** File in `public/` used when rendering. */
-  file: z.string(),
+  /** File in `public/` used when rendering. Omit for a black background with no footage. */
+  file: z.string().optional(),
   /** File in `public/` used in the Studio (light proxy, same timestamps). */
-  preview: z.string(),
+  preview: z.string().optional(),
   width: num,
   height: num,
 });
