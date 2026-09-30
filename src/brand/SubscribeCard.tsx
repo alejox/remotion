@@ -20,7 +20,7 @@ import { brandFamily, sansFamily } from "./fonts";
 import { LogoDisc } from "./LogoDisc";
 import { LogoMark } from "./LogoMark";
 import { Slash } from "./Panel";
-import { COLOR, EDGE, MARGIN, PANEL_BG } from "./tokens";
+import { COLOR, EDGE, MARGIN } from "./tokens";
 
 // Jost (Futura-style) is the brand font: the closest free match to the Apple Motion original.
 const classicFont = brandFamily;
@@ -71,7 +71,7 @@ const CY = H / 2;
 const BTN = { x: 776, w: 330, h: 77 };
 const BELL = { x: 1175 };
 const CLASSIC_RED = "#FE2100"; // sampled from the original
-const PRESSED = { classic: "#585858", clean: "#3F3F46" } as const;
+const PRESSED_CLASSIC = "#585858";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const ramp = (f: number, [a, b]: readonly [number, number], easing = Easing.out(Easing.cubic)): number =>
@@ -253,7 +253,13 @@ export const SubscribeCard: React.FC<SubscribeCardProps> = ({
   const pressed = frame >= T.press && frame < T.release;
   const done = frame >= T.press;
   const btnLabel = done ? "SUSCRITO" : "SUSCRIBIRSE";
-  const btnBg = classic ? (pressed ? PRESSED.classic : CLASSIC_RED) : pressed ? "rgba(37,161,220,0.22)" : "rgba(44,44,46,0.72)";
+  const btnBg = classic
+    ? pressed
+      ? PRESSED_CLASSIC
+      : CLASSIC_RED
+    : pressed
+      ? "rgba(24,43,58,0.46)"
+      : "rgba(24,34,46,0.30)";
   const pressScale = pressed ? 0.965 : 1;
 
   const nameFont = classic
@@ -302,7 +308,9 @@ export const SubscribeCard: React.FC<SubscribeCardProps> = ({
           clipPath: `inset(${H - h}px ${insetX}px 0px ${insetX}px round ${radius}px)`,
           borderRadius: radius,
           overflow: "hidden",
-          background: classic ? "#FFFFFF" : PANEL_BG,
+          background: classic ? "#FFFFFF" : "rgba(14,14,18,0.20)",
+          backdropFilter: classic ? undefined : "blur(2px) saturate(115%)",
+          WebkitBackdropFilter: classic ? undefined : "blur(2px) saturate(115%)",
         }}
       >
         {classic ? null : <Slash />}
@@ -343,11 +351,12 @@ export const SubscribeCard: React.FC<SubscribeCardProps> = ({
               ...(classic
                 ? {}
                 : {
-                    border: `1px solid ${pressed ? "rgba(37,161,220,0.72)" : "rgba(37,161,220,0.42)"}`,
+                    border: `1px solid ${pressed ? "rgba(37,161,220,0.96)" : "rgba(37,161,220,0.78)"}`,
                     boxSizing: "border-box" as const,
-                    backdropFilter: "blur(18px) saturate(160%)",
-                    WebkitBackdropFilter: "blur(18px) saturate(160%)",
-                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22), inset 0 -1px 0 rgba(0,0,0,0.24)",
+                    backdropFilter: "blur(12px) saturate(155%)",
+                    WebkitBackdropFilter: "blur(12px) saturate(155%)",
+                    boxShadow:
+                      "0 8px 24px rgba(0,0,0,0.20), inset 0 1px 0 rgba(213,241,255,0.28), inset 0 -1px 0 rgba(0,0,0,0.18)",
                   }),
               display: "flex",
               alignItems: "center",
@@ -366,9 +375,12 @@ export const SubscribeCard: React.FC<SubscribeCardProps> = ({
                 aria-hidden="true"
                 style={{
                   position: "absolute",
-                  inset: 1,
+                  left: 8,
+                  right: 8,
+                  top: 2,
+                  height: 1,
                   borderRadius: 37,
-                  background: "linear-gradient(180deg, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.035) 42%, rgba(37,161,220,0.035) 100%)",
+                  background: "linear-gradient(90deg, rgba(167,223,255,0.08), rgba(167,223,255,0.38) 50%, rgba(167,223,255,0.08))",
                   pointerEvents: "none",
                 }}
               />

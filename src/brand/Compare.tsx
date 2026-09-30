@@ -1,17 +1,20 @@
 /**
- * Compare (COMPARE) - A vs B in one panel, two columns. The winner gets a cyan
- * hairline; the loser is gray with a white 60% strike drawn across its value with
- * `evolvePath`, clipped to the exact glyph width (measureText). Values are strings so a template can show "~$150" or "$0".
+ * Compare (COMPARE) - a before/after told in time, in the shared column. The loser enters
+ * first as a large dim-gray display figure with its fog label; a white strike draws across
+ * it, the frame holds, then the loser fades out and the winner takes its place in cyan at
+ * the same display size, the last element to arrive. One display figure is on screen at a
+ * time. The strike is drawn with `evolvePath`, clipped to the exact glyph width
+ * (measureText). Values are strings so a template can show "~$150" or "$0".
  */
 import React from "react";
-import { useCurrentFrame } from "remotion";
+import { interpolate, useCurrentFrame } from "remotion";
 import { evolvePath } from "@remotion/paths";
 import { measureText } from "@remotion/layout-utils";
-import { sansFamily, SANS } from "./fonts";
+import { sansFamily } from "./fonts";
 import { drawProgress } from "./motion";
-import { Panel } from "./Panel";
-import { Reveal } from "./Reveal";
-import { COLOR, MARGIN, EDGE, TYPE } from "./tokens";
+import { Reveal, Rise } from "./Reveal";
+import { COLOR, COLUMN_X, MOTION, TYPE } from "./tokens";
+import { bodyStyle, Column, headStyle, opticalShift } from "./typography";
 
 export type CompareSide = { name: string; value: string };
 
@@ -20,71 +23,82 @@ export type CompareProps = {
   duration: number;
   a?: CompareSide;
   b?: CompareSide;
-  /** Which side wins (gets the cyan hairline; the other is struck). */
+  /** Which side wins (cyan display figure, arrives last; the other is dim and struck). */
   winner?: "a" | "b";
   x?: number;
   y?: number;
-  hairline?: boolean;
 };
 
-const COL_W = 330;
-const VALUE_H = 76;
-/** Value text style (also used to measure the glyph width the strike must match). */
-const VALUE_STYLE = { fontFamily: sansFamily, fontWeight: 700, fontSize: TYPE.value, letterSpacing: `${-0.02 * TYPE.value}px` };
+const FIGURE_H = Math.round(TYPE.figure * 0.95);
+const LABEL_H = Math.round(TYPE.body * 1.35) + 8;
+/** Loser figure style (also used to measure the glyph width the strike must match). */
+const FIGURE_STYLE = {
+  fontFamily: sansFamily,
+  fontWeight: 700,
+  fontSize: TYPE.figure,
+  letterSpacing: `${-0.05 * TYPE.figure}px`,
+};
+/** Beat-local frames: the strike draws, the frame holds ~0.5s, the loser fades, the winner enters. */
+const STRIKE_FROM = 30;
+const STRIKE_FRAMES = 18;
+const FADE_FROM = STRIKE_FROM + STRIKE_FRAMES + 15;
+const FADE_FRAMES = 10;
+const WINNER_AT = FADE_FROM + FADE_FRAMES + 2;
 
-const Column: React.FC<{ side: CompareSide; win: boolean; local: number }> = ({ side, win, local }) => {
-  // Strike spans exactly the glyph width of the old price.
-  const glyphW = win ? 0 : measureText({ text: side.value, ...VALUE_STYLE }).width;
-  const strikePath = `M0 ${VALUE_H / 2} L${glyphW} ${VALUE_H / 2}`;
-  const strike = evolvePath(drawProgress(local, 16, 12), strikePath);
+const figureStyle: React.CSSProperties = {
+  ...headStyle,
+  fontSize: TYPE.figure,
+  letterSpacing: "-0.05em",
+  lineHeight: 0.95,
+};
+
+const Loser: React.FC<{ side: CompareSide; local: number }> = ({ side, local }) => {
+  const shift = opticalShift(side.value, TYPE.figure);
+  const glyphW = measureText({ text: side.value, ...FIGURE_STYLE }).width;
+  const y = LABEL_H + FIGURE_H * 0.56;
+  const strikePath = `M0 ${y} L${glyphW} ${y}`;
+  const strike = evolvePath(drawProgress(local, STRIKE_FROM, STRIKE_FRAMES), strikePath);
+  const out = interpolate(local, [FADE_FROM, FADE_FROM + FADE_FRAMES], [1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
   return (
-    <div
-      style={{
-        width: COL_W,
-        boxSizing: "border-box",
-        padding: "16px 28px 18px",
-        borderRadius: 8,
-        border: win ? `1px solid ${COLOR.cyan}` : "1px solid transparent",
-        fontFamily: SANS,
-      }}
-    >
-      <div
-        style={{
-          fontWeight: 500,
-          fontSize: TYPE.meta,
-          color: COLOR.fog,
-          whiteSpace: "nowrap",
-        }}
-      >
-        {side.name}
-      </div>
-      <div style={{ position: "relative", height: VALUE_H, marginTop: 8 }}>
-        <div
-          style={{
-            fontWeight: 700,
-            fontSize: TYPE.value,
-            lineHeight: `${VALUE_H}px`,
-            letterSpacing: "-0.02em",
-            color: win ? COLOR.white : COLOR.fog,
-            whiteSpace: "nowrap",
-          }}
+    <div style={{ position: "absolute", left: 0, top: 0, opacity: out }}>
+      <Rise index={0}>
+        <div style={{ ...bodyStyle, marginBottom: 8 }}>{side.name}</div>
+        <div style={{ ...figureStyle, color: COLOR.fog, opacity: 0.55, marginLeft: shift }}>{side.value}</div>
+        <svg
+          width={Math.max(glyphW, 1)}
+          height={LABEL_H + FIGURE_H}
+          style={{ position: "absolute", left: shift, top: 0, overflow: "visible" }}
         >
-          {side.value}
+          <path
+            d={strikePath}
+            stroke="rgba(255,255,255,0.7)"
+            strokeWidth={9}
+            strokeLinecap="butt"
+            fill="none"
+            strokeDasharray={strike.strokeDasharray}
+            strokeDashoffset={strike.strokeDashoffset}
+          />
+        </svg>
+      </Rise>
+    </div>
+  );
+};
+
+/** "20 min": the number is cyan, the unit stays fog (same size) so cyan covers < 5% of the frame. */
+const Winner: React.FC<{ side: CompareSide }> = ({ side }) => {
+  const [num, ...unit] = side.value.split(" ");
+  return (
+    <div style={{ position: "absolute", left: 0, top: 0 }}>
+      <Rise index={WINNER_AT / MOTION.staggerFrames}>
+        <div style={{ ...bodyStyle, color: COLOR.white, marginBottom: 8 }}>{side.name}</div>
+        <div style={{ ...figureStyle, whiteSpace: "pre", marginLeft: opticalShift(side.value, TYPE.figure) }}>
+          <span style={{ color: COLOR.cyan }}>{num}</span>
+          {unit.length ? <span style={{ color: COLOR.fog }}>{` ${unit.join(" ")}`}</span> : null}
         </div>
-        {win ? null : (
-          <svg width={Math.max(glyphW, 1)} height={VALUE_H} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-            <path
-              d={strikePath}
-              stroke="rgba(255,255,255,0.6)"
-              strokeWidth={3}
-              strokeLinecap="butt"
-              fill="none"
-              strokeDasharray={strike.strokeDasharray}
-              strokeDashoffset={strike.strokeDashoffset}
-            />
-          </svg>
-        )}
-      </div>
+      </Rise>
     </div>
   );
 };
@@ -95,19 +109,19 @@ export const Compare: React.FC<CompareProps> = ({
   a = { name: "Opción A", value: "$100" },
   b = { name: "Opción B", value: "$0" },
   winner = "b",
-  x = MARGIN,
-  y = EDGE,
-  hairline = true,
+  x = COLUMN_X,
+  y,
 }) => {
   const local = useCurrentFrame() - start;
+  const [lose, win] = winner === "b" ? [a, b] : [b, a];
   return (
-    <Reveal start={start} duration={duration}>
-      <Panel x={x} y={y} hairline={hairline} padding="12px 14px 12px 20px">
-        <div style={{ display: "flex", gap: 12 }}>
-          <Column side={a} win={winner === "a"} local={local} />
-          <Column side={b} win={winner === "b"} local={local} />
+    <Reveal start={start} duration={duration} staged>
+      <Column x={x} y={y}>
+        <div style={{ position: "relative", height: LABEL_H + FIGURE_H, width: 1300 }}>
+          <Loser side={lose} local={local} />
+          <Winner side={win} />
         </div>
-      </Panel>
+      </Column>
     </Reveal>
   );
 };

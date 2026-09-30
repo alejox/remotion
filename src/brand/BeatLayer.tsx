@@ -5,6 +5,7 @@
  */
 import React from "react";
 import { Checklist } from "./Checklist";
+import { ComponentTag } from "./ComponentTag";
 import { Compare } from "./Compare";
 import type { Beat } from "./config";
 import { Keyword } from "./Keyword";
@@ -14,12 +15,20 @@ import { Spotlight, type Rect, type ZoomSpec } from "./Spotlight";
 import { TitleCard } from "./TitleCard";
 import type { Timeline } from "./timeline";
 import { ValueCard } from "./ValueCard";
-import { MOTION } from "./tokens";
+import { COLUMN_X, MOTION } from "./tokens";
+
+/** A spotlight headline starts this many frames before the callout and sits at this y. */
+const HEADLINE_LEAD = 24;
+const HEADLINE_Y = 196;
 
 export type MappedBeat = { beat: Beat; start: number; duration: number };
 
 /** Convert beats (source seconds) to timeline frames. Throws on a time outside every segment. */
-export const mapBeats = (tl: Timeline, beats: Beat[], fps: number = MOTION.fps): MappedBeat[] =>
+export const mapBeats = (
+  tl: Timeline,
+  beats: Beat[],
+  fps: number = MOTION.fps,
+): MappedBeat[] =>
   beats.map((beat) => ({
     beat,
     start: tl.frame(beat.at),
@@ -27,23 +36,26 @@ export const mapBeats = (tl: Timeline, beats: Beat[], fps: number = MOTION.fps):
   }));
 
 type Slots = {
-  title: { x: number; y: number };
+  title: { x: number; y: number | undefined };
   lowerThird: { x: number; y: number | undefined };
   keyword: { x: number; y: number | undefined };
-  value: { x: number; y: number };
-  checklist: { x: number; y: number };
-  compare: { x: number; y: number };
+  value: { x: number; y: number | undefined };
+  checklist: { x: number; y: number | undefined };
+  compare: { x: number; y: number | undefined };
 };
 
-/** Default anchors: landscape overlays hug the 5% safe area, Shorts stay inside x 80..940. */
+/**
+ * Default anchors: landscape text shares the x = 192 column and centres vertically (no `y`);
+ * Shorts stay inside x 80..940.
+ */
 export const SLOTS: { landscape: Slots; short: Slots } = {
   landscape: {
-    title: { x: 96, y: 64 },
-    lowerThird: { x: 96, y: undefined },
-    keyword: { x: 96, y: undefined },
-    value: { x: 96, y: 380 },
-    checklist: { x: 96, y: 300 },
-    compare: { x: 96, y: 64 },
+    title: { x: COLUMN_X, y: undefined },
+    lowerThird: { x: COLUMN_X, y: undefined },
+    keyword: { x: COLUMN_X, y: undefined },
+    value: { x: COLUMN_X, y: undefined },
+    checklist: { x: COLUMN_X, y: undefined },
+    compare: { x: COLUMN_X, y: undefined },
   },
   short: {
     title: { x: 80, y: 170 },
@@ -56,7 +68,10 @@ export const SLOTS: { landscape: Slots; short: Slots } = {
 };
 
 /** Zoom specs of every Spotlight that asks for a zoom (target mapped into the stage). */
-export const zoomSpecs = (mapped: MappedBeat[], mapRect: (r: Rect) => Rect): ZoomSpec[] =>
+export const zoomSpecs = (
+  mapped: MappedBeat[],
+  mapRect: (r: Rect) => Rect,
+): ZoomSpec[] =>
   mapped.flatMap((m) =>
     m.beat.type === "spotlight" && m.beat.zoom && m.beat.zoom > 1
       ? [
@@ -71,14 +86,28 @@ export const zoomSpecs = (mapped: MappedBeat[], mapRect: (r: Rect) => Rect): Zoo
       : [],
   );
 
+/** On-screen names of the components, shown as a quiet label when `labels` is on. */
+const LABELS: Record<Beat["type"], string | undefined> = {
+  title: "Tarjeta de título",
+  lowerThird: "Tercio inferior",
+  keyword: "Palabra clave",
+  spotlight: "Foco",
+  subscribe: undefined,
+  value: "Valor",
+  checklist: "Lista",
+  compare: "Comparación",
+};
+
 export const BeatLayer: React.FC<{
   beats: MappedBeat[];
   short?: boolean;
+  /** Label each beat with its component name (showcase). */
+  labels?: boolean;
   /** The stage Spotlights live in (frame px). Default: the whole frame. */
   stage?: Rect;
   /** Footage coordinates -> stage coordinates. Default: identity. */
   mapRect?: (r: Rect) => Rect;
-}> = ({ beats, short = false, stage, mapRect = (r) => r }) => {
+}> = ({ beats, short = false, labels = false, stage, mapRect = (r) => r }) => {
   const slots = short ? SLOTS.short : SLOTS.landscape;
   return (
     <>
@@ -122,19 +151,38 @@ export const BeatLayer: React.FC<{
             );
           case "spotlight":
             return (
-              <Spotlight
-                key={i}
-                start={start}
-                duration={duration}
-                target={mapRect(b.target)}
-                step={b.step}
-                label={b.label}
-                zoom={b.zoom}
-                focus={b.focus ? mapRect(b.focus) : undefined}
-                chipPlacement={b.chipPlacement}
-                chipAt={b.chipAt ? { x: mapRect({ ...b.chipAt, w: 0, h: 0 }).x, y: mapRect({ ...b.chipAt, w: 0, h: 0 }).y } : undefined}
-                stage={stage}
-              />
+              <React.Fragment key={i}>
+                <Spotlight
+                  start={start}
+                  duration={duration}
+                  target={mapRect(b.target)}
+                  step={b.step}
+                  label={b.label}
+                  zoom={b.zoom}
+                  focus={b.focus ? mapRect(b.focus) : undefined}
+                  chipPlacement={b.chipPlacement}
+                  chipAt={
+                    b.chipAt
+                      ? {
+                          x: mapRect({ ...b.chipAt, w: 0, h: 0 }).x,
+                          y: mapRect({ ...b.chipAt, w: 0, h: 0 }).y,
+                        }
+                      : undefined
+                  }
+                  stage={stage}
+                  chipGap={b.chipGap}
+                  outline={b.outline}
+                />
+                {b.headline ? (
+                  // The headline arrives first, as the placeholder window fades in, and sits above the dim.
+                  <Keyword
+                    start={start - HEADLINE_LEAD}
+                    duration={duration + HEADLINE_LEAD}
+                    text={b.headline}
+                    y={b.headlineY ?? HEADLINE_Y}
+                  />
+                ) : null}
+              </React.Fragment>
             );
           case "subscribe":
             return (
@@ -157,7 +205,9 @@ export const BeatLayer: React.FC<{
                 start={start}
                 duration={duration}
                 label={b.label}
+                headline={b.headline}
                 value={b.value}
+                suffix={b.suffix}
                 x={b.x ?? slots.value.x}
                 y={b.y ?? slots.value.y}
               />
@@ -189,6 +239,19 @@ export const BeatLayer: React.FC<{
             );
         }
       })}
+      {labels
+        ? beats.map(({ beat: b, start, duration }, i) => {
+            const label = LABELS[b.type];
+            return label ? (
+              <ComponentTag
+                key={`tag${i}`}
+                start={start}
+                duration={duration}
+                label={label}
+              />
+            ) : null;
+          })
+        : null}
     </>
   );
 };

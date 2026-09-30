@@ -1,6 +1,7 @@
 /**
- * Motion helpers (DNA v2). Everything is smooth and short, with zero overshoot:
- * enter 12f (ease-out cubic, 16px slide + fade), exit 8f, zoom 18f (in-out cubic).
+ * Motion helpers (showcase mode, Apple-style). Everything is quiet, with zero overshoot:
+ * enter 20f (ease-out cubic, 32px rise + fade, lines staggered 5f), exit 10f fade,
+ * zoom 18f (in-out cubic).
  */
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { MOTION } from "./tokens";
@@ -12,7 +13,7 @@ const clamp = {
 
 export const easeOut = Easing.out(Easing.cubic);
 
-/** Entrance at beat-local frame `local`: 12f, 16px slide up + fade. */
+/** Entrance at beat-local frame `local`: 20f, 32px rise + fade. */
 export const enter = (
   local: number,
   frames: number = MOTION.enterFrames,
@@ -21,7 +22,7 @@ export const enter = (
   return { progress, opacity: progress, y: (1 - progress) * MOTION.slidePx };
 };
 
-/** Exit over the last 8f of a `duration`-long beat: fade + 8px drift up. */
+/** Exit over the last 10f of a `duration`-long beat: a pure fade, no drift. */
 export const exit = (
   local: number,
   duration: number,
@@ -31,8 +32,12 @@ export const exit = (
     easing: Easing.in(Easing.cubic),
     ...clamp,
   });
-  return { progress, opacity: 1 - progress, y: -progress * (MOTION.slidePx / 2) };
+  return { progress, opacity: 1 - progress, y: 0 };
 };
+
+/** Entrance of line `index` in a staggered text block (5f between lines). */
+export const staggered = (local: number, index: number): { progress: number; opacity: number; y: number } =>
+  enter(local - index * MOTION.staggerFrames);
 
 /** Smooth zoom scale: 1 -> `to` over 18f with an in-out cubic. Never overshoots. */
 export const smoothZoom = (

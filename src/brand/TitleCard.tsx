@@ -1,13 +1,12 @@
 /**
- * TitleCard (TITLE) - the video topic in the first seconds: a small caps meta label
- * plus a one-line sentence-case title in a panel. Place it top-left while a burned-in
- * source pill occupies the bottom; never centred.
+ * TitleCard (TITLE) - the video topic: a small caps eyebrow plus a one- or two-line
+ * sentence-case headline, set directly on black in the shared column. Lines rise in one
+ * by one (separate lines with "\n").
  */
 import React from "react";
-import { SANS } from "./fonts";
-import { Panel } from "./Panel";
-import { Reveal } from "./Reveal";
-import { COLOR, EDGE, MARGIN, TYPE } from "./tokens";
+import { Reveal, Rise } from "./Reveal";
+import { COLUMN_X } from "./tokens";
+import { Column, eyebrowStyle, headStyle, lines } from "./typography";
 
 export type TitleCardProps = {
   start: number;
@@ -16,7 +15,6 @@ export type TitleCardProps = {
   title?: string;
   x?: number;
   y?: number;
-  hairline?: boolean;
 };
 
 export const TitleCard: React.FC<TitleCardProps> = ({
@@ -24,39 +22,21 @@ export const TitleCard: React.FC<TitleCardProps> = ({
   duration,
   meta = "TUTORIAL · OBS",
   title = "Título del video",
-  x = MARGIN,
-  y = EDGE,
-  hairline = true,
+  x = COLUMN_X,
+  y,
 }) => (
-  <Reveal start={start} duration={duration}>
-    <Panel x={x} y={y} hairline={hairline}>
-      <div
-        style={{
-          fontFamily: SANS,
-          fontWeight: 500,
-          fontSize: TYPE.meta,
-          letterSpacing: "0.14em",
-          textTransform: "uppercase",
-          color: COLOR.fog,
-          lineHeight: 1.25,
-          whiteSpace: "nowrap",
-        }}
-      >
+  <Reveal start={start} duration={duration} staged>
+    <Column x={x} y={y} gap={20}>
+      <Rise index={0} style={eyebrowStyle}>
         {meta}
+      </Rise>
+      <div>
+        {lines(title).map((line, i) => (
+          <Rise key={i} index={i + 1} style={headStyle}>
+            {line}
+          </Rise>
+        ))}
       </div>
-      <div
-        style={{
-          fontFamily: SANS,
-          fontWeight: 700,
-          fontSize: TYPE.title,
-          letterSpacing: "-0.02em",
-          lineHeight: 1.25,
-          marginTop: 6,
-          whiteSpace: "nowrap",
-        }}
-      >
-        {title}
-      </div>
-    </Panel>
+    </Column>
   </Reveal>
 );

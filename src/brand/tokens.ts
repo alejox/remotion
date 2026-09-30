@@ -23,11 +23,15 @@ export const PANEL_BG = "rgba(14,14,18,0.9)";
 /** Optional 1px hairline over busy footage. */
 export const HAIRLINE = "1px solid rgba(255,255,255,0.08)";
 export const PANEL_RADIUS = 12;
+/** UI objects (pills, mock windows) sit on black in Apple's dark grays. */
+export const UI = { pill: "#1D1D1F", row: "#2C2C2E", line: "#3A3A3C" } as const;
 /** Width of the brand slash bar on every panel's left edge. */
 export const SLASH_W = 6;
 
 /** ONE margin system: left/right margin of every landscape overlay, card and outro (96px at 1920). */
 export const MARGIN = 96;
+/** Showcase column: every text block of a 16:9 frame shares this left edge (10% of 1920). */
+export const COLUMN_X = 192;
 /** Landscape top margin of top-anchored overlays, and bottom margin of bottom-anchored ones. */
 export const EDGE = 64;
 
@@ -59,17 +63,25 @@ export const TYPE = {
   section: 86,
   /** Shorts captions. */
   caption: 62,
+  /** Showcase headline: 9.6% of frame height. */
+  head: 104,
+  /** Showcase body and eyebrow: the only other size on a frame (headline is 3x this). */
+  body: 34,
+  /** Showcase stat figure ("3x"): the loudest thing on a frame that has one (body is the only other size). */
+  figure: 340,
 } as const;
 
 /** Frames at 30 fps. */
 export const MOTION = {
   fps: 30,
-  enterFrames: 12,
-  exitFrames: 8,
+  enterFrames: 20,
+  exitFrames: 10,
   wipeFrames: 14,
   zoomFrames: 18,
   /** Enter slide distance in px. */
-  slidePx: 16,
+  slidePx: 32,
+  /** Frames between two staggered lines of one text block. */
+  staggerFrames: 5,
   /** Spotlight: everything outside the target keeps 45% of its brightness. */
   dimTo: 0.45,
   /** Spotlight zoom ceiling. */

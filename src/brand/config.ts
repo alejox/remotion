@@ -52,6 +52,14 @@ export const beatSchema = z.discriminatedUnion("type", [
     chipPlacement: z.enum(["auto", "above", "below", "left", "right"]).optional(),
     /** Explicit chip top-left in footage coordinates. */
     chipAt: z.object({ x: num, y: num }).optional(),
+    /** Gap in px between the chip and the box when the chip sits left or right (default 18). */
+    chipGap: num.optional(),
+    /** Hard 2px white outline on the target (default true). False = soft focus: dim only. */
+    outline: z.boolean().optional(),
+    /** Optional headline (separate lines with "\n") set on the column above the callout. */
+    headline: z.string().optional(),
+    /** Top of that headline (default 196). */
+    headlineY: num.optional(),
   }),
   z.object({
     type: z.literal("subscribe"),
@@ -62,7 +70,18 @@ export const beatSchema = z.discriminatedUnion("type", [
     channelName: z.string().optional(),
     tagline: z.string().optional(),
   }),
-  z.object({ type: z.literal("value"), ...base, ...pos, label: z.string(), value: z.string() }),
+  z.object({
+    type: z.literal("value"),
+    ...base,
+    ...pos,
+    /** Optional small caps line above. */
+    label: z.string().optional(),
+    /** Optional supporting line above the figure. */
+    headline: z.string().optional(),
+    value: z.string(),
+    /** Optional fog words next to the figure, e.g. "más rápido". */
+    suffix: z.string().optional(),
+  }),
   z.object({
     type: z.literal("checklist"),
     ...base,

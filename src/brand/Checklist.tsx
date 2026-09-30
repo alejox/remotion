@@ -1,15 +1,15 @@
 /**
- * Checklist (CHECKLIST) - requirements or recap: 2 to 4 rows, cyan checks that draw
- * on one by one (@remotion/paths `evolvePath`), text in white. Optional small caps title.
+ * Checklist (CHECKLIST) - requirements or recap: 2 to 4 rows in fog with white checks that
+ * draw on one by one (@remotion/paths `evolvePath`), under an optional headline. Set
+ * directly on black in the shared column.
  */
 import React from "react";
 import { useCurrentFrame } from "remotion";
 import { evolvePath } from "@remotion/paths";
-import { SANS } from "./fonts";
 import { drawProgress } from "./motion";
-import { Panel } from "./Panel";
-import { Reveal } from "./Reveal";
-import { COLOR, MARGIN, TYPE } from "./tokens";
+import { Reveal, Rise } from "./Reveal";
+import { COLOR, COLUMN_X, TYPE } from "./tokens";
+import { bodyStyle, Column, headStyle, lines } from "./typography";
 
 export type ChecklistProps = {
   start: number;
@@ -19,22 +19,21 @@ export type ChecklistProps = {
   title?: string;
   x?: number;
   y?: number;
-  hairline?: boolean;
 };
 
 const CHECK_PATH = "M4 12.5 L9.5 18 L20 6";
-/** Frames between two checks starting to draw, and how long one check takes. */
-const STEP = 10;
-const DRAW = 10;
-const FIRST = 10;
+/** Frames between two checks starting to draw, how long one takes, and when the first starts (after the rows rose in). */
+const STEP = 12;
+const DRAW = 12;
+const FIRST = 46;
 
-const Check: React.FC<{ progress: number; size?: number }> = ({ progress, size = 34 }) => {
+const Check: React.FC<{ progress: number; size?: number }> = ({ progress, size = TYPE.body + 6 }) => {
   const evolved = evolvePath(progress, CHECK_PATH);
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" style={{ flex: "none" }}>
       <path
         d={CHECK_PATH}
-        stroke={COLOR.cyan}
+        stroke={COLOR.white}
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -45,44 +44,21 @@ const Check: React.FC<{ progress: number; size?: number }> = ({ progress, size =
   );
 };
 
-const Rows: React.FC<{ start: number; items: string[]; title?: string }> = ({ start, items, title }) => {
+const Rows: React.FC<{ start: number; items: string[] }> = ({ start, items }) => {
   const local = useCurrentFrame() - start;
   return (
-    <>
-      {title ? (
-        <div
-          style={{
-            fontFamily: SANS,
-            fontWeight: 500,
-            fontSize: TYPE.meta,
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: COLOR.fog,
-            marginBottom: 12,
-          }}
-        >
-          {title}
-        </div>
-      ) : null}
+    <div style={{ marginTop: 44 }}>
       {items.slice(0, 4).map((item, i) => (
-        <div
+        <Rise
           key={item}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 16,
-            height: 52,
-            fontFamily: SANS,
-            fontWeight: 500,
-            fontSize: TYPE.label,
-            whiteSpace: "nowrap",
-          }}
+          index={i + 2}
+          style={{ display: "flex", alignItems: "center", gap: 20, height: 68, ...bodyStyle }}
         >
           <Check progress={drawProgress(local, FIRST + i * STEP, DRAW)} />
           <span>{item}</span>
-        </div>
+        </Rise>
       ))}
-    </>
+    </div>
   );
 };
 
@@ -91,13 +67,19 @@ export const Checklist: React.FC<ChecklistProps> = ({
   duration,
   items = ["Primer requisito", "Segundo requisito"],
   title,
-  x = MARGIN,
-  y = 300,
-  hairline = true,
+  x = COLUMN_X,
+  y,
 }) => (
-  <Reveal start={start} duration={duration}>
-    <Panel x={x} y={y} hairline={hairline} padding="20px 34px 20px 38px">
-      <Rows start={start} items={items} title={title} />
-    </Panel>
+  <Reveal start={start} duration={duration} staged>
+    <Column x={x} y={y}>
+      {title
+        ? lines(title).map((line, i) => (
+            <Rise key={i} index={i} style={headStyle}>
+              {line}
+            </Rise>
+          ))
+        : null}
+      <Rows start={start} items={items} />
+    </Column>
   </Reveal>
 );

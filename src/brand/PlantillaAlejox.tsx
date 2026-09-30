@@ -1,21 +1,24 @@
 /**
- * PlantillaAlejox - the 16:9 template (1920x1080, 30 fps). Pure wiring: it holds NO
- * video-specific values. Everything comes from one `VideoConfig` (see `config.ts` and
- * `examples/deckboard.config.ts`), which is also the composition's default props, so it
+ * PlantillaAlejox - the 16:9 template (1920x1080, 30 fps). Without source footage,
+ * the showcase loops glass-test.mp4 behind the beats and shows a placeholder window
+ * for the Spotlight. Other video-specific values come from `VideoConfig` (see `config.ts` and
+ * `examples/showcase.config.ts`), which is also the composition's default props, so it
  * is editable in the Studio props panel. The duration comes from `calculateMetadata`
  * (`plantillaDuration`).
  */
 import React, { useMemo } from "react";
-import { AbsoluteFill, useVideoConfig } from "remotion";
+import { AbsoluteFill, staticFile, useVideoConfig } from "remotion";
+import { Video } from "@remotion/media";
 import { z } from "zod";
 import { BeatLayer, mapBeats, zoomSpecs } from "./BeatLayer";
 import { BrandSfx, cuesFromBeats, cuesFromTimeline } from "./BrandSfx";
 import { configDuration, outroStart, timelineFromConfig, videoConfigSchema, type VideoConfig } from "./config";
 import { BrandTimeline, FootageAudio, FullPicture } from "./Footage";
 import { Outro } from "./Outro";
+import { PlaceholderScreen } from "./PlaceholderScreen";
 import { SourceProvider } from "./Source";
 import { ZoomStage } from "./Spotlight";
-import { COLOR, MOTION } from "./tokens";
+import { MOTION } from "./tokens";
 
 export const plantillaSchema = z.object({ config: videoConfigSchema });
 export type PlantillaProps = z.infer<typeof plantillaSchema>;
@@ -33,11 +36,35 @@ export const PlantillaAlejox: React.FC<PlantillaProps> = ({ config }) => {
 
   return (
     <SourceProvider source={config.source}>
-      <AbsoluteFill style={{ backgroundColor: COLOR.panel }}>
+      <AbsoluteFill style={{ backgroundColor: "#000" }}>
         <BrandTimeline
           tl={tl}
+          cardTag="Sección"
+          renderCardBackdrop={!config.source.file ? (card) => (
+            <AbsoluteFill>
+              <Video
+                src={staticFile("glass-test.mp4")}
+                trimBefore={card.start}
+                loop
+                muted
+                objectFit="cover"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </AbsoluteFill>
+          ) : undefined}
           renderSegment={(s) =>
-            s.kind === "screen" && zooms.length > 0 ? (
+            !config.source.file ? (
+              <AbsoluteFill>
+                <Video
+                  src={staticFile("glass-test.mp4")}
+                  trimBefore={s.fromFrame}
+                  loop
+                  muted
+                  objectFit="cover"
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </AbsoluteFill>
+            ) : s.kind === "screen" && zooms.length > 0 ? (
               <ZoomStage stage={stage} specs={zooms} frameOffset={s.start}>
                 <FullPicture segment={s} />
               </ZoomStage>
@@ -47,12 +74,20 @@ export const PlantillaAlejox: React.FC<PlantillaProps> = ({ config }) => {
           }
         />
         <FootageAudio segments={tl.segments} audioDelayFrames={config.audioDelayFrames ?? MOTION.defaultAudioDelayFrames} />
-        <BeatLayer beats={beats} stage={stage} />
+        {config.source.file
+          ? null
+          : beats.map((m, i) =>
+              m.beat.type === "spotlight" ? (
+                <PlaceholderScreen key={i} start={m.start} duration={m.duration} />
+              ) : null,
+            )}
+        <BeatLayer beats={beats} stage={stage} labels />
         <Outro
           start={outroAt}
           duration={Math.round(config.outro.seconds * MOTION.fps)}
           title={config.outro.title}
           slots={config.outro.slots}
+          tag="Cierre"
         />
         <BrandSfx cues={cues} />
       </AbsoluteFill>

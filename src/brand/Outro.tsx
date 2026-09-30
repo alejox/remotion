@@ -1,63 +1,56 @@
 /**
- * Outro (OUTRO) - the last seconds: a dark frame, LogoDisc and "Gracias por ver".
- * Landscape adds two flat end-screen slots inside the 96px margins: a 16:9 video slot and a
- * circular slot for YouTube's subscribe element. Shorts have no end screens: just the
- * logo and the thanks, centred around y 800-1000. Fades in with the standard enter.
+ * Outro (OUTRO) - the last seconds on black: the brand mark, a headline and a fog line, in the
+ * shared column (Shorts: the same trio on a centred axis around y 800-1000). Fades in
+ * with the standard enter. `slots` is accepted for old configs and ignored: end-screen
+ * placeholders are not drawn in showcase mode.
  */
 import React from "react";
 import { AbsoluteFill, useVideoConfig } from "remotion";
-import { SANS } from "./fonts";
-import { LogoDisc } from "./LogoDisc";
-import { Panel } from "./Panel";
-import { Reveal } from "./Reveal";
-import { COLOR, HAIRLINE, MARGIN, TYPE } from "./tokens";
+import { BrandMark } from "./BrandMark";
+import { ComponentTag } from "./ComponentTag";
+import { Reveal, Rise } from "./Reveal";
+import { COLUMN_X } from "./tokens";
+import { bodyStyle, Column, headStyle } from "./typography";
 
 export type OutroProps = {
   start: number;
   duration: number;
   title?: string;
-  /** Meta labels of the two landscape end-screen slots (video, subscribe). */
+  /** Second line under the headline. */
+  subtitle?: string;
+  /** Component label at the top (showcase). */
+  tag?: string;
+  /** Ignored (see above). */
   slots?: [string, string];
-};
-
-const Title: React.FC<{ text: string }> = ({ text }) => (
-  <div
-    style={{
-      fontFamily: SANS,
-      fontWeight: 700,
-      fontSize: TYPE.section,
-      letterSpacing: "-0.02em",
-      whiteSpace: "nowrap",
-      color: COLOR.white,
-    }}
-  >
-    {text}
-  </div>
-);
-
-const metaStyle: React.CSSProperties = {
-  fontFamily: SANS,
-  fontWeight: 500,
-  fontSize: TYPE.meta,
-  letterSpacing: "0.14em",
-  textTransform: "uppercase",
-  color: COLOR.fog,
 };
 
 export const Outro: React.FC<OutroProps> = ({
   start,
   duration,
-  title = "Gracias por ver",
-  slots = ["Siguiente video", "Suscríbete"],
+  title = "Gracias por ver.",
+  subtitle = "Nos vemos en el próximo video.",
+  tag,
 }) => {
   const { width, height } = useVideoConfig();
   const short = height > width;
-  // Landscape block: header 132 + gap 56 + row 585 = 773, centred vertically.
-  const row = 585;
-  const top = (height - (132 + 56 + row)) / 2;
+  const content = (
+    <>
+      <Rise index={0}>
+        <BrandMark height={short ? 110 : 96} />
+      </Rise>
+      <div style={short ? { textAlign: "center" } : undefined}>
+        <Rise index={1} style={headStyle}>
+          {title}
+        </Rise>
+        <Rise index={2} style={{ ...bodyStyle, marginTop: 12 }}>
+          {subtitle}
+        </Rise>
+      </div>
+    </>
+  );
   return (
-    <Reveal start={start} duration={duration} noSlide>
-      <AbsoluteFill style={{ backgroundColor: COLOR.panel }} />
+    <Reveal start={start} duration={duration} staged>
+      <AbsoluteFill style={{ backgroundColor: "#000" }} />
       {short ? (
         <div
           style={{
@@ -71,45 +64,16 @@ export const Outro: React.FC<OutroProps> = ({
             gap: 40,
           }}
         >
-          <LogoDisc size={132} />
-          <Title text={title} />
+          {content}
         </div>
       ) : (
-        <>
-          <div style={{ position: "absolute", left: MARGIN, top, display: "flex", alignItems: "center", gap: 36 }}>
-            <LogoDisc size={132} />
-            <Title text={title} />
-          </div>
-          <Panel
-            x={MARGIN}
-            y={top + 132 + 56}
-            width={1040}
-            hairline
-            padding="22px 30px 22px 38px"
-            style={{ height: row, background: COLOR.slot }}
-          >
-            <div style={metaStyle}>{slots[0]}</div>
-          </Panel>
-          <div
-            style={{
-              position: "absolute",
-              left: width - MARGIN - row,
-              top: top + 132 + 56,
-              width: row,
-              height: row,
-              boxSizing: "border-box",
-              borderRadius: "50%",
-              border: HAIRLINE,
-              background: COLOR.slot,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div style={metaStyle}>{slots[1]}</div>
-          </div>
-        </>
+        <Column x={COLUMN_X} gap={32}>
+          {content}
+        </Column>
       )}
+      {tag ? (
+        <ComponentTag start={start} duration={duration} label={tag} />
+      ) : null}
     </Reveal>
   );
 };

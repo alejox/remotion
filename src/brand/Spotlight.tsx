@@ -1,8 +1,9 @@
 /**
  * Spotlight (SPOTLIGHT) - the functional screen callout. Dims everything outside the
- * target to 45%, draws a 2px cyan rounded box on the target with `evolvePath`, shows a
- * step chip ("PASO 2 · label") and can zoom the footage (<= 1.8x, 18f in, 18f out,
- * smooth, once per step).
+ * target to 45%, draws a 2px white rounded box on the target with `evolvePath` (or, with `outline` off,
+ * just leaves a soft rounded hole in the dim), then
+ * brings in a dark-gray step pill (gray numbered dot + label) and can zoom the footage
+ * (<= 1.8x, 18f in, 18f out, smooth, once per step).
  *
  * Coordinates: `target` is in STAGE coordinates (the footage rectangle the callout
  * lives in). `stage` is that rectangle in frame pixels (default: the whole frame).
@@ -15,8 +16,8 @@ import { CameraMotionBlur } from "@remotion/motion-blur";
 import { evolvePath } from "@remotion/paths";
 import { SANS } from "./fonts";
 import { drawProgress, enter, exit, smoothZoom, useReveal } from "./motion";
-import { Panel } from "./Panel";
-import { COLOR, MOTION, TYPE } from "./tokens";
+import { Pill } from "./Panel";
+import { COLOR, MOTION, TYPE, UI } from "./tokens";
 
 export type Rect = { x: number; y: number; w: number; h: number };
 
@@ -119,6 +120,27 @@ export const ZoomStage: React.FC<{
   );
 };
 
+/** The numbered dot: cyan when it stands alone (the frame's one accent), gray inside a pill. */
+const Badge: React.FC<{ step: number; tone: string }> = ({ step, tone }) => (
+  <span
+    style={{
+      width: 56,
+      height: 56,
+      borderRadius: "50%",
+      background: tone,
+      color: COLOR.white,
+      fontFamily: SANS,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: 700,
+      fontSize: TYPE.body,
+    }}
+  >
+    {step}
+  </span>
+);
+
 const roundedRect = (x: number, y: number, w: number, h: number, r: number): string =>
   `M${x + r} ${y} H${x + w - r} A${r} ${r} 0 0 1 ${x + w} ${y + r} V${y + h - r} A${r} ${r} 0 0 1 ${x + w - r} ${y + h} H${x + r} A${r} ${r} 0 0 1 ${x} ${y + h - r} V${y + r} A${r} ${r} 0 0 1 ${x + r} ${y} Z`;
 
@@ -132,8 +154,6 @@ export type SpotlightProps = {
   zoom?: number;
   /** The stage in frame pixels. Defaults to the whole frame. */
   stage?: Rect;
-  /** Small caps word before the number, e.g. "PASO". */
-  stepWord?: string;
   /** Zoom focus (stage coordinates). Default: the target. */
   focus?: Rect;
   /**
@@ -143,11 +163,20 @@ export type SpotlightProps = {
   chipPlacement?: "auto" | "above" | "below" | "left" | "right";
   /** Explicit chip top-left in stage coordinates (overrides `chipPlacement`). */
   chipAt?: { x: number; y: number };
+  /** Gap between chip and box for "left"/"right" placement. Default 18. */
+  chipGap?: number;
+  /** Hard 2px white outline on the target. False = soft focus (dim + rounded hole only). */
+  outline?: boolean;
 };
 
 const PAD = 6;
 const RADIUS = 8;
 const DRAW_FRAMES = 12;
+/** Corner radius of the dim hole when there is no outline. */
+const SOFT_RADIUS = 22;
+/** Dim fade length, and when the pill enters after a soft focus (dim 14f, row lift 16-30f, toggle 40-54f). */
+const DIM_FRAMES = 14;
+const SOFT_CHIP_AT = 70;
 
 export const Spotlight: React.FC<SpotlightProps> = ({
   start,
@@ -157,10 +186,11 @@ export const Spotlight: React.FC<SpotlightProps> = ({
   label = "",
   zoom,
   stage,
-  stepWord = "PASO",
   focus,
   chipPlacement = "auto",
   chipAt,
+  chipGap = 18,
+  outline = true,
 }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
@@ -170,7 +200,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({
     return null;
   }
   const local = reveal.local;
-  const layer = enter(local).opacity * exit(local, duration).opacity;
+  const layer = enter(local, DIM_FRAMES).opacity * exit(local, duration).opacity;
   const z = zoomState(frame, [{ start, duration, target, focus, zoom }], st);
   const map = (v: number, o: number): number => o + (v - o) * z.scale;
   const x0 = map(target.x, z.ox) - PAD;
@@ -179,12 +209,15 @@ export const Spotlight: React.FC<SpotlightProps> = ({
   const y1 = map(target.y + target.h, z.oy) + PAD;
   const bw = x1 - x0;
   const bh = y1 - y0;
-  const boxPath = roundedRect(x0, y0, bw, bh, RADIUS);
+  const boxPath = roundedRect(x0, y0, bw, bh, outline ? RADIUS : SOFT_RADIUS);
   const evolved = evolvePath(drawProgress(local, 0, DRAW_FRAMES), boxPath);
   const dim = `M0 0 H${st.w} V${st.h} H0 Z ${boxPath}`;
 
-  const chipW = 190 + label.length * 17;
-  const chipH = 76;
+  const chipW = 130 + label.length * 17;
+  const chipH = 80;
+  // The pill waits for the box to finish drawing (or, with no outline, for the dim and the
+  // row lift to settle): one thing moves at a time.
+  const chipIn = enter(local - (outline ? DRAW_FRAMES : SOFT_CHIP_AT));
   const gap = 18;
   const free = {
     above: y0 - gap,
@@ -214,9 +247,9 @@ export const Spotlight: React.FC<SpotlightProps> = ({
   const chipStyle: React.CSSProperties = chipAt
     ? { left: chipAt.x, top: chipAt.y }
     : side === "left"
-      ? { right: st.w - x0 + gap, top: Math.max(y0, 0) }
+      ? { right: st.w - x0 + chipGap, top: Math.max(y0, 0) }
       : side === "right"
-        ? { left: x1 + gap, top: Math.max(y0, 0) }
+        ? { left: x1 + chipGap, top: Math.max(y0, 0) }
         : {
             ...(anchorRight ? { right: st.w - x1 } : { left: x0 }),
             ...(side === "below" ? { top: y1 + gap } : { bottom: st.h - y0 + gap }),
@@ -238,7 +271,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({
         <path
           d={boxPath}
           fill="none"
-          stroke={COLOR.cyan}
+          stroke={outline ? COLOR.white : "none"}
           strokeWidth={2}
           strokeDasharray={evolved.strokeDasharray}
           strokeDashoffset={evolved.strokeDashoffset}
@@ -248,33 +281,18 @@ export const Spotlight: React.FC<SpotlightProps> = ({
         style={{
           position: "absolute",
           ...chipStyle,
-          opacity: reveal.opacity,
-          transform: `translateY(${reveal.y}px)`,
+          opacity: chipIn.opacity * exit(local, duration).opacity,
+          transform: `translateY(${chipIn.y}px)`,
         }}
       >
-        <Panel hairline padding="14px 28px 14px 34px">
-          <div
-            style={{
-              fontFamily: SANS,
-              display: "flex",
-              alignItems: "baseline",
-              gap: 14,
-              whiteSpace: "nowrap",
-            }}
-          >
-            <span
-              style={{
-                fontWeight: 700,
-                fontSize: TYPE.meta,
-                letterSpacing: "0.14em",
-                color: COLOR.cyan,
-              }}
-            >
-              {`${stepWord} ${step}`}
-            </span>
-            <span style={{ fontWeight: 500, fontSize: TYPE.label, letterSpacing: "-0.01em" }}>{label}</span>
-          </div>
-        </Panel>
+        {label ? (
+          <Pill style={{ fontFamily: SANS, whiteSpace: "nowrap" }}>
+            <Badge step={step} tone={UI.line} />
+            <span style={{ fontWeight: 500, fontSize: TYPE.body, letterSpacing: "-0.01em" }}>{label}</span>
+          </Pill>
+        ) : (
+          <Badge step={step} tone={COLOR.cyan} />
+        )}
       </div>
     </div>
   );

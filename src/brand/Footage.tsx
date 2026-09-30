@@ -10,7 +10,7 @@ import { AbsoluteFill, Audio, Easing, Sequence } from "remotion";
 import { linearTiming, TransitionSeries } from "@remotion/transitions";
 import { SectionCard } from "./SectionCard";
 import { SourcePicture, useSourceFile } from "./Source";
-import type { BuiltSegment, Timeline } from "./timeline";
+import type { BuiltCard, BuiltSegment, Timeline } from "./timeline";
 import { diagonalWipe } from "./transitions/diagonalWipe";
 import { MOTION } from "./tokens";
 
@@ -52,7 +52,11 @@ export const FootageAudio: React.FC<{ segments: BuiltSegment[]; audioDelayFrames
 export const BrandTimeline: React.FC<{
   tl: Timeline;
   renderSegment: (segment: BuiltSegment) => React.ReactNode;
-}> = ({ tl, renderSegment }) => (
+  /** Component label shown on section cards (showcase). */
+  cardTag?: string;
+  /** Optional backdrop for the chapter card; omitted for real-footage templates. */
+  renderCardBackdrop?: (card: BuiltCard) => React.ReactNode;
+}> = ({ tl, renderSegment, cardTag, renderCardBackdrop }) => (
   <TransitionSeries>
     {tl.items.flatMap((item, i) => {
       const nodes: React.ReactNode[] = [];
@@ -70,8 +74,19 @@ export const BrandTimeline: React.FC<{
       }
       if (item.kind === "card") {
         nodes.push(
-          <TransitionSeries.Sequence key={`i${i}`} name="section card" durationInFrames={item.length}>
-            <SectionCard duration={item.length} number={item.number} title={item.title} wipe={tl.wipe} />
+          <TransitionSeries.Sequence
+            key={`i${i}`}
+            name="section card"
+            durationInFrames={item.length}
+          >
+            <SectionCard
+              duration={item.length}
+              number={item.number}
+              title={item.title}
+              wipe={tl.wipe}
+              tag={cardTag}
+              backdrop={renderCardBackdrop?.(item)}
+            />
           </TransitionSeries.Sequence>,
         );
       } else {

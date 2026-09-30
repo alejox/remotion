@@ -4,7 +4,7 @@
  * 20 degree seam. Optional 1px white-8% hairline for busy footage.
  */
 import React from "react";
-import { COLOR, HAIRLINE, PANEL_BG, PANEL_RADIUS, SEAM_TAN, SLASH_W } from "./tokens";
+import { COLOR, HAIRLINE, PANEL_BG, PANEL_RADIUS, SEAM_TAN, SLASH_W, UI } from "./tokens";
 
 export type PanelProps = {
   children?: React.ReactNode;
@@ -64,6 +64,30 @@ export const Panel: React.FC<PanelProps> = ({
     }}
   >
     <Slash />
+    {children}
+  </div>
+);
+
+/**
+ * Pill - the showcase UI object: a dark-gray fully rounded capsule on black (Apple style).
+ * Only for interface elements such as the Spotlight step chip, never for plain text.
+ */
+export const Pill: React.FC<{ children?: React.ReactNode; style?: React.CSSProperties }> = ({
+  children,
+  style,
+}) => (
+  <div
+    style={{
+      display: "inline-flex",
+      alignItems: "center",
+      gap: 20,
+      padding: "14px 36px 14px 14px",
+      background: UI.pill,
+      borderRadius: 999,
+      color: COLOR.white,
+      ...style,
+    }}
+  >
     {children}
   </div>
 );

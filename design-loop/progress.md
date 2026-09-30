@@ -5,7 +5,7 @@ Bar: Apple MacBook Pro page · System: design-system.md (section 0 overrides)
 | Piece | Round | Brief | System | Craft | Status |
 |---|---|---|---|---|---|
 | P1 16:9 showcase (PlantillaAlejox) | 6 | PASS | PASS | FAIL | paused (usage limit) |
-| P3 Subscribe button, glass (in 16:9 showcase) | 1 | PASS | PASS | PASS | complete |
+| P3 Subscribe button, glass (in 16:9 showcase) | 3 | PASS | PASS | FAIL | iterate |
 | P4 Transition, Apple style | 0 | - | - | - | pending |
 | P2 9:16 showcase + captions, Apple style | 0 | - | - | - | pending |
 
@@ -41,8 +41,20 @@ Scope change (user, 2026-09-29): add a glass (Apple Liquid Glass) subscribe butt
 ### P3 round 1
 - Rendered `PlantillaAlejox` frame 1320 at 50% to `/private/tmp/plantilla-suscribe-glass.png`.
 - Brief: PASS — clear subscribe CTA integrated into the 16:9 component showcase.
-- System: PASS — clean variant uses only the dark glass surface, white label and cyan interaction accent; classic remains the red replica.
-- Craft: PASS — translucent blur and specular edge remain restrained over the rich footage; label contrast and pill silhouette are clear.
+- System: FAIL — later independent review found that this video-background showcase frame diverges from the current black-canvas-only rule. User explicitly requested video for the Liquid Glass review; document a narrowly scoped exception.
+- Craft: FAIL — pill fill reads as opaque; video translucency and a specular edge are too subtle.
+
+### P3 round 2
+- Rendered `PlantillaAlejox` frame 1320 at 50% to `/private/tmp/plantilla-suscribe-glass-round2.png`.
+- Brief: PASS — CTA stays legible and distinct.
+- System: FAIL — cited the same black-canvas rule, which must be scoped for the user's video-backed glass review.
+- Craft: FAIL — pill still reads as opaque against the frosted parent card; strengthen visible translucency and the narrow top-edge reflection.
+
+### P3 round 3
+- Updated `design-system.md` with a scoped T3 video-background exception and rendered `/private/tmp/plantilla-suscribe-glass-round3.png` at 50%.
+- Brief: PASS — the CTA is legible over the requested video.
+- System: PASS — current rule now explicitly allows this single video-backed T3 review; other showcase beats remain black.
+- Craft: FAIL — footage is visible through the pill but still too muted; the idle edge reads white instead of cyan and the reflection is too thin. Strengthen transparency/detail and cyan/specular cues, without glow.
 
 ### P1 round 6
 - Brief: PASS. System: PASS (minor: strike starts at x=184).

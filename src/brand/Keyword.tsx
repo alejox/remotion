@@ -1,12 +1,11 @@
 /**
  * Keyword (KEYWORD) - a term the viewer must remember. Sparingly (max 1 per 30s).
- * Small panel, term in white, one optional cyan word.
+ * Headline set directly on black; separate lines with "\n". One optional whole word in cyan.
  */
 import React from "react";
-import { SANS } from "./fonts";
-import { Panel } from "./Panel";
-import { Reveal } from "./Reveal";
-import { COLOR, EDGE, MARGIN, TYPE } from "./tokens";
+import { Reveal, Rise } from "./Reveal";
+import { COLOR, COLUMN_X } from "./tokens";
+import { Column, headStyle, lines } from "./typography";
 
 export type KeywordProps = {
   start: number;
@@ -16,7 +15,6 @@ export type KeywordProps = {
   accent?: string;
   x?: number;
   y?: number;
-  hairline?: boolean;
 };
 
 export const Keyword: React.FC<KeywordProps> = ({
@@ -24,34 +22,25 @@ export const Keyword: React.FC<KeywordProps> = ({
   duration,
   text = "Palabra clave",
   accent,
-  x = MARGIN,
+  x = COLUMN_X,
   y,
-  hairline = true,
 }) => {
   // Colour WHOLE words only.
   const accentWords = new Set((accent ?? "").split(" ").filter(Boolean));
-  const words = text.split(" ");
   return (
-    <Reveal start={start} duration={duration}>
-      <Panel x={x} y={y} hairline={hairline} padding="16px 30px 16px 36px" style={y === undefined ? { bottom: EDGE } : undefined}>
-        <div
-          style={{
-            fontFamily: SANS,
-            fontWeight: 700,
-            fontSize: TYPE.label,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.25,
-            whiteSpace: "nowrap",
-          }}
-        >
-          {words.map((w, i) => (
-            <React.Fragment key={i}>
-              {i > 0 ? " " : null}
-              <span style={{ color: accentWords.has(w) ? COLOR.cyan : COLOR.white }}>{w}</span>
-            </React.Fragment>
-          ))}
-        </div>
-      </Panel>
+    <Reveal start={start} duration={duration} staged>
+      <Column x={x} y={y}>
+        {lines(text).map((line, li) => (
+          <Rise key={li} index={li} style={headStyle}>
+            {line.split(" ").map((w, i) => (
+              <React.Fragment key={i}>
+                {i > 0 ? " " : null}
+                <span style={{ color: accentWords.has(w) ? COLOR.cyan : COLOR.white }}>{w}</span>
+              </React.Fragment>
+            ))}
+          </Rise>
+        ))}
+      </Column>
     </Reveal>
   );
 };

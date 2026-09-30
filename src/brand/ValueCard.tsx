@@ -1,63 +1,67 @@
 /**
- * ValueCard (VALUE) - an exact value to copy (port, IP, setting): small label,
- * Geist Mono value.
+ * ValueCard (VALUE) - the number is the payoff. An optional fog caps label and a white
+ * supporting line (fog) come first; the figure follows on its own line at 340px, the loudest
+ * and only coloured element (cyan), arriving last, with optional fog words on their own line under it.
+ * Set directly on black in the shared column.
  */
 import React from "react";
-import { MONO, SANS } from "./fonts";
-import { Panel } from "./Panel";
-import { Reveal } from "./Reveal";
-import { COLOR, MARGIN, TYPE } from "./tokens";
+import { Reveal, Rise } from "./Reveal";
+import { COLOR, COLUMN_X, TYPE } from "./tokens";
+import { bodyStyle, Column, eyebrowStyle, headStyle, opticalShift } from "./typography";
 
 export type ValueCardProps = {
   start: number;
   duration: number;
   label?: string;
+  headline?: string;
   value?: string;
+  suffix?: string;
   x?: number;
   y?: number;
-  hairline?: boolean;
 };
 
 export const ValueCard: React.FC<ValueCardProps> = ({
   start,
   duration,
-  label = "Puerto",
+  label,
+  headline,
   value = "4460",
-  x = MARGIN,
-  y = 380,
-  hairline = true,
+  suffix,
+  x = COLUMN_X,
+  y,
 }) => (
-  <Reveal start={start} duration={duration}>
-    <Panel x={x} y={y} hairline={hairline} padding="20px 30px 22px 38px">
-      <div style={{ display: "flex", alignItems: "center", gap: 36 }}>
-        <div>
-          <div
-            style={{
-              fontFamily: SANS,
-              fontWeight: 500,
-              fontSize: TYPE.meta,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: COLOR.fog,
-              lineHeight: 1.25,
-            }}
-          >
-            {label}
-          </div>
-          <div
-            style={{
-              fontFamily: MONO,
-              fontWeight: 500,
-              fontSize: TYPE.value,
-              lineHeight: 1.15,
-              marginTop: 6,
-              whiteSpace: "nowrap",
-            }}
-          >
-            {value}
-          </div>
-        </div>
-      </div>
-    </Panel>
+  <Reveal start={start} duration={duration} staged>
+    <Column x={x} y={y} gap={16}>
+      {label ? (
+        <Rise index={0} style={eyebrowStyle}>
+          {label}
+        </Rise>
+      ) : null}
+      {headline ? (
+        <Rise index={1} style={bodyStyle}>
+          {headline}
+        </Rise>
+      ) : null}
+      <Rise index={3}>
+        <span
+          style={{
+            ...headStyle,
+            display: "block",
+            fontSize: TYPE.figure,
+            letterSpacing: "-0.05em",
+            lineHeight: 0.95,
+            color: COLOR.cyan,
+            marginLeft: opticalShift(value, TYPE.figure),
+          }}
+        >
+          {value}
+        </span>
+      </Rise>
+      {suffix ? (
+        <Rise index={5} style={bodyStyle}>
+          {suffix}
+        </Rise>
+      ) : null}
+    </Column>
   </Reveal>
 );

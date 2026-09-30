@@ -1,70 +1,76 @@
 /**
  * SectionCard (SECTION) - chapter change. Rendered as a `<TransitionSeries>` scene: the
- * grape/cyan diagonal wipe reveals a dark frame, then "01" plus the section title,
- * left-aligned beside a large brand slash. `duration` is the whole scene INCLUDING both
- * wipes (`wipe` frames each); the text lives between them.
+ * grape/cyan diagonal wipe reveals a black frame, then a fog "01" and the section headline
+ * in the shared column, with a large 20 degree brand slash on the right.
+ * `duration` is the whole scene INCLUDING both wipes (`wipe` frames each); the text lives
+ * between them.
  */
 import React from "react";
-import { AbsoluteFill } from "remotion";
-import { SANS } from "./fonts";
-import { Slash } from "./Panel";
-import { Reveal } from "./Reveal";
-import { COLOR, MARGIN, MOTION, TYPE } from "./tokens";
+import { AbsoluteFill, useVideoConfig } from "remotion";
+import { ComponentTag } from "./ComponentTag";
+import { Reveal, Rise } from "./Reveal";
+import { BrandSlash } from "./BrandSlash";
+import { MOTION } from "./tokens";
+import { Column, eyebrowStyle, headStyle, lines } from "./typography";
 
 export type SectionCardProps = {
   duration: number;
   number?: number | string;
   title?: string;
   wipe?: number;
+  /** Component label at the top (showcase). */
+  tag?: string;
+  /** Optional scene backdrop, shown beneath the frosted chapter-card material. */
+  backdrop?: React.ReactNode;
 };
+
+/** The slash is the hero of the card: right of the text, inside the 8% margin (x + width <= 1766). */
+const SLASH_X = 1400;
+const SLASH_H = 620;
 
 export const SectionCard: React.FC<SectionCardProps> = ({
   duration,
   number = "01",
   title = "Título de la sección",
   wipe = MOTION.wipeFrames,
+  tag,
+  backdrop,
 }) => {
+  const { height } = useVideoConfig();
   const num = typeof number === "number" && number < 10 ? `0${number}` : String(number);
+  const rows = lines(title);
+  const hold = Math.max(duration - 2 * wipe, MOTION.enterFrames + MOTION.exitFrames);
   return (
-    <AbsoluteFill style={{ backgroundColor: COLOR.panel }}>
-      <Reveal start={wipe} duration={Math.max(duration - 2 * wipe, MOTION.enterFrames + MOTION.exitFrames)}>
-        <div
+    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+      {backdrop}
+      {backdrop ? (
+        <AbsoluteFill
           style={{
-            position: "absolute",
-            left: MARGIN,
-            top: 0,
-            bottom: 0,
-            display: "flex",
-            alignItems: "center",
+            background: "rgba(9, 14, 21, 0.68)",
+            backdropFilter: "blur(26px) saturate(140%)",
+            WebkitBackdropFilter: "blur(26px) saturate(140%)",
+            borderTop: "1px solid rgba(255, 255, 255, 0.2)",
+            boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.08)",
           }}
-        >
-          <div style={{ position: "relative", paddingLeft: 48, fontFamily: SANS, color: COLOR.white }}>
-            <Slash width={10} />
-            <div
-              style={{
-                fontWeight: 500,
-                fontSize: TYPE.label,
-                letterSpacing: "0.14em",
-                color: COLOR.cyan,
-                fontVariantNumeric: "tabular-nums",
-              }}
-            >
-              {num}
-            </div>
-            <div
-              style={{
-                fontWeight: 700,
-                fontSize: TYPE.section,
-                letterSpacing: "-0.02em",
-                lineHeight: 1.1,
-                marginTop: 10,
-                whiteSpace: "nowrap",
-              }}
-            >
-              {title}
-            </div>
+        />
+      ) : null}
+      {tag ? <ComponentTag start={wipe} duration={hold} label={tag} /> : null}
+      <Reveal start={wipe} duration={hold} staged>
+        <Column gap={20}>
+          <Rise index={0} style={{ ...eyebrowStyle, letterSpacing: "0.06em" }}>
+            {num}
+          </Rise>
+          <div>
+            {rows.map((line, i) => (
+              <Rise key={i} index={i + 1} style={headStyle}>
+                {line}
+              </Rise>
+            ))}
           </div>
-        </div>
+        </Column>
+        <Rise index={2} style={{ position: "absolute", left: SLASH_X, top: (height - SLASH_H) / 2 }}>
+          <BrandSlash height={SLASH_H} />
+        </Rise>
       </Reveal>
     </AbsoluteFill>
   );
