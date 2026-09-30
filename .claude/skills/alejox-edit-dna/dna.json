@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "name": "Alejox Gaming — Tech Clean edit identity (v2)",
+    "slug": "alejox-edit-dna",
+    "source": [
+      "reference/channel-page.png — brand colours, logo, 20° banner diagonal ONLY (thumbnails stay loud; the video does not copy them)",
+      "Direction: MKBHD restraint (small clean sans type, few elements, footage is the star) + Harris Heller / Alpha Gaming functional screen callouts (highlight what to click, nothing decorative)"
+    ],
+    "captured": "2026-09-29",
+    "medium_of_origin": "YouTube tech/OBS tutorials, 16:9 long form + 9:16 Shorts",
+    "not_copied": [
+      "No MKBHD or Alpha Gaming assets, fonts or layouts are copied; only their restraint principles"
+    ],
+    "history": "v1 (thumbnail/MrBeast: Anton skewed caps, strokes, yellow breakout, frequent punch-ins) REJECTED by the creator 2026-09-29: 'se ve caricatura', 'muchos zooms distraen del contenido'. Archived in history/."
+  },
+  "soul": {
+    "one_line": "Small white Geist labels on flat near-black panels, one cyan accent, a 20° grape-to-cyan slash as the only brand flourish, footage untouched.",
+    "adjectives": [
+      "calm",
+      "precise",
+      "technical",
+      "trustworthy"
+    ],
+    "lineage": "Premium tech-review restraint (MKBHD) + streaming-tutorial callouts (Alpha Gaming)",
+    "read_distance": "laptop and phone; minimum text 26px at 1080px canvas width",
+    "energy": {
+      "density": 2,
+      "variance": 3,
+      "contrast": 7,
+      "warmth": 3
+    }
+  },
+  "palette": {
+    "colors": [
+      {
+        "name": "night panel",
+        "hex": "#0E0E12",
+        "role": "panels at 90% opacity"
+      },
+      {
+        "name": "paper white",
+        "hex": "#FFFFFF",
+        "role": "all primary text"
+      },
+      {
+        "name": "fog gray",
+        "hex": "#A1A1AA",
+        "role": "secondary text, metadata"
+      },
+      {
+        "name": "electric cyan-blue",
+        "hex": "#25A1DC",
+        "role": "THE accent: highlight boxes, active word, progress, one emphasised word"
+      },
+      {
+        "name": "deep grape",
+        "hex": "#5A2885",
+        "role": "brand only: the 20° slash, section cards, lower-third tick"
+      }
+    ],
+    "coverage": {
+      "footage": 85,
+      "night panels": 9,
+      "white/gray type": 4,
+      "cyan accent": 1.5,
+      "grape": 0.5
+    },
+    "mode": "dark",
+    "banned": [
+      "yellow in video overlays (yellow lives in thumbnails only)",
+      "gradients on text",
+      "neon glows",
+      "any accent other than cyan (no red/green marks: checks are cyan, strikes are white 60%)"
+    ]
+  },
+  "type": {
+    "families": [
+      {
+        "role": "all video text",
+        "family": "Geist",
+        "weights": [
+          500,
+          700
+        ],
+        "source": "public/fonts/Geist-VariableFont_wght.ttf (+Italic) via @remotion/fonts in src/brand/fonts.ts",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"
+      },
+      {
+        "role": "ports, IPs, file names, values",
+        "family": "Geist Mono",
+        "weights": [
+          500
+        ],
+        "source": "public/fonts/GeistMono-VariableFont_wght.ttf (+Italic) via @remotion/fonts",
+        "fallback": "ui-monospace, Menlo, monospace"
+      },
+      {
+        "role": "brand moments: wordmark, classic subscribe card",
+        "family": "Jost",
+        "weights": [
+          500,
+          700
+        ],
+        "source": "public/fonts/Jost-VariableFont_wght.ttf (+Italic) via @remotion/fonts",
+        "fallback": "Futura, 'Century Gothic', sans-serif"
+      },
+      {
+        "role": "thumbnails ONLY (never in video)",
+        "family": "Anton",
+        "fallback": "Impact",
+        "source": "public/fonts/Anton-Regular.ttf (thumbnails only, not loaded in video)"
+      }
+    ],
+    "scale": {
+      "display_to_body_ratio": "2.5:1 (section titles) — labels stay small",
+      "steps": [
+        "title",
+        "label",
+        "meta"
+      ],
+      "max_sizes_per_frame": 2
+    },
+    "treatment": {
+      "display_tracking": "-0.02em on titles",
+      "body_leading": 1.25,
+      "case": "Sentence case everywhere; ONLY meta labels (e.g. 'PASO 2') in caps with +0.14em tracking",
+      "measure": "labels max 32 characters, one line",
+      "numerals": "tabular; section numbers as '01', '02'"
+    }
+  },
+  "space": {
+    "grid": "overlays anchor to the lower-left or upper-left corner; screen callouts anchor to their target",
+    "margin_pct": "one system: 96px at 1920 (5%) left/right for every archetype; top = bottom margin",
+    "gutter_pct": 1.5,
+    "alignment": "left-aligned text, never centred in 16:9 (Shorts captions centred)",
+    "rhythm": "one overlay at a time; at least 3s of clean footage between talking-head overlays",
+    "negative_space": "the speaker and the UI being explained are never covered",
+    "safe_area": {
+      "youtube_16x9": "5% all sides",
+      "shorts_9x16": "x 80..940 of 1080, y 154..1498 of 1920"
+    }
+  },
+  "surface": {
+    "texture": "none",
+    "edges": "panels 12px radius at 1080p; the brand slash is the only sharp 20° edge",
+    "elevation": "flat; a single 1px white-8% hairline on panels over busy footage; no drop shadows",
+    "imagery": "footage untouched, no push-ins on talking head; screen captures may zoom ONLY to reveal a detail",
+    "iconography": "Lucide-style line icons, 2px stroke, white or cyan; no emoji",
+    "logo": "Use src/brand/LogoMark.tsx (inline vector from public/logo/alejox.svg). Optical centring is baked into its viewBox (mark 60% of box, anchor 35% from bbox centre toward area centroid -> ~3.4% above centre). The SVG box must equal the disc box: no padding, borders or offsets."
+  },
+  "signatures": [
+    "Text is small: labels at 3.2% of frame height, section titles at 8% — the footage stays the subject",
+    "Every panel carries the brand slash: a 6px-wide grape→cyan bar on its left edge, top cut at 20°",
+    "Cyan is the only accent and covers under 2% of the frame",
+    "Screen callouts = dim everything outside the target to 45% + 2px cyan rounded highlight box + small step chip; the zoom (if any) is smooth, 1.0→max 1.8, 18 frames, at most once per step",
+    "Motion is smooth and short: enter 12 frames (ease-out cubic, 16px slide + fade), exit 8 frames; no overshoot, no shake",
+    "Section changes use the 20° diagonal wipe (grape band then cyan band), 14 frames — the only loud moment"
+  ],
+  "weird_move": {
+    "what": "The 20° brand slash",
+    "how": "Everything in the kit is orthogonal and quiet EXCEPT the 20° cut: the top of every panel's accent bar, the section wipe, and the lower-third tick. It is the banner's seam, reused as a signature.",
+    "why": "It ties the sober video to the loud thumbnails/banner without importing their cartoon type"
+  },
+  "archetypes": [
+    {
+      "name": "TITLE",
+      "use": "first 3s: video topic",
+      "layout": "lower-left panel: meta label ('TUTORIAL · OBS') + one-line title"
+    },
+    {
+      "name": "LOWER_THIRD",
+      "use": "first on-camera appearance",
+      "layout": "logo disc + 'Alejoxgaming' + 'Tutoriales · Tecnología · Streaming', panel with brand slash"
+    },
+    {
+      "name": "SECTION",
+      "use": "chapter change",
+      "layout": "diagonal wipe → dark frame with '01' + section title left-aligned, 1.5s, wipe out"
+    },
+    {
+      "name": "KEYWORD",
+      "use": "a key term the viewer must remember (sparingly, max 1 per 30s)",
+      "layout": "small panel lower-left, term in white, optional cyan word"
+    },
+    {
+      "name": "SPOTLIGHT",
+      "use": "screen capture: where to click",
+      "layout": "dim + highlight box + step chip ('PASO 2 · Habilita el servidor WebSocket'), optional smooth zoom"
+    },
+    {
+      "name": "VALUE",
+      "use": "exact values to copy: port, IP, setting",
+      "layout": "panel with label + JetBrains Mono value, copy icon"
+    },
+    {
+      "name": "CHECKLIST",
+      "use": "requirements / recap",
+      "layout": "panel with 2-4 rows, green checks drawing in one by one"
+    },
+    {
+      "name": "COMPARE",
+      "use": "A vs B (price, free vs pro)",
+      "layout": "two columns in one panel, winner gets a cyan hairline, loser gray with red strike"
+    },
+    {
+      "name": "OUTRO",
+      "use": "last 10s",
+      "layout": "dark frame, logo disc, 'Gracias por ver' + two end-screen slots as flat panels"
+    }
+  ],
+  "motion": {
+    "easing": "Easing.out(Easing.cubic) or spring({damping: 200}) — critically damped, zero overshoot",
+    "durations": {
+      "enter": "12 frames",
+      "exit": "8 frames",
+      "wipe": "14 frames",
+      "zoom": "18 frames",
+      "hold_min": "2s"
+    },
+    "entrances": [
+      "16px slide + fade",
+      "width reveal for bars",
+      "stroke draw-on (@remotion/paths) for highlight boxes and checks"
+    ],
+    "never_moves": [
+      "talking-head framing (no punch-ins)",
+      "text once settled"
+    ],
+    "motion_blur": "CameraMotionBlur only on the section wipe and screen zooms",
+    "zoom_budget": "talking head: 0 zooms. Screen capture: max 1 zoom per step, only to make something legible"
+  },
+  "pacing": {
+    "long_form": "the footage carries the video; overlays are sparse and functional",
+    "shorts": "captions 2-4 words per chunk, Inter 700, white with the spoken word in cyan, 4-frame rise (no scale pop); jump cuts allowed, zooms not",
+    "shorts_layout": "Screen segments use a SPLIT: top ~42% speaker (face-cam crop, edge to edge), bottom ~58% screen crop edge to edge, straight divider with the slash at its left end, captions on the divider. Fallback: full-bleed screen crop over a blurred 40%-dark copy of itself. Never flat black areas."
+  },
+  "voice": {
+    "register": "direct, neutral Latin American Spanish (tú), technical and exact",
+    "sentence_length": "labels 2-6 words",
+    "headline_shape": "sentence case statements: 'Conecta Deckboard con OBS'",
+    "banned_words": [
+      "increíble",
+      "brutal",
+      "épico",
+      "INSANO"
+    ]
+  },
+  "bans": [
+    "Never condensed, skewed, outlined or shadowed display type",
+    "Never yellow in video overlays",
+    "Never a punch-in or zoom on the talking head",
+    "Never more than one zoom per screen-capture step",
+    "Never overshoot, bounce, shake, or scale-pop entrances",
+    "Never ALL CAPS titles (caps only for small meta labels)",
+    "Never more than one overlay on screen at once (Shorts: captions + at most one other)",
+    "Never cover the speaker's face or the UI element being explained",
+    "Never glows, textures, particles, emoji, or gradients except the brand slash",
+    "Never full subtitles in 16:9 long form",
+    "Never place a chip/label over the UI element being explained",
+    "Never partial-word colouring",
+    "Never end-screen cards in Shorts",
+    "Never an overlay while a burned-in source graphic is on screen",
+    "Never flat black/empty areas over ~8% of a Short frame (outro excepted)"
+  ],
+  "tests": [
+    {
+      "id": "T1",
+      "test": "Cyan covers under 2% of the frame; no yellow pixels from overlays",
+      "auto": true
+    },
+    {
+      "id": "T2",
+      "test": "At most 2 type sizes in one frame",
+      "auto": false
+    },
+    {
+      "id": "T3",
+      "test": "Largest overlay text under 9% of frame height",
+      "auto": false
+    },
+    {
+      "id": "T4",
+      "test": "All video text Geist / Geist Mono (Jost only for brand moments), sentence case (meta labels excepted), no stroke, no shadow, no skew",
+      "auto": false
+    },
+    {
+      "id": "T5",
+      "test": "Every panel has the 20° grape→cyan slash on its left edge",
+      "auto": false
+    },
+    {
+      "id": "T6",
+      "test": "Overlays inside the platform safe area",
+      "auto": true
+    },
+    {
+      "id": "T7",
+      "test": "Entrances 12f, exits 8f, zero overshoot",
+      "auto": false
+    },
+    {
+      "id": "T8",
+      "test": "Zero zooms on talking-head segments; max one zoom per SPOTLIGHT step",
+      "auto": false
+    },
+    {
+      "id": "T9",
+      "test": "Smallest text >= 26px on a 1080px-tall frame (16:9) or 1080px-wide frame (9:16)",
+      "auto": false
+    },
+    {
+      "id": "T10",
+      "test": "Squint test: the footage, not the graphics, is the first thing you see",
+      "auto": false
+    },
+    {
+      "id": "T11",
+      "test": "Logo mark bbox centre within 1.5% of disc diameter horizontally and 2-4% ABOVE disc centre vertically (optical), measured on a rendered still for every archetype showing the disc",
+      "auto": true
+    },
+    {
+      "id": "T12",
+      "test": "Shorts: flat #111/#0E0E12 area <= 8% of the frame (outro excepted)",
+      "auto": true
+    }
+  ],
+  "reconstruction": {
+    "attempted": true,
+    "gaps_found": [
+      "User caught logo off-centre in disc (6% left, 4% low); fixed via cropped mark + flex centring + measured test T11",
+      "v2 critic r1: spotlight zoom must centre the target (no dead space); box wraps only the target row",
+      "v2 critic r1: title collided with burned-in SUSCRITO banner; Shorts title+captions overlapped",
+      "v2 critic r1: Shorts screen footage too small (29%) -> fill safe width, crop inside chrome",
+      "User: Shorts screen segments left ~55% flat black -> split layout"
+    ],
+    "passes": 1
+  }
+}

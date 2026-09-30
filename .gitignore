@@ -5,3 +5,8 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Source footage and renders (large binaries)
+src/video/
+public/*.mp4
+*_editado*.mp4

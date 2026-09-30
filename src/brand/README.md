@@ -1,0 +1,38 @@
+# Alejox brand kit (`src/brand/`) - DNA v2 "Tech Clean"
+
+Small white Geist labels on flat near-black panels, one cyan accent, a 20 degree
+grape-to-cyan slash as the only flourish, footage untouched. Rules:
+`.claude/skills/alejox-edit-dna/` (`PROMPT.md`, `dna.json`); constants: `tokens.ts`.
+
+## New video in 5 steps
+1. Put the master in `public/` (plus a light proxy for the Studio, same timestamps).
+2. Copy `examples/deckboard.config.ts` (16:9) or `examples/deckboard.short.config.ts` (9:16)
+   to `examples/<video>.config.ts` and set `source` (file, preview, size).
+3. Set `items` from the transcript: `camera` / `screen` segments in SOURCE seconds,
+   `section` cards, `join: "cut"` for jump cuts. Shorts also set `cameraCrop`, `screen`, `captions`.
+4. List `beats` by source seconds (`at: 128.2`): `title`, `lowerThird`, `keyword`,
+   `spotlight` (target in 1920x1080 screen coords, optional `zoom` <= 1.8), `value`,
+   `checklist`, `compare`, `subscribe`. The engine maps them across segments and wipes.
+5. Register in `src/Root.tsx`, one line (duration comes from `calculateMetadata`):
+   `<BrandVideoComposition id="MiVideo" config={miConfig} />` or `<BrandShortComposition ... />`.
+
+The config is the composition's default props with a zod schema, so it is editable in the
+Studio props panel. Templates (`PlantillaAlejox*.tsx`) hold no video-specific values.
+
+## Archetypes (one file each)
+`TitleCard`, `LowerThird`, `SectionCard`, `Keyword`, `Spotlight` (+ `ZoomStage`), `ValueCard`,
+`Checklist`, `Compare`, `Outro`, `Captions` (Shorts only), all built on `Panel` (the slash), plus
+`SubscribeCard` (variants `classic` / `clean`; `subscribe` beat; standalone transparent composition
+`SuscribeteAlejox`, ProRes 4444 friendly).
+
+## Rules the kit enforces
+- One overlay at a time; footage is never zoomed except inside a Spotlight (<= 1.8x, 18f).
+- Enter 12f (ease-out, 16px slide + fade), exit 8f, wipe 14f, no overshoot, shake or scale-pop.
+- Geist 500/700 + Geist Mono (Jost for brand moments, Anton only in thumbnails); no stroke/shadow/skew on type; text >= 26px.
+- Audio: pictures muted, one audible `<Audio>` per segment, delayed `audioDelayFrames`.
+- Logo: vector `LogoMark` (optical centring baked in) inside `LogoDisc`; margin system: `MARGIN` 96 / `EDGE` 64.
+- Nearly full disk: render only stills: `npx remotion still <id> out.png --frame=N`.
+
+## Fonts
+
+Bundled locally in `public/fonts/` (variable TTFs) and loaded in `src/brand/fonts.ts` with `@remotion/fonts`, so renders work offline. Geist = video text, Geist Mono = values, Jost = brand moments, Anton = thumbnails only (shipped, not loaded). To change a font, drop the file in `public/fonts/` and edit `fonts.ts`.

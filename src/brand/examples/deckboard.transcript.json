@@ -1,0 +1,7515 @@
+[
+ {
+  "id": 0,
+  "start": 0.0,
+  "end": 4.78,
+  "text": "Hola amigos como esta mi nombre es Alejandro y Alejox Gaming y vamos a validar como utilizar",
+  "words": [
+   {
+    "w": "Hola",
+    "start": 0.0,
+    "end": 0.1
+   },
+   {
+    "w": "amigos",
+    "start": 0.1,
+    "end": 0.32
+   },
+   {
+    "w": "como",
+    "start": 0.32,
+    "end": 0.6
+   },
+   {
+    "w": "esta",
+    "start": 0.6,
+    "end": 0.78
+   },
+   {
+    "w": "mi",
+    "start": 0.78,
+    "end": 0.96
+   },
+   {
+    "w": "nombre",
+    "start": 0.96,
+    "end": 1.14
+   },
+   {
+    "w": "es",
+    "start": 1.14,
+    "end": 1.4
+   },
+   {
+    "w": "Alejandro",
+    "start": 1.4,
+    "end": 1.9
+   },
+   {
+    "w": "y",
+    "start": 1.9,
+    "end": 2.02
+   },
+   {
+    "w": "Alejox",
+    "start": 2.02,
+    "end": 2.42
+   },
+   {
+    "w": "Gaming",
+    "start": 2.42,
+    "end": 2.72
+   },
+   {
+    "w": "y",
+    "start": 2.72,
+    "end": 3.14
+   },
+   {
+    "w": "vamos",
+    "start": 3.14,
+    "end": 3.34
+   },
+   {
+    "w": "a",
+    "start": 3.34,
+    "end": 3.5
+   },
+   {
+    "w": "validar",
+    "start": 3.5,
+    "end": 4.0
+   },
+   {
+    "w": "como",
+    "start": 4.0,
+    "end": 4.32
+   },
+   {
+    "w": "utilizar",
+    "start": 4.32,
+    "end": 4.78
+   }
+  ]
+ },
+ {
+  "id": 1,
+  "start": 4.78,
+  "end": 10.18,
+  "text": "un stream deck totalmente gratuito sin tener que comprar absolutamente nada utilizando tan",
+  "words": [
+   {
+    "w": "un",
+    "start": 4.78,
+    "end": 4.98
+   },
+   {
+    "w": "stream",
+    "start": 4.98,
+    "end": 5.26
+   },
+   {
+    "w": "deck",
+    "start": 5.26,
+    "end": 5.54
+   },
+   {
+    "w": "totalmente",
+    "start": 5.54,
+    "end": 6.16
+   },
+   {
+    "w": "gratuito",
+    "start": 6.16,
+    "end": 6.84
+   },
+   {
+    "w": "sin",
+    "start": 6.84,
+    "end": 7.14
+   },
+   {
+    "w": "tener",
+    "start": 7.14,
+    "end": 7.4
+   },
+   {
+    "w": "que",
+    "start": 7.4,
+    "end": 7.54
+   },
+   {
+    "w": "comprar",
+    "start": 7.54,
+    "end": 7.86
+   },
+   {
+    "w": "absolutamente",
+    "start": 7.86,
+    "end": 8.74
+   },
+   {
+    "w": "nada",
+    "start": 8.74,
+    "end": 9.28
+   },
+   {
+    "w": "utilizando",
+    "start": 9.28,
+    "end": 10.02
+   },
+   {
+    "w": "tan",
+    "start": 10.02,
+    "end": 10.18
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "start": 10.18,
+  "end": 12.48,
+  "text": "solo nuestro celular o una tableta.",
+  "words": [
+   {
+    "w": "solo",
+    "start": 10.18,
+    "end": 10.44
+   },
+   {
+    "w": "nuestro",
+    "start": 10.44,
+    "end": 10.72
+   },
+   {
+    "w": "celular",
+    "start": 10.72,
+    "end": 11.32
+   },
+   {
+    "w": "o",
+    "start": 11.32,
+    "end": 11.64
+   },
+   {
+    "w": "una",
+    "start": 11.64,
+    "end": 11.9
+   },
+   {
+    "w": "tableta.",
+    "start": 11.9,
+    "end": 12.48
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "start": 12.54,
+  "end": 17.8,
+  "text": "Un stream deck físico obviamente es increíble es lo mejor pero pues suele ser más costoso",
+  "words": [
+   {
+    "w": "Un",
+    "start": 12.54,
+    "end": 12.62
+   },
+   {
+    "w": "stream",
+    "start": 12.62,
+    "end": 12.9
+   },
+   {
+    "w": "deck",
+    "start": 12.9,
+    "end": 13.16
+   },
+   {
+    "w": "físico",
+    "start": 13.16,
+    "end": 13.8
+   },
+   {
+    "w": "obviamente",
+    "start": 13.8,
+    "end": 14.1
+   },
+   {
+    "w": "es",
+    "start": 14.1,
+    "end": 14.8
+   },
+   {
+    "w": "increíble",
+    "start": 14.8,
+    "end": 15.56
+   },
+   {
+    "w": "es",
+    "start": 15.56,
+    "end": 15.76
+   },
+   {
+    "w": "lo",
+    "start": 15.76,
+    "end": 15.86
+   },
+   {
+    "w": "mejor",
+    "start": 15.86,
+    "end": 16.12
+   },
+   {
+    "w": "pero",
+    "start": 16.12,
+    "end": 16.38
+   },
+   {
+    "w": "pues",
+    "start": 16.38,
+    "end": 16.6
+   },
+   {
+    "w": "suele",
+    "start": 16.6,
+    "end": 16.9
+   },
+   {
+    "w": "ser",
+    "start": 16.9,
+    "end": 17.1
+   },
+   {
+    "w": "más",
+    "start": 17.1,
+    "end": 17.24
+   },
+   {
+    "w": "costoso",
+    "start": 17.24,
+    "end": 17.8
+   }
+  ]
+ },
+ {
+  "id": 4,
+  "start": 17.8,
+  "end": 22.2,
+  "text": "pero gracias a Deckboard vamos a convertir nuestro celular o tableta en una botonera",
+  "words": [
+   {
+    "w": "pero",
+    "start": 17.8,
+    "end": 18.16
+   },
+   {
+    "w": "gracias",
+    "start": 18.16,
+    "end": 18.48
+   },
+   {
+    "w": "a",
+    "start": 18.48,
+    "end": 18.66
+   },
+   {
+    "w": "Deckboard",
+    "start": 18.66,
+    "end": 19.04
+   },
+   {
+    "w": "vamos",
+    "start": 19.04,
+    "end": 19.34
+   },
+   {
+    "w": "a",
+    "start": 19.34,
+    "end": 19.5
+   },
+   {
+    "w": "convertir",
+    "start": 19.5,
+    "end": 20.14
+   },
+   {
+    "w": "nuestro",
+    "start": 20.14,
+    "end": 20.3
+   },
+   {
+    "w": "celular",
+    "start": 20.3,
+    "end": 20.8
+   },
+   {
+    "w": "o",
+    "start": 20.8,
+    "end": 20.92
+   },
+   {
+    "w": "tableta",
+    "start": 20.92,
+    "end": 21.42
+   },
+   {
+    "w": "en",
+    "start": 21.42,
+    "end": 21.6
+   },
+   {
+    "w": "una",
+    "start": 21.6,
+    "end": 21.74
+   },
+   {
+    "w": "botonera",
+    "start": 21.74,
+    "end": 22.2
+   }
+  ]
+ },
+ {
+  "id": 5,
+  "start": 22.2,
+  "end": 24.3,
+  "text": "virtual, sin nada más que decir vamos a darle.",
+  "words": [
+   {
+    "w": "virtual,",
+    "start": 22.2,
+    "end": 22.58
+   },
+   {
+    "w": "sin",
+    "start": 23.0,
+    "end": 23.02
+   },
+   {
+    "w": "nada",
+    "start": 23.02,
+    "end": 23.18
+   },
+   {
+    "w": "más",
+    "start": 23.18,
+    "end": 23.38
+   },
+   {
+    "w": "que",
+    "start": 23.38,
+    "end": 23.48
+   },
+   {
+    "w": "decir",
+    "start": 23.48,
+    "end": 23.72
+   },
+   {
+    "w": "vamos",
+    "start": 23.72,
+    "end": 23.96
+   },
+   {
+    "w": "a",
+    "start": 23.96,
+    "end": 24.12
+   },
+   {
+    "w": "darle.",
+    "start": 24.12,
+    "end": 24.3
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "start": 26.37,
+  "end": 32.88,
+  "text": "En si que es Deckboard Deckboard es una aplicación que se enlaza con nuestro OBS entonces para ello",
+  "words": [
+   {
+    "w": "En",
+    "start": 26.37,
+    "end": 26.72
+   },
+   {
+    "w": "si",
+    "start": 26.72,
+    "end": 26.9
+   },
+   {
+    "w": "que",
+    "start": 26.9,
+    "end": 27.08
+   },
+   {
+    "w": "es",
+    "start": 27.08,
+    "end": 27.22
+   },
+   {
+    "w": "Deckboard",
+    "start": 27.22,
+    "end": 27.62
+   },
+   {
+    "w": "Deckboard",
+    "start": 27.62,
+    "end": 28.1
+   },
+   {
+    "w": "es",
+    "start": 28.1,
+    "end": 28.3
+   },
+   {
+    "w": "una",
+    "start": 28.3,
+    "end": 28.46
+   },
+   {
+    "w": "aplicación",
+    "start": 28.46,
+    "end": 29.22
+   },
+   {
+    "w": "que",
+    "start": 29.22,
+    "end": 29.7
+   },
+   {
+    "w": "se",
+    "start": 29.7,
+    "end": 29.9
+   },
+   {
+    "w": "enlaza",
+    "start": 29.9,
+    "end": 30.46
+   },
+   {
+    "w": "con",
+    "start": 30.46,
+    "end": 30.72
+   },
+   {
+    "w": "nuestro",
+    "start": 30.72,
+    "end": 31.0
+   },
+   {
+    "w": "OBS",
+    "start": 31.0,
+    "end": 31.72
+   },
+   {
+    "w": "entonces",
+    "start": 31.72,
+    "end": 32.2
+   },
+   {
+    "w": "para",
+    "start": 32.2,
+    "end": 32.56
+   },
+   {
+    "w": "ello",
+    "start": 32.56,
+    "end": 32.88
+   }
+  ]
+ },
+ {
+  "id": 7,
+  "start": 32.88,
+  "end": 38.8,
+  "text": "lo primero que tenemos que hacer es descargar la aplicación en nuestro computador vamos",
+  "words": [
+   {
+    "w": "lo",
+    "start": 32.88,
+    "end": 33.26
+   },
+   {
+    "w": "primero",
+    "start": 33.26,
+    "end": 33.54
+   },
+   {
+    "w": "que",
+    "start": 33.54,
+    "end": 33.74
+   },
+   {
+    "w": "tenemos",
+    "start": 33.74,
+    "end": 33.96
+   },
+   {
+    "w": "que",
+    "start": 33.96,
+    "end": 34.22
+   },
+   {
+    "w": "hacer",
+    "start": 34.22,
+    "end": 34.44
+   },
+   {
+    "w": "es",
+    "start": 34.44,
+    "end": 35.16
+   },
+   {
+    "w": "descargar",
+    "start": 35.16,
+    "end": 35.86
+   },
+   {
+    "w": "la",
+    "start": 35.86,
+    "end": 36.18
+   },
+   {
+    "w": "aplicación",
+    "start": 36.18,
+    "end": 37.02
+   },
+   {
+    "w": "en",
+    "start": 37.02,
+    "end": 37.4
+   },
+   {
+    "w": "nuestro",
+    "start": 37.4,
+    "end": 37.64
+   },
+   {
+    "w": "computador",
+    "start": 37.64,
+    "end": 38.36
+   },
+   {
+    "w": "vamos",
+    "start": 38.36,
+    "end": 38.8
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "start": 38.8,
+  "end": 41.42,
+  "text": "a buscar en Google Deckboard.",
+  "words": [
+   {
+    "w": "a",
+    "start": 38.8,
+    "end": 39.0
+   },
+   {
+    "w": "buscar",
+    "start": 39.0,
+    "end": 39.28
+   },
+   {
+    "w": "en",
+    "start": 39.28,
+    "end": 40.18
+   },
+   {
+    "w": "Google",
+    "start": 40.18,
+    "end": 40.38
+   },
+   {
+    "w": "Deckboard.",
+    "start": 40.38,
+    "end": 41.42
+   }
+  ]
+ },
+ {
+  "id": 9,
+  "start": 41.56,
+  "end": 48.36,
+  "text": "Acá nos sale de primero validamos que la página sea deckboard.app y acá vamos a descargar",
+  "words": [
+   {
+    "w": "Acá",
+    "start": 41.56,
+    "end": 41.74
+   },
+   {
+    "w": "nos",
+    "start": 41.74,
+    "end": 41.84
+   },
+   {
+    "w": "sale",
+    "start": 41.84,
+    "end": 42.02
+   },
+   {
+    "w": "de",
+    "start": 42.02,
+    "end": 42.14
+   },
+   {
+    "w": "primero",
+    "start": 42.14,
+    "end": 42.48
+   },
+   {
+    "w": "validamos",
+    "start": 42.48,
+    "end": 43.18
+   },
+   {
+    "w": "que",
+    "start": 43.18,
+    "end": 43.38
+   },
+   {
+    "w": "la",
+    "start": 43.38,
+    "end": 43.52
+   },
+   {
+    "w": "página",
+    "start": 43.52,
+    "end": 43.9
+   },
+   {
+    "w": "sea",
+    "start": 43.9,
+    "end": 44.22
+   },
+   {
+    "w": "deckboard",
+    "start": 44.22,
+    "end": 44.8
+   },
+   {
+    "w": ".app",
+    "start": 44.8,
+    "end": 45.44
+   },
+   {
+    "w": "y",
+    "start": 45.44,
+    "end": 46.72
+   },
+   {
+    "w": "acá",
+    "start": 46.72,
+    "end": 47.0
+   },
+   {
+    "w": "vamos",
+    "start": 47.0,
+    "end": 47.36
+   },
+   {
+    "w": "a",
+    "start": 47.36,
+    "end": 47.6
+   },
+   {
+    "w": "descargar",
+    "start": 47.6,
+    "end": 48.36
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "start": 48.36,
+  "end": 53.76,
+  "text": "gratuita seleccionamos nuestro sistema operativo muy importante esta aplicación es gratuita",
+  "words": [
+   {
+    "w": "gratuita",
+    "start": 48.36,
+    "end": 49.0
+   },
+   {
+    "w": "seleccionamos",
+    "start": 49.0,
+    "end": 49.96
+   },
+   {
+    "w": "nuestro",
+    "start": 49.96,
+    "end": 50.22
+   },
+   {
+    "w": "sistema",
+    "start": 50.22,
+    "end": 50.68
+   },
+   {
+    "w": "operativo",
+    "start": 50.68,
+    "end": 51.2
+   },
+   {
+    "w": "muy",
+    "start": 51.2,
+    "end": 51.76
+   },
+   {
+    "w": "importante",
+    "start": 51.76,
+    "end": 52.24
+   },
+   {
+    "w": "esta",
+    "start": 52.24,
+    "end": 52.54
+   },
+   {
+    "w": "aplicación",
+    "start": 52.54,
+    "end": 52.98
+   },
+   {
+    "w": "es",
+    "start": 52.98,
+    "end": 53.12
+   },
+   {
+    "w": "gratuita",
+    "start": 53.12,
+    "end": 53.76
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "start": 53.76,
+  "end": 60.84,
+  "text": "tanto en Windows como en Mac que eso es bien relevante en ese aspecto yo en el streaming principal",
+  "words": [
+   {
+    "w": "tanto",
+    "start": 53.76,
+    "end": 54.16
+   },
+   {
+    "w": "en",
+    "start": 54.16,
+    "end": 54.42
+   },
+   {
+    "w": "Windows",
+    "start": 54.42,
+    "end": 54.8
+   },
+   {
+    "w": "como",
+    "start": 54.8,
+    "end": 55.14
+   },
+   {
+    "w": "en",
+    "start": 55.14,
+    "end": 55.32
+   },
+   {
+    "w": "Mac",
+    "start": 55.32,
+    "end": 55.5
+   },
+   {
+    "w": "que",
+    "start": 55.5,
+    "end": 55.92
+   },
+   {
+    "w": "eso",
+    "start": 55.92,
+    "end": 56.14
+   },
+   {
+    "w": "es",
+    "start": 56.14,
+    "end": 56.3
+   },
+   {
+    "w": "bien",
+    "start": 56.3,
+    "end": 56.82
+   },
+   {
+    "w": "relevante",
+    "start": 56.82,
+    "end": 57.52
+   },
+   {
+    "w": "en",
+    "start": 57.52,
+    "end": 57.74
+   },
+   {
+    "w": "ese",
+    "start": 57.74,
+    "end": 57.9
+   },
+   {
+    "w": "aspecto",
+    "start": 57.9,
+    "end": 59.16
+   },
+   {
+    "w": "yo",
+    "start": 59.16,
+    "end": 59.42
+   },
+   {
+    "w": "en",
+    "start": 59.42,
+    "end": 59.58
+   },
+   {
+    "w": "el",
+    "start": 59.58,
+    "end": 59.74
+   },
+   {
+    "w": "streaming",
+    "start": 59.74,
+    "end": 60.32
+   },
+   {
+    "w": "principal",
+    "start": 60.32,
+    "end": 60.84
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "start": 60.84,
+  "end": 63.82,
+  "text": "lo tengo en Mac y funciona perfecto.",
+  "words": [
+   {
+    "w": "lo",
+    "start": 60.84,
+    "end": 61.08
+   },
+   {
+    "w": "tengo",
+    "start": 61.08,
+    "end": 61.3
+   },
+   {
+    "w": "en",
+    "start": 61.3,
+    "end": 61.44
+   },
+   {
+    "w": "Mac",
+    "start": 61.44,
+    "end": 61.68
+   },
+   {
+    "w": "y",
+    "start": 61.68,
+    "end": 62.12
+   },
+   {
+    "w": "funciona",
+    "start": 62.12,
+    "end": 62.56
+   },
+   {
+    "w": "perfecto.",
+    "start": 62.56,
+    "end": 63.82
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "start": 63.82,
+  "end": 70.04,
+  "text": "Una vez descarga nuestra aplicación la ejecutamos y acá ya es darle lo de siempre",
+  "words": [
+   {
+    "w": "Una",
+    "start": 63.82,
+    "end": 64.22
+   },
+   {
+    "w": "vez",
+    "start": 64.22,
+    "end": 64.38
+   },
+   {
+    "w": "descarga",
+    "start": 64.38,
+    "end": 64.8
+   },
+   {
+    "w": "nuestra",
+    "start": 64.8,
+    "end": 65.1
+   },
+   {
+    "w": "aplicación",
+    "start": 65.1,
+    "end": 65.8
+   },
+   {
+    "w": "la",
+    "start": 65.8,
+    "end": 65.96
+   },
+   {
+    "w": "ejecutamos",
+    "start": 65.96,
+    "end": 66.64
+   },
+   {
+    "w": "y",
+    "start": 66.64,
+    "end": 68.58
+   },
+   {
+    "w": "acá",
+    "start": 68.58,
+    "end": 68.74
+   },
+   {
+    "w": "ya",
+    "start": 68.74,
+    "end": 68.98
+   },
+   {
+    "w": "es",
+    "start": 68.98,
+    "end": 69.16
+   },
+   {
+    "w": "darle",
+    "start": 69.16,
+    "end": 69.38
+   },
+   {
+    "w": "lo",
+    "start": 69.38,
+    "end": 69.64
+   },
+   {
+    "w": "de",
+    "start": 69.64,
+    "end": 69.78
+   },
+   {
+    "w": "siempre",
+    "start": 69.78,
+    "end": 70.04
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "start": 70.04,
+  "end": 79.44,
+  "text": "instalar y siguiente voy a ejecutar el programa y se nos deja oír algo así entonces",
+  "words": [
+   {
+    "w": "instalar",
+    "start": 70.04,
+    "end": 70.68
+   },
+   {
+    "w": "y",
+    "start": 70.68,
+    "end": 71.16
+   },
+   {
+    "w": "siguiente",
+    "start": 71.16,
+    "end": 71.58
+   },
+   {
+    "w": "voy",
+    "start": 71.58,
+    "end": 73.26
+   },
+   {
+    "w": "a",
+    "start": 73.26,
+    "end": 73.38
+   },
+   {
+    "w": "ejecutar",
+    "start": 73.38,
+    "end": 73.9
+   },
+   {
+    "w": "el",
+    "start": 73.9,
+    "end": 74.04
+   },
+   {
+    "w": "programa",
+    "start": 74.04,
+    "end": 74.44
+   },
+   {
+    "w": "y",
+    "start": 74.44,
+    "end": 76.28
+   },
+   {
+    "w": "se",
+    "start": 76.28,
+    "end": 76.44
+   },
+   {
+    "w": "nos",
+    "start": 76.44,
+    "end": 76.58
+   },
+   {
+    "w": "deja",
+    "start": 76.58,
+    "end": 76.78
+   },
+   {
+    "w": "oír",
+    "start": 76.78,
+    "end": 77.02
+   },
+   {
+    "w": "algo",
+    "start": 77.02,
+    "end": 77.54
+   },
+   {
+    "w": "así",
+    "start": 77.54,
+    "end": 77.9
+   },
+   {
+    "w": "entonces",
+    "start": 77.9,
+    "end": 79.44
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "start": 79.44,
+  "end": 85.32,
+  "text": "que vamos a hacer lo primero va a hacer conectarlo al OBS aquí ya tenemos la opción de OBS studio",
+  "words": [
+   {
+    "w": "que",
+    "start": 79.44,
+    "end": 79.78
+   },
+   {
+    "w": "vamos",
+    "start": 79.78,
+    "end": 79.94
+   },
+   {
+    "w": "a",
+    "start": 79.94,
+    "end": 80.08
+   },
+   {
+    "w": "hacer",
+    "start": 80.08,
+    "end": 80.24
+   },
+   {
+    "w": "lo",
+    "start": 80.24,
+    "end": 80.38
+   },
+   {
+    "w": "primero",
+    "start": 80.38,
+    "end": 80.64
+   },
+   {
+    "w": "va",
+    "start": 80.64,
+    "end": 80.86
+   },
+   {
+    "w": "a",
+    "start": 80.86,
+    "end": 80.88
+   },
+   {
+    "w": "hacer",
+    "start": 80.88,
+    "end": 80.98
+   },
+   {
+    "w": "conectarlo",
+    "start": 80.98,
+    "end": 81.66
+   },
+   {
+    "w": "al",
+    "start": 81.66,
+    "end": 81.92
+   },
+   {
+    "w": "OBS",
+    "start": 81.92,
+    "end": 82.26
+   },
+   {
+    "w": "aquí",
+    "start": 82.26,
+    "end": 83.26
+   },
+   {
+    "w": "ya",
+    "start": 83.26,
+    "end": 83.52
+   },
+   {
+    "w": "tenemos",
+    "start": 83.52,
+    "end": 83.88
+   },
+   {
+    "w": "la",
+    "start": 83.88,
+    "end": 84.08
+   },
+   {
+    "w": "opción",
+    "start": 84.08,
+    "end": 84.32
+   },
+   {
+    "w": "de",
+    "start": 84.32,
+    "end": 84.5
+   },
+   {
+    "w": "OBS",
+    "start": 84.5,
+    "end": 84.94
+   },
+   {
+    "w": "studio",
+    "start": 84.94,
+    "end": 85.32
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "start": 85.32,
+  "end": 89.42,
+  "text": "yo acá lo tengo limpio ustedes de pronto les sale algunos datos pero esto no es relevante",
+  "words": [
+   {
+    "w": "yo",
+    "start": 85.32,
+    "end": 85.6
+   },
+   {
+    "w": "acá",
+    "start": 85.6,
+    "end": 85.7
+   },
+   {
+    "w": "lo",
+    "start": 85.7,
+    "end": 85.84
+   },
+   {
+    "w": "tengo",
+    "start": 85.84,
+    "end": 86.02
+   },
+   {
+    "w": "limpio",
+    "start": 86.02,
+    "end": 86.36
+   },
+   {
+    "w": "ustedes",
+    "start": 86.36,
+    "end": 86.56
+   },
+   {
+    "w": "de",
+    "start": 86.56,
+    "end": 86.74
+   },
+   {
+    "w": "pronto",
+    "start": 86.74,
+    "end": 86.88
+   },
+   {
+    "w": "les",
+    "start": 86.88,
+    "end": 87.06
+   },
+   {
+    "w": "sale",
+    "start": 87.06,
+    "end": 87.2
+   },
+   {
+    "w": "algunos",
+    "start": 87.2,
+    "end": 87.4
+   },
+   {
+    "w": "datos",
+    "start": 87.4,
+    "end": 87.74
+   },
+   {
+    "w": "pero",
+    "start": 87.74,
+    "end": 88.1
+   },
+   {
+    "w": "esto",
+    "start": 88.1,
+    "end": 88.58
+   },
+   {
+    "w": "no",
+    "start": 88.58,
+    "end": 88.72
+   },
+   {
+    "w": "es",
+    "start": 88.72,
+    "end": 88.82
+   },
+   {
+    "w": "relevante",
+    "start": 88.82,
+    "end": 89.42
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "start": 89.42,
+  "end": 94.7,
+  "text": "antes de él les voy a dar un pequeño truco y se fijan acá hay unos botoncitos o unos",
+  "words": [
+   {
+    "w": "antes",
+    "start": 89.42,
+    "end": 90.26
+   },
+   {
+    "w": "de",
+    "start": 90.26,
+    "end": 90.46
+   },
+   {
+    "w": "él",
+    "start": 90.46,
+    "end": 90.54
+   },
+   {
+    "w": "les",
+    "start": 90.54,
+    "end": 90.66
+   },
+   {
+    "w": "voy",
+    "start": 90.66,
+    "end": 90.78
+   },
+   {
+    "w": "a",
+    "start": 90.78,
+    "end": 90.92
+   },
+   {
+    "w": "dar",
+    "start": 90.92,
+    "end": 91.04
+   },
+   {
+    "w": "un",
+    "start": 91.04,
+    "end": 91.18
+   },
+   {
+    "w": "pequeño",
+    "start": 91.18,
+    "end": 91.44
+   },
+   {
+    "w": "truco",
+    "start": 91.44,
+    "end": 91.92
+   },
+   {
+    "w": "y",
+    "start": 91.92,
+    "end": 92.52
+   },
+   {
+    "w": "se",
+    "start": 92.52,
+    "end": 92.62
+   },
+   {
+    "w": "fijan",
+    "start": 92.62,
+    "end": 93.02
+   },
+   {
+    "w": "acá",
+    "start": 93.02,
+    "end": 93.24
+   },
+   {
+    "w": "hay",
+    "start": 93.24,
+    "end": 93.42
+   },
+   {
+    "w": "unos",
+    "start": 93.42,
+    "end": 93.54
+   },
+   {
+    "w": "botoncitos",
+    "start": 93.54,
+    "end": 94.24
+   },
+   {
+    "w": "o",
+    "start": 94.24,
+    "end": 94.52
+   },
+   {
+    "w": "unos",
+    "start": 94.52,
+    "end": 94.7
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "start": 94.7,
+  "end": 101.56,
+  "text": "cuadritos vamos a dar clic acá y vamos a fijar el OBS acá para qué para saber",
+  "words": [
+   {
+    "w": "cuadritos",
+    "start": 94.7,
+    "end": 95.24
+   },
+   {
+    "w": "vamos",
+    "start": 95.24,
+    "end": 96.04
+   },
+   {
+    "w": "a",
+    "start": 96.04,
+    "end": 96.22
+   },
+   {
+    "w": "dar",
+    "start": 96.22,
+    "end": 96.38
+   },
+   {
+    "w": "clic",
+    "start": 96.38,
+    "end": 96.56
+   },
+   {
+    "w": "acá",
+    "start": 96.56,
+    "end": 96.88
+   },
+   {
+    "w": "y",
+    "start": 96.88,
+    "end": 97.28
+   },
+   {
+    "w": "vamos",
+    "start": 97.28,
+    "end": 97.64
+   },
+   {
+    "w": "a",
+    "start": 97.64,
+    "end": 97.84
+   },
+   {
+    "w": "fijar",
+    "start": 97.84,
+    "end": 98.68
+   },
+   {
+    "w": "el",
+    "start": 98.68,
+    "end": 98.94
+   },
+   {
+    "w": "OBS",
+    "start": 98.94,
+    "end": 99.48
+   },
+   {
+    "w": "acá",
+    "start": 99.48,
+    "end": 99.98
+   },
+   {
+    "w": "para",
+    "start": 99.98,
+    "end": 100.9
+   },
+   {
+    "w": "qué",
+    "start": 100.9,
+    "end": 101.1
+   },
+   {
+    "w": "para",
+    "start": 101.1,
+    "end": 101.3
+   },
+   {
+    "w": "saber",
+    "start": 101.3,
+    "end": 101.56
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "start": 101.56,
+  "end": 107.68,
+  "text": "si nos quedó conectado o no eso es opcional pero pues me gusta tenerlo ahí visualmente",
+  "words": [
+   {
+    "w": "si",
+    "start": 101.56,
+    "end": 101.72
+   },
+   {
+    "w": "nos",
+    "start": 101.72,
+    "end": 101.9
+   },
+   {
+    "w": "quedó",
+    "start": 101.9,
+    "end": 102.12
+   },
+   {
+    "w": "conectado",
+    "start": 102.12,
+    "end": 102.74
+   },
+   {
+    "w": "o",
+    "start": 102.74,
+    "end": 102.98
+   },
+   {
+    "w": "no",
+    "start": 102.98,
+    "end": 103.08
+   },
+   {
+    "w": "eso",
+    "start": 103.08,
+    "end": 103.62
+   },
+   {
+    "w": "es",
+    "start": 103.62,
+    "end": 103.82
+   },
+   {
+    "w": "opcional",
+    "start": 103.82,
+    "end": 104.86
+   },
+   {
+    "w": "pero",
+    "start": 104.86,
+    "end": 105.54
+   },
+   {
+    "w": "pues",
+    "start": 105.54,
+    "end": 105.8
+   },
+   {
+    "w": "me",
+    "start": 105.8,
+    "end": 106.2
+   },
+   {
+    "w": "gusta",
+    "start": 106.2,
+    "end": 106.42
+   },
+   {
+    "w": "tenerlo",
+    "start": 106.42,
+    "end": 106.96
+   },
+   {
+    "w": "ahí",
+    "start": 106.96,
+    "end": 107.06
+   },
+   {
+    "w": "visualmente",
+    "start": 107.06,
+    "end": 107.68
+   }
+  ]
+ },
+ {
+  "id": 20,
+  "start": 107.68,
+  "end": 114.38,
+  "text": "entonces qué vamos a hacer ahora vamos a abrir el OBS y una vez dentro de nuestro OBS",
+  "words": [
+   {
+    "w": "entonces",
+    "start": 107.68,
+    "end": 108.66
+   },
+   {
+    "w": "qué",
+    "start": 108.66,
+    "end": 108.94
+   },
+   {
+    "w": "vamos",
+    "start": 108.94,
+    "end": 109.08
+   },
+   {
+    "w": "a",
+    "start": 109.08,
+    "end": 109.22
+   },
+   {
+    "w": "hacer",
+    "start": 109.22,
+    "end": 109.36
+   },
+   {
+    "w": "ahora",
+    "start": 109.36,
+    "end": 109.58
+   },
+   {
+    "w": "vamos",
+    "start": 109.58,
+    "end": 109.86
+   },
+   {
+    "w": "a",
+    "start": 109.86,
+    "end": 109.98
+   },
+   {
+    "w": "abrir",
+    "start": 109.98,
+    "end": 110.12
+   },
+   {
+    "w": "el",
+    "start": 110.12,
+    "end": 110.3
+   },
+   {
+    "w": "OBS",
+    "start": 110.3,
+    "end": 110.68
+   },
+   {
+    "w": "y",
+    "start": 110.68,
+    "end": 112.8
+   },
+   {
+    "w": "una",
+    "start": 112.8,
+    "end": 112.94
+   },
+   {
+    "w": "vez",
+    "start": 112.94,
+    "end": 113.12
+   },
+   {
+    "w": "dentro",
+    "start": 113.12,
+    "end": 113.42
+   },
+   {
+    "w": "de",
+    "start": 113.42,
+    "end": 113.6
+   },
+   {
+    "w": "nuestro",
+    "start": 113.6,
+    "end": 113.74
+   },
+   {
+    "w": "OBS",
+    "start": 113.74,
+    "end": 114.38
+   }
+  ]
+ },
+ {
+  "id": 21,
+  "start": 114.38,
+  "end": 120.5,
+  "text": "vamos a conectar Dekbork con OBS esto lo vamos a hacer a través de las herramientas en el",
+  "words": [
+   {
+    "w": "vamos",
+    "start": 114.38,
+    "end": 115.08
+   },
+   {
+    "w": "a",
+    "start": 115.08,
+    "end": 115.24
+   },
+   {
+    "w": "conectar",
+    "start": 115.24,
+    "end": 115.88
+   },
+   {
+    "w": "Dekbork",
+    "start": 115.88,
+    "end": 116.56
+   },
+   {
+    "w": "con",
+    "start": 116.56,
+    "end": 116.86
+   },
+   {
+    "w": "OBS",
+    "start": 116.86,
+    "end": 117.48
+   },
+   {
+    "w": "esto",
+    "start": 117.48,
+    "end": 117.9
+   },
+   {
+    "w": "lo",
+    "start": 117.9,
+    "end": 118.06
+   },
+   {
+    "w": "vamos",
+    "start": 118.06,
+    "end": 118.22
+   },
+   {
+    "w": "a",
+    "start": 118.22,
+    "end": 118.48
+   },
+   {
+    "w": "hacer",
+    "start": 118.48,
+    "end": 118.72
+   },
+   {
+    "w": "a",
+    "start": 118.72,
+    "end": 118.94
+   },
+   {
+    "w": "través",
+    "start": 118.94,
+    "end": 119.2
+   },
+   {
+    "w": "de",
+    "start": 119.2,
+    "end": 119.34
+   },
+   {
+    "w": "las",
+    "start": 119.34,
+    "end": 119.48
+   },
+   {
+    "w": "herramientas",
+    "start": 119.48,
+    "end": 120.12
+   },
+   {
+    "w": "en",
+    "start": 120.12,
+    "end": 120.38
+   },
+   {
+    "w": "el",
+    "start": 120.38,
+    "end": 120.5
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "start": 120.5,
+  "end": 128.16,
+  "text": "web socket es decir vamos acá a herramientas ajustes del servidor web socket y muy importante",
+  "words": [
+   {
+    "w": "web",
+    "start": 120.5,
+    "end": 120.66
+   },
+   {
+    "w": "socket",
+    "start": 120.66,
+    "end": 121.04
+   },
+   {
+    "w": "es",
+    "start": 121.04,
+    "end": 121.28
+   },
+   {
+    "w": "decir",
+    "start": 121.28,
+    "end": 121.56
+   },
+   {
+    "w": "vamos",
+    "start": 121.56,
+    "end": 122.36
+   },
+   {
+    "w": "acá",
+    "start": 122.36,
+    "end": 122.68
+   },
+   {
+    "w": "a",
+    "start": 122.68,
+    "end": 123.06
+   },
+   {
+    "w": "herramientas",
+    "start": 123.06,
+    "end": 123.88
+   },
+   {
+    "w": "ajustes",
+    "start": 123.88,
+    "end": 124.54
+   },
+   {
+    "w": "del",
+    "start": 124.54,
+    "end": 124.7
+   },
+   {
+    "w": "servidor",
+    "start": 124.7,
+    "end": 125.1
+   },
+   {
+    "w": "web",
+    "start": 125.1,
+    "end": 125.42
+   },
+   {
+    "w": "socket",
+    "start": 125.42,
+    "end": 125.78
+   },
+   {
+    "w": "y",
+    "start": 125.78,
+    "end": 127.2
+   },
+   {
+    "w": "muy",
+    "start": 127.2,
+    "end": 127.52
+   },
+   {
+    "w": "importante",
+    "start": 127.52,
+    "end": 128.16
+   }
+  ]
+ },
+ {
+  "id": 23,
+  "start": 128.16,
+  "end": 134.98,
+  "text": "fíjese en que esta opción que dice habilitar servidor web socket esté habilitada y adicional",
+  "words": [
+   {
+    "w": "fíjese",
+    "start": 128.16,
+    "end": 129.34
+   },
+   {
+    "w": "en",
+    "start": 129.34,
+    "end": 129.56
+   },
+   {
+    "w": "que",
+    "start": 129.56,
+    "end": 129.7
+   },
+   {
+    "w": "esta",
+    "start": 129.7,
+    "end": 130.28
+   },
+   {
+    "w": "opción",
+    "start": 130.28,
+    "end": 130.7
+   },
+   {
+    "w": "que",
+    "start": 130.7,
+    "end": 130.92
+   },
+   {
+    "w": "dice",
+    "start": 130.92,
+    "end": 131.14
+   },
+   {
+    "w": "habilitar",
+    "start": 131.14,
+    "end": 131.86
+   },
+   {
+    "w": "servidor",
+    "start": 131.86,
+    "end": 132.34
+   },
+   {
+    "w": "web",
+    "start": 132.34,
+    "end": 132.58
+   },
+   {
+    "w": "socket",
+    "start": 132.58,
+    "end": 132.94
+   },
+   {
+    "w": "esté",
+    "start": 132.94,
+    "end": 133.36
+   },
+   {
+    "w": "habilitada",
+    "start": 133.36,
+    "end": 134.16
+   },
+   {
+    "w": "y",
+    "start": 134.16,
+    "end": 134.48
+   },
+   {
+    "w": "adicional",
+    "start": 134.48,
+    "end": 134.98
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "start": 134.98,
+  "end": 141.38,
+  "text": "que este puerto que está acá sea exactamente el mismo que está en Dekbork vamos al Dekbork y",
+  "words": [
+   {
+    "w": "que",
+    "start": 134.98,
+    "end": 135.64
+   },
+   {
+    "w": "este",
+    "start": 135.64,
+    "end": 136.12
+   },
+   {
+    "w": "puerto",
+    "start": 136.12,
+    "end": 136.56
+   },
+   {
+    "w": "que",
+    "start": 136.56,
+    "end": 136.76
+   },
+   {
+    "w": "está",
+    "start": 136.76,
+    "end": 136.98
+   },
+   {
+    "w": "acá",
+    "start": 136.98,
+    "end": 137.26
+   },
+   {
+    "w": "sea",
+    "start": 137.26,
+    "end": 137.66
+   },
+   {
+    "w": "exactamente",
+    "start": 137.66,
+    "end": 138.3
+   },
+   {
+    "w": "el",
+    "start": 138.3,
+    "end": 138.62
+   },
+   {
+    "w": "mismo",
+    "start": 138.62,
+    "end": 138.96
+   },
+   {
+    "w": "que",
+    "start": 138.96,
+    "end": 139.2
+   },
+   {
+    "w": "está",
+    "start": 139.2,
+    "end": 139.44
+   },
+   {
+    "w": "en",
+    "start": 139.44,
+    "end": 139.6
+   },
+   {
+    "w": "Dekbork",
+    "start": 139.6,
+    "end": 140.0
+   },
+   {
+    "w": "vamos",
+    "start": 140.0,
+    "end": 140.42
+   },
+   {
+    "w": "al",
+    "start": 140.42,
+    "end": 140.64
+   },
+   {
+    "w": "Dekbork",
+    "start": 140.64,
+    "end": 141.12
+   },
+   {
+    "w": "y",
+    "start": 141.12,
+    "end": 141.38
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "start": 141.38,
+  "end": 147.98,
+  "text": "vamos a validar esto damos clic en settings y acá vamos a pasar la información que tiene el web",
+  "words": [
+   {
+    "w": "vamos",
+    "start": 141.38,
+    "end": 141.56
+   },
+   {
+    "w": "a",
+    "start": 141.56,
+    "end": 141.72
+   },
+   {
+    "w": "validar",
+    "start": 141.72,
+    "end": 142.08
+   },
+   {
+    "w": "esto",
+    "start": 142.08,
+    "end": 142.38
+   },
+   {
+    "w": "damos",
+    "start": 142.38,
+    "end": 143.3
+   },
+   {
+    "w": "clic",
+    "start": 143.3,
+    "end": 143.56
+   },
+   {
+    "w": "en",
+    "start": 143.56,
+    "end": 143.8
+   },
+   {
+    "w": "settings",
+    "start": 143.8,
+    "end": 144.16
+   },
+   {
+    "w": "y",
+    "start": 144.16,
+    "end": 145.02
+   },
+   {
+    "w": "acá",
+    "start": 145.02,
+    "end": 145.3
+   },
+   {
+    "w": "vamos",
+    "start": 145.3,
+    "end": 145.84
+   },
+   {
+    "w": "a",
+    "start": 145.84,
+    "end": 146.22
+   },
+   {
+    "w": "pasar",
+    "start": 146.22,
+    "end": 146.48
+   },
+   {
+    "w": "la",
+    "start": 146.48,
+    "end": 146.7
+   },
+   {
+    "w": "información",
+    "start": 146.7,
+    "end": 147.02
+   },
+   {
+    "w": "que",
+    "start": 147.02,
+    "end": 147.5
+   },
+   {
+    "w": "tiene",
+    "start": 147.5,
+    "end": 147.72
+   },
+   {
+    "w": "el",
+    "start": 147.72,
+    "end": 147.88
+   },
+   {
+    "w": "web",
+    "start": 147.88,
+    "end": 147.98
+   }
+  ]
+ },
+ {
+  "id": 26,
+  "start": 147.98,
+  "end": 155.36,
+  "text": "socket entonces en el OBS pues primero lo que hablamos el servidor es el 44.60 en mi caso",
+  "words": [
+   {
+    "w": "socket",
+    "start": 147.98,
+    "end": 148.38
+   },
+   {
+    "w": "entonces",
+    "start": 148.38,
+    "end": 149.46
+   },
+   {
+    "w": "en",
+    "start": 149.46,
+    "end": 150.34
+   },
+   {
+    "w": "el",
+    "start": 150.34,
+    "end": 150.46
+   },
+   {
+    "w": "OBS",
+    "start": 150.46,
+    "end": 150.9
+   },
+   {
+    "w": "pues",
+    "start": 150.9,
+    "end": 151.2
+   },
+   {
+    "w": "primero",
+    "start": 151.2,
+    "end": 151.52
+   },
+   {
+    "w": "lo",
+    "start": 151.52,
+    "end": 151.72
+   },
+   {
+    "w": "que",
+    "start": 151.72,
+    "end": 151.86
+   },
+   {
+    "w": "hablamos",
+    "start": 151.86,
+    "end": 152.3
+   },
+   {
+    "w": "el",
+    "start": 152.3,
+    "end": 152.7
+   },
+   {
+    "w": "servidor",
+    "start": 152.7,
+    "end": 153.12
+   },
+   {
+    "w": "es",
+    "start": 153.12,
+    "end": 153.3
+   },
+   {
+    "w": "el",
+    "start": 153.3,
+    "end": 153.4
+   },
+   {
+    "w": "44",
+    "start": 153.4,
+    "end": 153.88
+   },
+   {
+    "w": ".60",
+    "start": 153.88,
+    "end": 154.62
+   },
+   {
+    "w": "en",
+    "start": 154.62,
+    "end": 154.96
+   },
+   {
+    "w": "mi",
+    "start": 154.96,
+    "end": 155.08
+   },
+   {
+    "w": "caso",
+    "start": 155.08,
+    "end": 155.36
+   }
+  ]
+ },
+ {
+  "id": 27,
+  "start": 156.5,
+  "end": 166.02,
+  "text": "entonces puerto 44.60 y la dirección ip la encontramos acá donde dice mostrar información",
+  "words": [
+   {
+    "w": "entonces",
+    "start": 156.5,
+    "end": 157.2
+   },
+   {
+    "w": "puerto",
+    "start": 157.2,
+    "end": 157.8
+   },
+   {
+    "w": "44",
+    "start": 157.8,
+    "end": 158.54
+   },
+   {
+    "w": ".60",
+    "start": 158.54,
+    "end": 159.24
+   },
+   {
+    "w": "y",
+    "start": 159.24,
+    "end": 160.58
+   },
+   {
+    "w": "la",
+    "start": 160.58,
+    "end": 160.72
+   },
+   {
+    "w": "dirección",
+    "start": 160.72,
+    "end": 161.12
+   },
+   {
+    "w": "ip",
+    "start": 161.12,
+    "end": 161.44
+   },
+   {
+    "w": "la",
+    "start": 161.44,
+    "end": 163.62
+   },
+   {
+    "w": "encontramos",
+    "start": 163.62,
+    "end": 163.98
+   },
+   {
+    "w": "acá",
+    "start": 163.98,
+    "end": 164.4
+   },
+   {
+    "w": "donde",
+    "start": 164.4,
+    "end": 164.68
+   },
+   {
+    "w": "dice",
+    "start": 164.68,
+    "end": 164.96
+   },
+   {
+    "w": "mostrar",
+    "start": 164.96,
+    "end": 165.54
+   },
+   {
+    "w": "información",
+    "start": 165.54,
+    "end": 166.02
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "start": 166.02,
+  "end": 178.5,
+  "text": "de conexión la copio cierro esto acá y la pegamos acá y listo acá voy a cerrar le voy a dar clic acá",
+  "words": [
+   {
+    "w": "de",
+    "start": 166.02,
+    "end": 166.4
+   },
+   {
+    "w": "conexión",
+    "start": 166.4,
+    "end": 167.12
+   },
+   {
+    "w": "la",
+    "start": 167.12,
+    "end": 167.84
+   },
+   {
+    "w": "copio",
+    "start": 167.84,
+    "end": 168.6
+   },
+   {
+    "w": "cierro",
+    "start": 168.6,
+    "end": 169.86
+   },
+   {
+    "w": "esto",
+    "start": 169.86,
+    "end": 170.04
+   },
+   {
+    "w": "acá",
+    "start": 170.04,
+    "end": 170.3
+   },
+   {
+    "w": "y",
+    "start": 170.3,
+    "end": 171.88
+   },
+   {
+    "w": "la",
+    "start": 171.88,
+    "end": 172.02
+   },
+   {
+    "w": "pegamos",
+    "start": 172.02,
+    "end": 172.36
+   },
+   {
+    "w": "acá",
+    "start": 172.36,
+    "end": 172.62
+   },
+   {
+    "w": "y",
+    "start": 172.62,
+    "end": 173.66
+   },
+   {
+    "w": "listo",
+    "start": 175.62,
+    "end": 175.98
+   },
+   {
+    "w": "acá",
+    "start": 175.98,
+    "end": 176.18
+   },
+   {
+    "w": "voy",
+    "start": 176.18,
+    "end": 176.38
+   },
+   {
+    "w": "a",
+    "start": 176.38,
+    "end": 176.5
+   },
+   {
+    "w": "cerrar",
+    "start": 176.5,
+    "end": 176.86
+   },
+   {
+    "w": "le",
+    "start": 176.86,
+    "end": 177.54
+   },
+   {
+    "w": "voy",
+    "start": 177.54,
+    "end": 177.7
+   },
+   {
+    "w": "a",
+    "start": 177.7,
+    "end": 177.84
+   },
+   {
+    "w": "dar",
+    "start": 177.84,
+    "end": 177.96
+   },
+   {
+    "w": "clic",
+    "start": 177.96,
+    "end": 178.18
+   },
+   {
+    "w": "acá",
+    "start": 178.18,
+    "end": 178.5
+   }
+  ]
+ },
+ {
+  "id": 29,
+  "start": 178.5,
+  "end": 186.86,
+  "text": "y ya en estos momentos quedó conectado ahora vamos a hacer el tema de la instalación en el",
+  "words": [
+   {
+    "w": "y",
+    "start": 178.5,
+    "end": 179.48
+   },
+   {
+    "w": "ya",
+    "start": 180.88,
+    "end": 181.08
+   },
+   {
+    "w": "en",
+    "start": 181.08,
+    "end": 181.34
+   },
+   {
+    "w": "estos",
+    "start": 181.34,
+    "end": 181.5
+   },
+   {
+    "w": "momentos",
+    "start": 181.5,
+    "end": 181.8
+   },
+   {
+    "w": "quedó",
+    "start": 181.8,
+    "end": 182.26
+   },
+   {
+    "w": "conectado",
+    "start": 182.26,
+    "end": 182.94
+   },
+   {
+    "w": "ahora",
+    "start": 182.94,
+    "end": 184.08
+   },
+   {
+    "w": "vamos",
+    "start": 184.08,
+    "end": 184.54
+   },
+   {
+    "w": "a",
+    "start": 184.54,
+    "end": 184.74
+   },
+   {
+    "w": "hacer",
+    "start": 184.74,
+    "end": 185.0
+   },
+   {
+    "w": "el",
+    "start": 185.0,
+    "end": 185.24
+   },
+   {
+    "w": "tema",
+    "start": 185.24,
+    "end": 185.46
+   },
+   {
+    "w": "de",
+    "start": 185.46,
+    "end": 185.6
+   },
+   {
+    "w": "la",
+    "start": 185.6,
+    "end": 185.68
+   },
+   {
+    "w": "instalación",
+    "start": 185.68,
+    "end": 186.3
+   },
+   {
+    "w": "en",
+    "start": 186.3,
+    "end": 186.74
+   },
+   {
+    "w": "el",
+    "start": 186.74,
+    "end": 186.86
+   }
+  ]
+ },
+ {
+  "id": 30,
+  "start": 186.86,
+  "end": 194.48,
+  "text": "celular para ello es también bastante fácil nos dirigimos en nuestro celular a la play store",
+  "words": [
+   {
+    "w": "celular",
+    "start": 186.86,
+    "end": 187.3
+   },
+   {
+    "w": "para",
+    "start": 187.3,
+    "end": 187.86
+   },
+   {
+    "w": "ello",
+    "start": 187.86,
+    "end": 188.06
+   },
+   {
+    "w": "es",
+    "start": 188.06,
+    "end": 188.24
+   },
+   {
+    "w": "también",
+    "start": 188.24,
+    "end": 188.46
+   },
+   {
+    "w": "bastante",
+    "start": 188.46,
+    "end": 188.92
+   },
+   {
+    "w": "fácil",
+    "start": 188.92,
+    "end": 189.34
+   },
+   {
+    "w": "nos",
+    "start": 189.34,
+    "end": 190.24
+   },
+   {
+    "w": "dirigimos",
+    "start": 192.16,
+    "end": 192.64
+   },
+   {
+    "w": "en",
+    "start": 192.64,
+    "end": 192.8
+   },
+   {
+    "w": "nuestro",
+    "start": 192.8,
+    "end": 192.98
+   },
+   {
+    "w": "celular",
+    "start": 192.98,
+    "end": 193.46
+   },
+   {
+    "w": "a",
+    "start": 193.46,
+    "end": 193.76
+   },
+   {
+    "w": "la",
+    "start": 193.76,
+    "end": 193.86
+   },
+   {
+    "w": "play",
+    "start": 193.86,
+    "end": 194.12
+   },
+   {
+    "w": "store",
+    "start": 194.12,
+    "end": 194.48
+   }
+  ]
+ },
+ {
+  "id": 31,
+  "start": 195.52,
+  "end": 205.34,
+  "text": "y vamos a buscar la aplicación de que estén en abstore o play store buscamos Dekbork y acá",
+  "words": [
+   {
+    "w": "y",
+    "start": 195.52,
+    "end": 196.24
+   },
+   {
+    "w": "vamos",
+    "start": 196.24,
+    "end": 196.4
+   },
+   {
+    "w": "a",
+    "start": 196.4,
+    "end": 196.58
+   },
+   {
+    "w": "buscar",
+    "start": 196.58,
+    "end": 196.84
+   },
+   {
+    "w": "la",
+    "start": 196.84,
+    "end": 197.16
+   },
+   {
+    "w": "aplicación",
+    "start": 197.16,
+    "end": 197.9
+   },
+   {
+    "w": "de",
+    "start": 197.9,
+    "end": 199.32
+   },
+   {
+    "w": "que",
+    "start": 199.32,
+    "end": 199.5
+   },
+   {
+    "w": "estén",
+    "start": 199.5,
+    "end": 199.96
+   },
+   {
+    "w": "en",
+    "start": 199.96,
+    "end": 200.36
+   },
+   {
+    "w": "abstore",
+    "start": 200.36,
+    "end": 200.98
+   },
+   {
+    "w": "o",
+    "start": 200.98,
+    "end": 201.4
+   },
+   {
+    "w": "play",
+    "start": 201.4,
+    "end": 201.8
+   },
+   {
+    "w": "store",
+    "start": 201.8,
+    "end": 202.12
+   },
+   {
+    "w": "buscamos",
+    "start": 202.12,
+    "end": 202.96
+   },
+   {
+    "w": "Dekbork",
+    "start": 202.96,
+    "end": 203.5
+   },
+   {
+    "w": "y",
+    "start": 203.5,
+    "end": 205.04
+   },
+   {
+    "w": "acá",
+    "start": 205.04,
+    "end": 205.34
+   }
+  ]
+ },
+ {
+  "id": 32,
+  "start": 205.34,
+  "end": 212.7,
+  "text": "nos aparece primero es este que sale de arriba para vi instalamos y vamos a abrir la aplicación",
+  "words": [
+   {
+    "w": "nos",
+    "start": 205.34,
+    "end": 205.82
+   },
+   {
+    "w": "aparece",
+    "start": 205.82,
+    "end": 206.18
+   },
+   {
+    "w": "primero",
+    "start": 206.18,
+    "end": 206.72
+   },
+   {
+    "w": "es",
+    "start": 206.72,
+    "end": 206.9
+   },
+   {
+    "w": "este",
+    "start": 206.9,
+    "end": 207.08
+   },
+   {
+    "w": "que",
+    "start": 207.08,
+    "end": 207.24
+   },
+   {
+    "w": "sale",
+    "start": 207.24,
+    "end": 207.44
+   },
+   {
+    "w": "de",
+    "start": 207.44,
+    "end": 207.78
+   },
+   {
+    "w": "arriba",
+    "start": 207.78,
+    "end": 208.24
+   },
+   {
+    "w": "para",
+    "start": 208.24,
+    "end": 208.64
+   },
+   {
+    "w": "vi",
+    "start": 208.64,
+    "end": 208.92
+   },
+   {
+    "w": "instalamos",
+    "start": 208.92,
+    "end": 210.32
+   },
+   {
+    "w": "y",
+    "start": 210.32,
+    "end": 211.44
+   },
+   {
+    "w": "vamos",
+    "start": 211.44,
+    "end": 211.62
+   },
+   {
+    "w": "a",
+    "start": 211.62,
+    "end": 211.86
+   },
+   {
+    "w": "abrir",
+    "start": 211.86,
+    "end": 212.08
+   },
+   {
+    "w": "la",
+    "start": 212.08,
+    "end": 212.22
+   },
+   {
+    "w": "aplicación",
+    "start": 212.22,
+    "end": 212.7
+   }
+  ]
+ },
+ {
+  "id": 33,
+  "start": 212.7,
+  "end": 220.58,
+  "text": "muy importante tanto el computador como el Dekbork como tal tienen que estar en la misma red",
+  "words": [
+   {
+    "w": "muy",
+    "start": 212.7,
+    "end": 213.26
+   },
+   {
+    "w": "importante",
+    "start": 213.26,
+    "end": 213.86
+   },
+   {
+    "w": "tanto",
+    "start": 213.86,
+    "end": 214.64
+   },
+   {
+    "w": "el",
+    "start": 214.64,
+    "end": 214.98
+   },
+   {
+    "w": "computador",
+    "start": 214.98,
+    "end": 215.88
+   },
+   {
+    "w": "como",
+    "start": 215.88,
+    "end": 216.78
+   },
+   {
+    "w": "el",
+    "start": 216.78,
+    "end": 217.5
+   },
+   {
+    "w": "Dekbork",
+    "start": 217.5,
+    "end": 218.78
+   },
+   {
+    "w": "como",
+    "start": 218.78,
+    "end": 218.98
+   },
+   {
+    "w": "tal",
+    "start": 218.98,
+    "end": 219.24
+   },
+   {
+    "w": "tienen",
+    "start": 219.24,
+    "end": 219.54
+   },
+   {
+    "w": "que",
+    "start": 219.54,
+    "end": 219.68
+   },
+   {
+    "w": "estar",
+    "start": 219.68,
+    "end": 219.86
+   },
+   {
+    "w": "en",
+    "start": 219.86,
+    "end": 219.98
+   },
+   {
+    "w": "la",
+    "start": 219.98,
+    "end": 220.04
+   },
+   {
+    "w": "misma",
+    "start": 220.04,
+    "end": 220.24
+   },
+   {
+    "w": "red",
+    "start": 220.24,
+    "end": 220.58
+   }
+  ]
+ },
+ {
+  "id": 34,
+  "start": 220.58,
+  "end": 226.24,
+  "text": "entonces cómo nos vamos a conectar a la aplicación que está en el computador aquí vamos a dar clic",
+  "words": [
+   {
+    "w": "entonces",
+    "start": 220.58,
+    "end": 221.64
+   },
+   {
+    "w": "cómo",
+    "start": 221.64,
+    "end": 222.06
+   },
+   {
+    "w": "nos",
+    "start": 222.06,
+    "end": 222.24
+   },
+   {
+    "w": "vamos",
+    "start": 222.24,
+    "end": 222.34
+   },
+   {
+    "w": "a",
+    "start": 222.34,
+    "end": 222.54
+   },
+   {
+    "w": "conectar",
+    "start": 222.54,
+    "end": 223.2
+   },
+   {
+    "w": "a",
+    "start": 223.2,
+    "end": 223.5
+   },
+   {
+    "w": "la",
+    "start": 223.5,
+    "end": 223.6
+   },
+   {
+    "w": "aplicación",
+    "start": 223.6,
+    "end": 224.14
+   },
+   {
+    "w": "que",
+    "start": 224.14,
+    "end": 224.28
+   },
+   {
+    "w": "está",
+    "start": 224.28,
+    "end": 224.44
+   },
+   {
+    "w": "en",
+    "start": 224.44,
+    "end": 224.52
+   },
+   {
+    "w": "el",
+    "start": 224.52,
+    "end": 224.6
+   },
+   {
+    "w": "computador",
+    "start": 224.6,
+    "end": 225.2
+   },
+   {
+    "w": "aquí",
+    "start": 225.2,
+    "end": 225.48
+   },
+   {
+    "w": "vamos",
+    "start": 225.48,
+    "end": 225.68
+   },
+   {
+    "w": "a",
+    "start": 225.68,
+    "end": 225.86
+   },
+   {
+    "w": "dar",
+    "start": 225.86,
+    "end": 226.0
+   },
+   {
+    "w": "clic",
+    "start": 226.0,
+    "end": 226.24
+   }
+  ]
+ },
+ {
+  "id": 35,
+  "start": 226.24,
+  "end": 232.64,
+  "text": "en el icono de wifi y aquí ya nos aparece la opción para escanear en mi caso voy a escanear",
+  "words": [
+   {
+    "w": "en",
+    "start": 226.24,
+    "end": 226.54
+   },
+   {
+    "w": "el",
+    "start": 226.54,
+    "end": 226.68
+   },
+   {
+    "w": "icono",
+    "start": 226.68,
+    "end": 227.16
+   },
+   {
+    "w": "de",
+    "start": 227.16,
+    "end": 227.38
+   },
+   {
+    "w": "wifi",
+    "start": 227.38,
+    "end": 227.7
+   },
+   {
+    "w": "y",
+    "start": 227.7,
+    "end": 228.42
+   },
+   {
+    "w": "aquí",
+    "start": 228.42,
+    "end": 228.62
+   },
+   {
+    "w": "ya",
+    "start": 228.62,
+    "end": 228.82
+   },
+   {
+    "w": "nos",
+    "start": 228.82,
+    "end": 228.92
+   },
+   {
+    "w": "aparece",
+    "start": 228.92,
+    "end": 229.3
+   },
+   {
+    "w": "la",
+    "start": 229.3,
+    "end": 229.78
+   },
+   {
+    "w": "opción",
+    "start": 229.78,
+    "end": 230.08
+   },
+   {
+    "w": "para",
+    "start": 230.08,
+    "end": 230.3
+   },
+   {
+    "w": "escanear",
+    "start": 230.3,
+    "end": 230.98
+   },
+   {
+    "w": "en",
+    "start": 230.98,
+    "end": 231.54
+   },
+   {
+    "w": "mi",
+    "start": 231.54,
+    "end": 231.66
+   },
+   {
+    "w": "caso",
+    "start": 231.66,
+    "end": 231.94
+   },
+   {
+    "w": "voy",
+    "start": 231.94,
+    "end": 232.2
+   },
+   {
+    "w": "a",
+    "start": 232.2,
+    "end": 232.32
+   },
+   {
+    "w": "escanear",
+    "start": 232.32,
+    "end": 232.64
+   }
+  ]
+ },
+ {
+  "id": 36,
+  "start": 232.64,
+  "end": 238.72,
+  "text": "por medio del celular solamente dar los permisos tomamos el QR y en automático el debe",
+  "words": [
+   {
+    "w": "por",
+    "start": 232.64,
+    "end": 232.8
+   },
+   {
+    "w": "medio",
+    "start": 232.8,
+    "end": 233.16
+   },
+   {
+    "w": "del",
+    "start": 233.16,
+    "end": 233.8
+   },
+   {
+    "w": "celular",
+    "start": 233.8,
+    "end": 234.28
+   },
+   {
+    "w": "solamente",
+    "start": 234.28,
+    "end": 234.86
+   },
+   {
+    "w": "dar",
+    "start": 234.86,
+    "end": 235.3
+   },
+   {
+    "w": "los",
+    "start": 235.3,
+    "end": 235.44
+   },
+   {
+    "w": "permisos",
+    "start": 235.44,
+    "end": 236.02
+   },
+   {
+    "w": "tomamos",
+    "start": 236.02,
+    "end": 236.56
+   },
+   {
+    "w": "el",
+    "start": 236.56,
+    "end": 236.74
+   },
+   {
+    "w": "QR",
+    "start": 236.74,
+    "end": 237.02
+   },
+   {
+    "w": "y",
+    "start": 237.02,
+    "end": 237.48
+   },
+   {
+    "w": "en",
+    "start": 237.48,
+    "end": 237.66
+   },
+   {
+    "w": "automático",
+    "start": 237.66,
+    "end": 238.32
+   },
+   {
+    "w": "el",
+    "start": 238.32,
+    "end": 238.5
+   },
+   {
+    "w": "debe",
+    "start": 238.5,
+    "end": 238.72
+   }
+  ]
+ },
+ {
+  "id": 37,
+  "start": 238.72,
+  "end": 245.38,
+  "text": "conectarse a la aplicación y se fijan ya en pantalla me debe salir la cuadrícula de las",
+  "words": [
+   {
+    "w": "conectarse",
+    "start": 238.72,
+    "end": 239.6
+   },
+   {
+    "w": "a",
+    "start": 239.6,
+    "end": 240.08
+   },
+   {
+    "w": "la",
+    "start": 240.08,
+    "end": 240.2
+   },
+   {
+    "w": "aplicación",
+    "start": 240.2,
+    "end": 240.86
+   },
+   {
+    "w": "y",
+    "start": 240.86,
+    "end": 241.74
+   },
+   {
+    "w": "se",
+    "start": 241.74,
+    "end": 241.82
+   },
+   {
+    "w": "fijan",
+    "start": 241.82,
+    "end": 242.18
+   },
+   {
+    "w": "ya",
+    "start": 242.18,
+    "end": 242.36
+   },
+   {
+    "w": "en",
+    "start": 242.36,
+    "end": 242.48
+   },
+   {
+    "w": "pantalla",
+    "start": 242.48,
+    "end": 242.82
+   },
+   {
+    "w": "me",
+    "start": 242.82,
+    "end": 243.12
+   },
+   {
+    "w": "debe",
+    "start": 243.12,
+    "end": 243.32
+   },
+   {
+    "w": "salir",
+    "start": 243.32,
+    "end": 243.6
+   },
+   {
+    "w": "la",
+    "start": 243.6,
+    "end": 244.04
+   },
+   {
+    "w": "cuadrícula",
+    "start": 244.04,
+    "end": 244.98
+   },
+   {
+    "w": "de",
+    "start": 244.98,
+    "end": 245.18
+   },
+   {
+    "w": "las",
+    "start": 245.18,
+    "end": 245.38
+   }
+  ]
+ },
+ {
+  "id": 38,
+  "start": 245.38,
+  "end": 250.6,
+  "text": "acciones que puede ejecutar a través del Dekbork entonces qué vamos a hacer ahora vamos a empezar",
+  "words": [
+   {
+    "w": "acciones",
+    "start": 245.38,
+    "end": 245.9
+   },
+   {
+    "w": "que",
+    "start": 245.9,
+    "end": 246.12
+   },
+   {
+    "w": "puede",
+    "start": 246.12,
+    "end": 246.36
+   },
+   {
+    "w": "ejecutar",
+    "start": 246.36,
+    "end": 246.82
+   },
+   {
+    "w": "a",
+    "start": 246.82,
+    "end": 246.9
+   },
+   {
+    "w": "través",
+    "start": 246.9,
+    "end": 247.12
+   },
+   {
+    "w": "del",
+    "start": 247.12,
+    "end": 247.3
+   },
+   {
+    "w": "Dekbork",
+    "start": 247.3,
+    "end": 247.7
+   },
+   {
+    "w": "entonces",
+    "start": 247.7,
+    "end": 248.62
+   },
+   {
+    "w": "qué",
+    "start": 248.62,
+    "end": 249.16
+   },
+   {
+    "w": "vamos",
+    "start": 249.16,
+    "end": 249.34
+   },
+   {
+    "w": "a",
+    "start": 249.34,
+    "end": 249.52
+   },
+   {
+    "w": "hacer",
+    "start": 249.52,
+    "end": 249.68
+   },
+   {
+    "w": "ahora",
+    "start": 249.68,
+    "end": 249.9
+   },
+   {
+    "w": "vamos",
+    "start": 249.9,
+    "end": 250.2
+   },
+   {
+    "w": "a",
+    "start": 250.2,
+    "end": 250.38
+   },
+   {
+    "w": "empezar",
+    "start": 250.38,
+    "end": 250.6
+   }
+  ]
+ },
+ {
+  "id": 39,
+  "start": 250.6,
+  "end": 257.12,
+  "text": "a conectar acciones como tal para eso le voy a dar al botón de más y acá este le voy a poner",
+  "words": [
+   {
+    "w": "a",
+    "start": 250.6,
+    "end": 250.82
+   },
+   {
+    "w": "conectar",
+    "start": 250.82,
+    "end": 251.4
+   },
+   {
+    "w": "acciones",
+    "start": 251.4,
+    "end": 251.96
+   },
+   {
+    "w": "como",
+    "start": 251.96,
+    "end": 252.24
+   },
+   {
+    "w": "tal",
+    "start": 252.24,
+    "end": 252.46
+   },
+   {
+    "w": "para",
+    "start": 252.46,
+    "end": 252.82
+   },
+   {
+    "w": "eso",
+    "start": 252.82,
+    "end": 253.06
+   },
+   {
+    "w": "le",
+    "start": 253.06,
+    "end": 253.2
+   },
+   {
+    "w": "voy",
+    "start": 253.2,
+    "end": 253.32
+   },
+   {
+    "w": "a",
+    "start": 253.32,
+    "end": 253.42
+   },
+   {
+    "w": "dar",
+    "start": 253.42,
+    "end": 253.52
+   },
+   {
+    "w": "al",
+    "start": 253.52,
+    "end": 253.66
+   },
+   {
+    "w": "botón",
+    "start": 253.66,
+    "end": 254.14
+   },
+   {
+    "w": "de",
+    "start": 254.14,
+    "end": 254.76
+   },
+   {
+    "w": "más",
+    "start": 254.76,
+    "end": 255.0
+   },
+   {
+    "w": "y",
+    "start": 255.0,
+    "end": 256.04
+   },
+   {
+    "w": "acá",
+    "start": 256.04,
+    "end": 256.24
+   },
+   {
+    "w": "este",
+    "start": 256.24,
+    "end": 256.62
+   },
+   {
+    "w": "le",
+    "start": 256.62,
+    "end": 256.76
+   },
+   {
+    "w": "voy",
+    "start": 256.76,
+    "end": 256.86
+   },
+   {
+    "w": "a",
+    "start": 256.86,
+    "end": 256.94
+   },
+   {
+    "w": "poner",
+    "start": 256.94,
+    "end": 257.12
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "start": 257.12,
+  "end": 268.24,
+  "text": "por ejemplo iniciar en acciones voy a buscar obs y donde dices seleccionar escena acá voy",
+  "words": [
+   {
+    "w": "por",
+    "start": 257.12,
+    "end": 257.34
+   },
+   {
+    "w": "ejemplo",
+    "start": 257.34,
+    "end": 257.7
+   },
+   {
+    "w": "iniciar",
+    "start": 257.7,
+    "end": 259.46
+   },
+   {
+    "w": "en",
+    "start": 259.46,
+    "end": 260.58
+   },
+   {
+    "w": "acciones",
+    "start": 260.58,
+    "end": 261.08
+   },
+   {
+    "w": "voy",
+    "start": 261.08,
+    "end": 261.36
+   },
+   {
+    "w": "a",
+    "start": 261.36,
+    "end": 261.48
+   },
+   {
+    "w": "buscar",
+    "start": 261.48,
+    "end": 261.8
+   },
+   {
+    "w": "obs",
+    "start": 261.8,
+    "end": 262.42
+   },
+   {
+    "w": "y",
+    "start": 262.42,
+    "end": 264.76
+   },
+   {
+    "w": "donde",
+    "start": 264.76,
+    "end": 264.98
+   },
+   {
+    "w": "dices",
+    "start": 264.98,
+    "end": 265.4
+   },
+   {
+    "w": "seleccionar",
+    "start": 265.4,
+    "end": 265.94
+   },
+   {
+    "w": "escena",
+    "start": 265.94,
+    "end": 267.04
+   },
+   {
+    "w": "acá",
+    "start": 267.04,
+    "end": 267.52
+   },
+   {
+    "w": "voy",
+    "start": 267.52,
+    "end": 268.24
+   }
+  ]
+ },
+ {
+  "id": 41,
+  "start": 268.24,
+  "end": 273.94,
+  "text": "a darle clic a donde dice iniciando que sería la escena con la que quiero empezar y le doy",
+  "words": [
+   {
+    "w": "a",
+    "start": 268.24,
+    "end": 268.42
+   },
+   {
+    "w": "darle",
+    "start": 268.42,
+    "end": 268.58
+   },
+   {
+    "w": "clic",
+    "start": 268.58,
+    "end": 268.92
+   },
+   {
+    "w": "a",
+    "start": 268.92,
+    "end": 269.28
+   },
+   {
+    "w": "donde",
+    "start": 269.28,
+    "end": 269.44
+   },
+   {
+    "w": "dice",
+    "start": 269.44,
+    "end": 269.76
+   },
+   {
+    "w": "iniciando",
+    "start": 269.76,
+    "end": 270.44
+   },
+   {
+    "w": "que",
+    "start": 270.44,
+    "end": 270.62
+   },
+   {
+    "w": "sería",
+    "start": 270.62,
+    "end": 270.84
+   },
+   {
+    "w": "la",
+    "start": 270.84,
+    "end": 271.04
+   },
+   {
+    "w": "escena",
+    "start": 271.04,
+    "end": 271.38
+   },
+   {
+    "w": "con",
+    "start": 271.38,
+    "end": 271.6
+   },
+   {
+    "w": "la",
+    "start": 271.6,
+    "end": 271.7
+   },
+   {
+    "w": "que",
+    "start": 271.7,
+    "end": 271.84
+   },
+   {
+    "w": "quiero",
+    "start": 271.84,
+    "end": 272.12
+   },
+   {
+    "w": "empezar",
+    "start": 272.12,
+    "end": 272.78
+   },
+   {
+    "w": "y",
+    "start": 272.78,
+    "end": 273.66
+   },
+   {
+    "w": "le",
+    "start": 273.66,
+    "end": 273.76
+   },
+   {
+    "w": "doy",
+    "start": 273.76,
+    "end": 273.94
+   }
+  ]
+ },
+ {
+  "id": 42,
+  "start": 273.94,
+  "end": 280.04,
+  "text": "clic en agregar si se fijan en automático ya me debe salir el botón para iniciar ahora voy a",
+  "words": [
+   {
+    "w": "clic",
+    "start": 273.94,
+    "end": 274.14
+   },
+   {
+    "w": "en",
+    "start": 274.14,
+    "end": 274.32
+   },
+   {
+    "w": "agregar",
+    "start": 274.32,
+    "end": 274.76
+   },
+   {
+    "w": "si",
+    "start": 274.76,
+    "end": 275.44
+   },
+   {
+    "w": "se",
+    "start": 275.44,
+    "end": 275.56
+   },
+   {
+    "w": "fijan",
+    "start": 275.56,
+    "end": 275.9
+   },
+   {
+    "w": "en",
+    "start": 275.9,
+    "end": 276.0
+   },
+   {
+    "w": "automático",
+    "start": 276.0,
+    "end": 276.66
+   },
+   {
+    "w": "ya",
+    "start": 276.66,
+    "end": 277.04
+   },
+   {
+    "w": "me",
+    "start": 277.04,
+    "end": 277.18
+   },
+   {
+    "w": "debe",
+    "start": 277.18,
+    "end": 277.36
+   },
+   {
+    "w": "salir",
+    "start": 277.36,
+    "end": 277.66
+   },
+   {
+    "w": "el",
+    "start": 277.66,
+    "end": 278.04
+   },
+   {
+    "w": "botón",
+    "start": 278.04,
+    "end": 278.4
+   },
+   {
+    "w": "para",
+    "start": 278.4,
+    "end": 278.6
+   },
+   {
+    "w": "iniciar",
+    "start": 278.6,
+    "end": 279.12
+   },
+   {
+    "w": "ahora",
+    "start": 279.12,
+    "end": 279.66
+   },
+   {
+    "w": "voy",
+    "start": 279.66,
+    "end": 279.9
+   },
+   {
+    "w": "a",
+    "start": 279.9,
+    "end": 280.04
+   }
+  ]
+ },
+ {
+  "id": 43,
+  "start": 280.04,
+  "end": 290.72,
+  "text": "agregar otra escena esta se va a llamar a hablar voy a cambiar su color voy a poner este morado",
+  "words": [
+   {
+    "w": "agregar",
+    "start": 280.04,
+    "end": 280.34
+   },
+   {
+    "w": "otra",
+    "start": 280.34,
+    "end": 280.68
+   },
+   {
+    "w": "escena",
+    "start": 280.68,
+    "end": 281.02
+   },
+   {
+    "w": "esta",
+    "start": 282.53,
+    "end": 283.67
+   },
+   {
+    "w": "se",
+    "start": 283.67,
+    "end": 283.85
+   },
+   {
+    "w": "va",
+    "start": 283.85,
+    "end": 283.97
+   },
+   {
+    "w": "a",
+    "start": 283.97,
+    "end": 284.09
+   },
+   {
+    "w": "llamar",
+    "start": 284.09,
+    "end": 284.49
+   },
+   {
+    "w": "a",
+    "start": 284.49,
+    "end": 284.67
+   },
+   {
+    "w": "hablar",
+    "start": 284.67,
+    "end": 284.91
+   },
+   {
+    "w": "voy",
+    "start": 284.91,
+    "end": 285.83
+   },
+   {
+    "w": "a",
+    "start": 288.42,
+    "end": 288.56
+   },
+   {
+    "w": "cambiar",
+    "start": 288.56,
+    "end": 288.78
+   },
+   {
+    "w": "su",
+    "start": 288.78,
+    "end": 289.04
+   },
+   {
+    "w": "color",
+    "start": 289.04,
+    "end": 289.36
+   },
+   {
+    "w": "voy",
+    "start": 289.36,
+    "end": 289.76
+   },
+   {
+    "w": "a",
+    "start": 289.76,
+    "end": 289.86
+   },
+   {
+    "w": "poner",
+    "start": 289.86,
+    "end": 290.08
+   },
+   {
+    "w": "este",
+    "start": 290.08,
+    "end": 290.32
+   },
+   {
+    "w": "morado",
+    "start": 290.32,
+    "end": 290.72
+   }
+  ]
+ },
+ {
+  "id": 44,
+  "start": 291.36,
+  "end": 299.74,
+  "text": "y acá es cojo seleccionar escena y lo mismo acá voy a poner hablar listo ahí ya tengo",
+  "words": [
+   {
+    "w": "y",
+    "start": 291.36,
+    "end": 291.88
+   },
+   {
+    "w": "acá",
+    "start": 291.88,
+    "end": 292.1
+   },
+   {
+    "w": "es",
+    "start": 292.1,
+    "end": 292.38
+   },
+   {
+    "w": "cojo",
+    "start": 292.38,
+    "end": 292.76
+   },
+   {
+    "w": "seleccionar",
+    "start": 292.76,
+    "end": 294.02
+   },
+   {
+    "w": "escena",
+    "start": 294.02,
+    "end": 294.46
+   },
+   {
+    "w": "y",
+    "start": 294.46,
+    "end": 295.96
+   },
+   {
+    "w": "lo",
+    "start": 295.96,
+    "end": 296.1
+   },
+   {
+    "w": "mismo",
+    "start": 296.1,
+    "end": 296.36
+   },
+   {
+    "w": "acá",
+    "start": 296.36,
+    "end": 296.64
+   },
+   {
+    "w": "voy",
+    "start": 296.64,
+    "end": 296.84
+   },
+   {
+    "w": "a",
+    "start": 296.84,
+    "end": 296.92
+   },
+   {
+    "w": "poner",
+    "start": 296.92,
+    "end": 297.16
+   },
+   {
+    "w": "hablar",
+    "start": 297.16,
+    "end": 297.84
+   },
+   {
+    "w": "listo",
+    "start": 297.84,
+    "end": 299.26
+   },
+   {
+    "w": "ahí",
+    "start": 299.26,
+    "end": 299.36
+   },
+   {
+    "w": "ya",
+    "start": 299.36,
+    "end": 299.46
+   },
+   {
+    "w": "tengo",
+    "start": 299.46,
+    "end": 299.74
+   }
+  ]
+ },
+ {
+  "id": 45,
+  "start": 299.74,
+  "end": 307.1,
+  "text": "dos botones asignados ahora voy a seleccionar la otra escena que en este caso sería streaming",
+  "words": [
+   {
+    "w": "dos",
+    "start": 299.74,
+    "end": 300.16
+   },
+   {
+    "w": "botones",
+    "start": 300.16,
+    "end": 300.6
+   },
+   {
+    "w": "asignados",
+    "start": 300.6,
+    "end": 301.42
+   },
+   {
+    "w": "ahora",
+    "start": 301.42,
+    "end": 302.7
+   },
+   {
+    "w": "voy",
+    "start": 302.7,
+    "end": 302.96
+   },
+   {
+    "w": "a",
+    "start": 302.96,
+    "end": 303.1
+   },
+   {
+    "w": "seleccionar",
+    "start": 303.1,
+    "end": 303.6
+   },
+   {
+    "w": "la",
+    "start": 303.6,
+    "end": 303.88
+   },
+   {
+    "w": "otra",
+    "start": 303.88,
+    "end": 304.12
+   },
+   {
+    "w": "escena",
+    "start": 304.12,
+    "end": 304.54
+   },
+   {
+    "w": "que",
+    "start": 304.54,
+    "end": 304.84
+   },
+   {
+    "w": "en",
+    "start": 304.84,
+    "end": 305.0
+   },
+   {
+    "w": "este",
+    "start": 305.0,
+    "end": 305.18
+   },
+   {
+    "w": "caso",
+    "start": 305.18,
+    "end": 305.46
+   },
+   {
+    "w": "sería",
+    "start": 305.46,
+    "end": 305.86
+   },
+   {
+    "w": "streaming",
+    "start": 305.86,
+    "end": 307.1
+   }
+  ]
+ },
+ {
+  "id": 46,
+  "start": 310.5,
+  "end": 320.56,
+  "text": "y acá lo mismo seleccionamos la escena y escogemos streaming ahora muy importante estas escenas pues",
+  "words": [
+   {
+    "w": "y",
+    "start": 310.5,
+    "end": 311.06
+   },
+   {
+    "w": "acá",
+    "start": 312.88,
+    "end": 313.44
+   },
+   {
+    "w": "lo",
+    "start": 313.44,
+    "end": 313.6
+   },
+   {
+    "w": "mismo",
+    "start": 313.6,
+    "end": 313.78
+   },
+   {
+    "w": "seleccionamos",
+    "start": 313.78,
+    "end": 314.44
+   },
+   {
+    "w": "la",
+    "start": 314.44,
+    "end": 314.6
+   },
+   {
+    "w": "escena",
+    "start": 314.6,
+    "end": 316.2
+   },
+   {
+    "w": "y",
+    "start": 316.2,
+    "end": 316.8
+   },
+   {
+    "w": "escogemos",
+    "start": 316.8,
+    "end": 317.42
+   },
+   {
+    "w": "streaming",
+    "start": 317.42,
+    "end": 317.9
+   },
+   {
+    "w": "ahora",
+    "start": 317.9,
+    "end": 318.82
+   },
+   {
+    "w": "muy",
+    "start": 318.82,
+    "end": 319.02
+   },
+   {
+    "w": "importante",
+    "start": 319.02,
+    "end": 319.52
+   },
+   {
+    "w": "estas",
+    "start": 319.52,
+    "end": 319.96
+   },
+   {
+    "w": "escenas",
+    "start": 319.96,
+    "end": 320.4
+   },
+   {
+    "w": "pues",
+    "start": 320.4,
+    "end": 320.56
+   }
+  ]
+ },
+ {
+  "id": 47,
+  "start": 320.56,
+  "end": 325.18,
+  "text": "como es solamente para conectar el Dekbork se entiende que ustedes ya tienen creado el grupo",
+  "words": [
+   {
+    "w": "como",
+    "start": 320.56,
+    "end": 320.8
+   },
+   {
+    "w": "es",
+    "start": 320.8,
+    "end": 320.92
+   },
+   {
+    "w": "solamente",
+    "start": 320.92,
+    "end": 321.22
+   },
+   {
+    "w": "para",
+    "start": 321.22,
+    "end": 321.56
+   },
+   {
+    "w": "conectar",
+    "start": 321.56,
+    "end": 322.06
+   },
+   {
+    "w": "el",
+    "start": 322.06,
+    "end": 322.18
+   },
+   {
+    "w": "Dekbork",
+    "start": 322.18,
+    "end": 322.54
+   },
+   {
+    "w": "se",
+    "start": 322.54,
+    "end": 322.78
+   },
+   {
+    "w": "entiende",
+    "start": 322.78,
+    "end": 323.24
+   },
+   {
+    "w": "que",
+    "start": 323.24,
+    "end": 323.44
+   },
+   {
+    "w": "ustedes",
+    "start": 323.44,
+    "end": 323.64
+   },
+   {
+    "w": "ya",
+    "start": 323.64,
+    "end": 323.86
+   },
+   {
+    "w": "tienen",
+    "start": 323.86,
+    "end": 324.12
+   },
+   {
+    "w": "creado",
+    "start": 324.12,
+    "end": 324.7
+   },
+   {
+    "w": "el",
+    "start": 324.7,
+    "end": 324.98
+   },
+   {
+    "w": "grupo",
+    "start": 324.98,
+    "end": 325.18
+   }
+  ]
+ },
+ {
+  "id": 48,
+  "start": 325.18,
+  "end": 330.02,
+  "text": "de escenas en obs pero si no lo tienen creado aquí les voy a dejar un botoncito para que",
+  "words": [
+   {
+    "w": "de",
+    "start": 325.18,
+    "end": 325.42
+   },
+   {
+    "w": "escenas",
+    "start": 325.42,
+    "end": 325.7
+   },
+   {
+    "w": "en",
+    "start": 325.7,
+    "end": 325.86
+   },
+   {
+    "w": "obs",
+    "start": 325.86,
+    "end": 326.14
+   },
+   {
+    "w": "pero",
+    "start": 326.14,
+    "end": 326.72
+   },
+   {
+    "w": "si",
+    "start": 326.72,
+    "end": 326.9
+   },
+   {
+    "w": "no",
+    "start": 326.9,
+    "end": 327.0
+   },
+   {
+    "w": "lo",
+    "start": 327.0,
+    "end": 327.1
+   },
+   {
+    "w": "tienen",
+    "start": 327.1,
+    "end": 327.26
+   },
+   {
+    "w": "creado",
+    "start": 327.26,
+    "end": 327.74
+   },
+   {
+    "w": "aquí",
+    "start": 327.74,
+    "end": 328.04
+   },
+   {
+    "w": "les",
+    "start": 328.04,
+    "end": 328.2
+   },
+   {
+    "w": "voy",
+    "start": 328.2,
+    "end": 328.32
+   },
+   {
+    "w": "a",
+    "start": 328.32,
+    "end": 328.44
+   },
+   {
+    "w": "dejar",
+    "start": 328.44,
+    "end": 328.68
+   },
+   {
+    "w": "un",
+    "start": 328.68,
+    "end": 329.08
+   },
+   {
+    "w": "botoncito",
+    "start": 329.08,
+    "end": 329.6
+   },
+   {
+    "w": "para",
+    "start": 329.6,
+    "end": 329.88
+   },
+   {
+    "w": "que",
+    "start": 329.88,
+    "end": 330.02
+   }
+  ]
+ },
+ {
+  "id": 49,
+  "start": 330.02,
+  "end": 334.76,
+  "text": "se dirijan a un vídeo donde configuramos el obs de manera muy rápida y aquí van a poder",
+  "words": [
+   {
+    "w": "se",
+    "start": 330.02,
+    "end": 330.16
+   },
+   {
+    "w": "dirijan",
+    "start": 330.16,
+    "end": 330.54
+   },
+   {
+    "w": "a",
+    "start": 330.54,
+    "end": 330.68
+   },
+   {
+    "w": "un",
+    "start": 330.68,
+    "end": 330.84
+   },
+   {
+    "w": "vídeo",
+    "start": 330.84,
+    "end": 331.1
+   },
+   {
+    "w": "donde",
+    "start": 331.1,
+    "end": 331.46
+   },
+   {
+    "w": "configuramos",
+    "start": 331.46,
+    "end": 332.16
+   },
+   {
+    "w": "el",
+    "start": 332.16,
+    "end": 332.3
+   },
+   {
+    "w": "obs",
+    "start": 332.3,
+    "end": 332.56
+   },
+   {
+    "w": "de",
+    "start": 332.56,
+    "end": 332.8
+   },
+   {
+    "w": "manera",
+    "start": 332.8,
+    "end": 332.98
+   },
+   {
+    "w": "muy",
+    "start": 332.98,
+    "end": 333.22
+   },
+   {
+    "w": "rápida",
+    "start": 333.22,
+    "end": 333.72
+   },
+   {
+    "w": "y",
+    "start": 333.72,
+    "end": 334.06
+   },
+   {
+    "w": "aquí",
+    "start": 334.06,
+    "end": 334.28
+   },
+   {
+    "w": "van",
+    "start": 334.28,
+    "end": 334.46
+   },
+   {
+    "w": "a",
+    "start": 334.46,
+    "end": 334.54
+   },
+   {
+    "w": "poder",
+    "start": 334.54,
+    "end": 334.76
+   }
+  ]
+ },
+ {
+  "id": 50,
+  "start": 334.76,
+  "end": 339.6,
+  "text": "configurar sus escenas y regresar a este tutorial para conectarse con el Dekbork que vamos a hacer",
+  "words": [
+   {
+    "w": "configurar",
+    "start": 334.76,
+    "end": 335.36
+   },
+   {
+    "w": "sus",
+    "start": 335.36,
+    "end": 335.52
+   },
+   {
+    "w": "escenas",
+    "start": 335.52,
+    "end": 335.9
+   },
+   {
+    "w": "y",
+    "start": 335.9,
+    "end": 336.24
+   },
+   {
+    "w": "regresar",
+    "start": 336.24,
+    "end": 336.7
+   },
+   {
+    "w": "a",
+    "start": 336.7,
+    "end": 336.82
+   },
+   {
+    "w": "este",
+    "start": 336.82,
+    "end": 336.98
+   },
+   {
+    "w": "tutorial",
+    "start": 336.98,
+    "end": 337.34
+   },
+   {
+    "w": "para",
+    "start": 337.34,
+    "end": 337.64
+   },
+   {
+    "w": "conectarse",
+    "start": 337.64,
+    "end": 338.16
+   },
+   {
+    "w": "con",
+    "start": 338.16,
+    "end": 338.32
+   },
+   {
+    "w": "el",
+    "start": 338.32,
+    "end": 338.46
+   },
+   {
+    "w": "Dekbork",
+    "start": 338.46,
+    "end": 338.86
+   },
+   {
+    "w": "que",
+    "start": 338.86,
+    "end": 339.1
+   },
+   {
+    "w": "vamos",
+    "start": 339.1,
+    "end": 339.28
+   },
+   {
+    "w": "a",
+    "start": 339.28,
+    "end": 339.44
+   },
+   {
+    "w": "hacer",
+    "start": 339.44,
+    "end": 339.6
+   }
+  ]
+ },
+ {
+  "id": 51,
+  "start": 339.6,
+  "end": 344.98,
+  "text": "manipulando el dispositivo si se fijan si yo acá le doy en iniciar voy a minimizar esto",
+  "words": [
+   {
+    "w": "manipulando",
+    "start": 339.6,
+    "end": 340.32
+   },
+   {
+    "w": "el",
+    "start": 340.32,
+    "end": 340.46
+   },
+   {
+    "w": "dispositivo",
+    "start": 340.46,
+    "end": 341.14
+   },
+   {
+    "w": "si",
+    "start": 341.14,
+    "end": 341.54
+   },
+   {
+    "w": "se",
+    "start": 341.54,
+    "end": 341.66
+   },
+   {
+    "w": "fijan",
+    "start": 341.66,
+    "end": 341.98
+   },
+   {
+    "w": "si",
+    "start": 341.98,
+    "end": 342.12
+   },
+   {
+    "w": "yo",
+    "start": 342.12,
+    "end": 342.24
+   },
+   {
+    "w": "acá",
+    "start": 342.24,
+    "end": 342.34
+   },
+   {
+    "w": "le",
+    "start": 342.34,
+    "end": 342.5
+   },
+   {
+    "w": "doy",
+    "start": 342.5,
+    "end": 342.68
+   },
+   {
+    "w": "en",
+    "start": 342.68,
+    "end": 342.82
+   },
+   {
+    "w": "iniciar",
+    "start": 342.82,
+    "end": 343.38
+   },
+   {
+    "w": "voy",
+    "start": 343.38,
+    "end": 344.14
+   },
+   {
+    "w": "a",
+    "start": 344.14,
+    "end": 344.28
+   },
+   {
+    "w": "minimizar",
+    "start": 344.28,
+    "end": 344.64
+   },
+   {
+    "w": "esto",
+    "start": 344.64,
+    "end": 344.98
+   }
+  ]
+ },
+ {
+  "id": 52,
+  "start": 346.78,
+  "end": 352.48,
+  "text": "esto aquí ya quedó y le damos en iniciar por ejemplo aquí ya quedó funcionando esto ahora",
+  "words": [
+   {
+    "w": "esto",
+    "start": 346.78,
+    "end": 347.22
+   },
+   {
+    "w": "aquí",
+    "start": 347.22,
+    "end": 347.48
+   },
+   {
+    "w": "ya",
+    "start": 347.48,
+    "end": 347.64
+   },
+   {
+    "w": "quedó",
+    "start": 347.64,
+    "end": 348.02
+   },
+   {
+    "w": "y",
+    "start": 348.02,
+    "end": 348.16
+   },
+   {
+    "w": "le",
+    "start": 348.16,
+    "end": 348.26
+   },
+   {
+    "w": "damos",
+    "start": 348.26,
+    "end": 348.44
+   },
+   {
+    "w": "en",
+    "start": 348.44,
+    "end": 348.58
+   },
+   {
+    "w": "iniciar",
+    "start": 348.58,
+    "end": 348.96
+   },
+   {
+    "w": "por",
+    "start": 348.96,
+    "end": 349.08
+   },
+   {
+    "w": "ejemplo",
+    "start": 349.08,
+    "end": 349.36
+   },
+   {
+    "w": "aquí",
+    "start": 349.36,
+    "end": 350.62
+   },
+   {
+    "w": "ya",
+    "start": 350.62,
+    "end": 350.78
+   },
+   {
+    "w": "quedó",
+    "start": 350.78,
+    "end": 350.98
+   },
+   {
+    "w": "funcionando",
+    "start": 350.98,
+    "end": 351.46
+   },
+   {
+    "w": "esto",
+    "start": 351.46,
+    "end": 351.76
+   },
+   {
+    "w": "ahora",
+    "start": 351.76,
+    "end": 352.48
+   }
+  ]
+ },
+ {
+  "id": 53,
+  "start": 352.48,
+  "end": 360.4,
+  "text": "le voy a dar en hablar y streaming que podría ser otra fuente asimismo como se hace esto",
+  "words": [
+   {
+    "w": "le",
+    "start": 352.48,
+    "end": 352.66
+   },
+   {
+    "w": "voy",
+    "start": 352.66,
+    "end": 352.78
+   },
+   {
+    "w": "a",
+    "start": 352.78,
+    "end": 352.88
+   },
+   {
+    "w": "dar",
+    "start": 352.88,
+    "end": 352.96
+   },
+   {
+    "w": "en",
+    "start": 352.96,
+    "end": 353.12
+   },
+   {
+    "w": "hablar",
+    "start": 353.12,
+    "end": 353.32
+   },
+   {
+    "w": "y",
+    "start": 353.32,
+    "end": 355.16
+   },
+   {
+    "w": "streaming",
+    "start": 355.16,
+    "end": 355.5
+   },
+   {
+    "w": "que",
+    "start": 355.5,
+    "end": 355.7
+   },
+   {
+    "w": "podría",
+    "start": 355.7,
+    "end": 356.02
+   },
+   {
+    "w": "ser",
+    "start": 356.02,
+    "end": 356.22
+   },
+   {
+    "w": "otra",
+    "start": 356.22,
+    "end": 356.42
+   },
+   {
+    "w": "fuente",
+    "start": 356.42,
+    "end": 356.8
+   },
+   {
+    "w": "asimismo",
+    "start": 358.34,
+    "end": 359.46
+   },
+   {
+    "w": "como",
+    "start": 359.46,
+    "end": 359.7
+   },
+   {
+    "w": "se",
+    "start": 359.7,
+    "end": 359.88
+   },
+   {
+    "w": "hace",
+    "start": 359.88,
+    "end": 360.06
+   },
+   {
+    "w": "esto",
+    "start": 360.06,
+    "end": 360.4
+   }
+  ]
+ },
+ {
+  "id": 54,
+  "start": 360.4,
+  "end": 368.32,
+  "text": "también se puede hacer con los con las fuentes es decir con el micrófono por ejemplo les voy a mostrar",
+  "words": [
+   {
+    "w": "también",
+    "start": 360.4,
+    "end": 360.86
+   },
+   {
+    "w": "se",
+    "start": 360.86,
+    "end": 361.08
+   },
+   {
+    "w": "puede",
+    "start": 361.08,
+    "end": 361.3
+   },
+   {
+    "w": "hacer",
+    "start": 361.3,
+    "end": 361.68
+   },
+   {
+    "w": "con",
+    "start": 361.68,
+    "end": 362.48
+   },
+   {
+    "w": "los",
+    "start": 362.48,
+    "end": 362.78
+   },
+   {
+    "w": "con",
+    "start": 362.78,
+    "end": 363.58
+   },
+   {
+    "w": "las",
+    "start": 363.58,
+    "end": 363.8
+   },
+   {
+    "w": "fuentes",
+    "start": 363.8,
+    "end": 364.24
+   },
+   {
+    "w": "es",
+    "start": 364.24,
+    "end": 364.44
+   },
+   {
+    "w": "decir",
+    "start": 364.44,
+    "end": 364.72
+   },
+   {
+    "w": "con",
+    "start": 364.72,
+    "end": 365.32
+   },
+   {
+    "w": "el",
+    "start": 365.32,
+    "end": 365.58
+   },
+   {
+    "w": "micrófono",
+    "start": 365.58,
+    "end": 366.14
+   },
+   {
+    "w": "por",
+    "start": 366.14,
+    "end": 366.34
+   },
+   {
+    "w": "ejemplo",
+    "start": 366.34,
+    "end": 366.68
+   },
+   {
+    "w": "les",
+    "start": 366.68,
+    "end": 367.84
+   },
+   {
+    "w": "voy",
+    "start": 367.84,
+    "end": 367.96
+   },
+   {
+    "w": "a",
+    "start": 367.96,
+    "end": 368.08
+   },
+   {
+    "w": "mostrar",
+    "start": 368.08,
+    "end": 368.32
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "start": 368.32,
+  "end": 376.42,
+  "text": "acá como se haría en ese caso con el micrófono ponemos acá mic en vez de ponerlo como escena voy",
+  "words": [
+   {
+    "w": "acá",
+    "start": 368.32,
+    "end": 368.66
+   },
+   {
+    "w": "como",
+    "start": 368.66,
+    "end": 368.96
+   },
+   {
+    "w": "se",
+    "start": 368.96,
+    "end": 369.08
+   },
+   {
+    "w": "haría",
+    "start": 369.08,
+    "end": 369.28
+   },
+   {
+    "w": "en",
+    "start": 369.28,
+    "end": 369.42
+   },
+   {
+    "w": "ese",
+    "start": 369.42,
+    "end": 369.54
+   },
+   {
+    "w": "caso",
+    "start": 369.54,
+    "end": 369.82
+   },
+   {
+    "w": "con",
+    "start": 369.82,
+    "end": 370.12
+   },
+   {
+    "w": "el",
+    "start": 370.12,
+    "end": 370.24
+   },
+   {
+    "w": "micrófono",
+    "start": 370.24,
+    "end": 370.76
+   },
+   {
+    "w": "ponemos",
+    "start": 370.76,
+    "end": 371.86
+   },
+   {
+    "w": "acá",
+    "start": 371.86,
+    "end": 372.12
+   },
+   {
+    "w": "mic",
+    "start": 372.12,
+    "end": 372.46
+   },
+   {
+    "w": "en",
+    "start": 372.46,
+    "end": 374.18
+   },
+   {
+    "w": "vez",
+    "start": 374.18,
+    "end": 374.36
+   },
+   {
+    "w": "de",
+    "start": 374.36,
+    "end": 374.5
+   },
+   {
+    "w": "ponerlo",
+    "start": 374.5,
+    "end": 375.12
+   },
+   {
+    "w": "como",
+    "start": 375.12,
+    "end": 375.48
+   },
+   {
+    "w": "escena",
+    "start": 375.48,
+    "end": 376.1
+   },
+   {
+    "w": "voy",
+    "start": 376.1,
+    "end": 376.42
+   }
+  ]
+ },
+ {
+  "id": 56,
+  "start": 376.42,
+  "end": 384.94,
+  "text": "a ponerlo en donde dice audiosource control y acá me fijo que el dispositivo que yo",
+  "words": [
+   {
+    "w": "a",
+    "start": 376.42,
+    "end": 376.54
+   },
+   {
+    "w": "ponerlo",
+    "start": 376.54,
+    "end": 377.14
+   },
+   {
+    "w": "en",
+    "start": 377.14,
+    "end": 378.18
+   },
+   {
+    "w": "donde",
+    "start": 378.18,
+    "end": 378.36
+   },
+   {
+    "w": "dice",
+    "start": 378.36,
+    "end": 378.8
+   },
+   {
+    "w": "audiosource",
+    "start": 378.8,
+    "end": 379.54
+   },
+   {
+    "w": "control",
+    "start": 379.54,
+    "end": 380.08
+   },
+   {
+    "w": "y",
+    "start": 380.08,
+    "end": 380.6
+   },
+   {
+    "w": "acá",
+    "start": 380.6,
+    "end": 382.06
+   },
+   {
+    "w": "me",
+    "start": 382.06,
+    "end": 382.44
+   },
+   {
+    "w": "fijo",
+    "start": 382.44,
+    "end": 382.66
+   },
+   {
+    "w": "que",
+    "start": 382.66,
+    "end": 382.92
+   },
+   {
+    "w": "el",
+    "start": 382.92,
+    "end": 383.9
+   },
+   {
+    "w": "dispositivo",
+    "start": 383.9,
+    "end": 384.68
+   },
+   {
+    "w": "que",
+    "start": 384.68,
+    "end": 384.8
+   },
+   {
+    "w": "yo",
+    "start": 384.8,
+    "end": 384.94
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "start": 384.94,
+  "end": 391.24,
+  "text": "escoja sea el micrófono con el que estoy trabajando voy a escoger el mic house y listo acá lo voy a",
+  "words": [
+   {
+    "w": "escoja",
+    "start": 384.94,
+    "end": 385.28
+   },
+   {
+    "w": "sea",
+    "start": 385.28,
+    "end": 385.42
+   },
+   {
+    "w": "el",
+    "start": 385.42,
+    "end": 385.54
+   },
+   {
+    "w": "micrófono",
+    "start": 385.54,
+    "end": 386.04
+   },
+   {
+    "w": "con",
+    "start": 386.04,
+    "end": 386.24
+   },
+   {
+    "w": "el",
+    "start": 386.24,
+    "end": 386.36
+   },
+   {
+    "w": "que",
+    "start": 386.36,
+    "end": 386.46
+   },
+   {
+    "w": "estoy",
+    "start": 386.46,
+    "end": 386.68
+   },
+   {
+    "w": "trabajando",
+    "start": 386.68,
+    "end": 387.22
+   },
+   {
+    "w": "voy",
+    "start": 387.22,
+    "end": 387.72
+   },
+   {
+    "w": "a",
+    "start": 387.72,
+    "end": 387.84
+   },
+   {
+    "w": "escoger",
+    "start": 387.84,
+    "end": 388.1
+   },
+   {
+    "w": "el",
+    "start": 388.1,
+    "end": 388.3
+   },
+   {
+    "w": "mic",
+    "start": 388.3,
+    "end": 388.5
+   },
+   {
+    "w": "house",
+    "start": 388.5,
+    "end": 388.86
+   },
+   {
+    "w": "y",
+    "start": 388.86,
+    "end": 390.1
+   },
+   {
+    "w": "listo",
+    "start": 390.1,
+    "end": 390.52
+   },
+   {
+    "w": "acá",
+    "start": 390.52,
+    "end": 390.78
+   },
+   {
+    "w": "lo",
+    "start": 390.78,
+    "end": 391.04
+   },
+   {
+    "w": "voy",
+    "start": 391.04,
+    "end": 391.16
+   },
+   {
+    "w": "a",
+    "start": 391.16,
+    "end": 391.24
+   }
+  ]
+ },
+ {
+  "id": 58,
+  "start": 391.24,
+  "end": 398.36,
+  "text": "agregar algo muy importante si se fijan el color que nos sale aquí el como que se ponía un poquito más",
+  "words": [
+   {
+    "w": "agregar",
+    "start": 391.24,
+    "end": 391.58
+   },
+   {
+    "w": "algo",
+    "start": 391.58,
+    "end": 393.38
+   },
+   {
+    "w": "muy",
+    "start": 393.38,
+    "end": 393.54
+   },
+   {
+    "w": "importante",
+    "start": 393.54,
+    "end": 393.94
+   },
+   {
+    "w": "si",
+    "start": 393.94,
+    "end": 394.24
+   },
+   {
+    "w": "se",
+    "start": 394.24,
+    "end": 394.38
+   },
+   {
+    "w": "fijan",
+    "start": 394.38,
+    "end": 394.78
+   },
+   {
+    "w": "el",
+    "start": 394.78,
+    "end": 395.44
+   },
+   {
+    "w": "color",
+    "start": 395.44,
+    "end": 395.7
+   },
+   {
+    "w": "que",
+    "start": 395.7,
+    "end": 395.84
+   },
+   {
+    "w": "nos",
+    "start": 395.84,
+    "end": 395.98
+   },
+   {
+    "w": "sale",
+    "start": 395.98,
+    "end": 396.18
+   },
+   {
+    "w": "aquí",
+    "start": 396.18,
+    "end": 396.46
+   },
+   {
+    "w": "el",
+    "start": 396.46,
+    "end": 397.04
+   },
+   {
+    "w": "como",
+    "start": 397.04,
+    "end": 397.24
+   },
+   {
+    "w": "que",
+    "start": 397.24,
+    "end": 397.38
+   },
+   {
+    "w": "se",
+    "start": 397.38,
+    "end": 397.5
+   },
+   {
+    "w": "ponía",
+    "start": 397.5,
+    "end": 397.76
+   },
+   {
+    "w": "un",
+    "start": 397.76,
+    "end": 397.88
+   },
+   {
+    "w": "poquito",
+    "start": 397.88,
+    "end": 398.08
+   },
+   {
+    "w": "más",
+    "start": 398.08,
+    "end": 398.36
+   }
+  ]
+ },
+ {
+  "id": 59,
+  "start": 398.36,
+  "end": 402.52,
+  "text": "opaco cuando está activo quiere decir que cuando la tecla está presionada yo esto igual lo puedo",
+  "words": [
+   {
+    "w": "opaco",
+    "start": 398.36,
+    "end": 398.72
+   },
+   {
+    "w": "cuando",
+    "start": 398.72,
+    "end": 399.04
+   },
+   {
+    "w": "está",
+    "start": 399.04,
+    "end": 399.24
+   },
+   {
+    "w": "activo",
+    "start": 399.24,
+    "end": 399.66
+   },
+   {
+    "w": "quiere",
+    "start": 399.66,
+    "end": 399.78
+   },
+   {
+    "w": "decir",
+    "start": 399.78,
+    "end": 400.0
+   },
+   {
+    "w": "que",
+    "start": 400.0,
+    "end": 400.14
+   },
+   {
+    "w": "cuando",
+    "start": 400.14,
+    "end": 400.34
+   },
+   {
+    "w": "la",
+    "start": 400.34,
+    "end": 400.5
+   },
+   {
+    "w": "tecla",
+    "start": 400.5,
+    "end": 400.76
+   },
+   {
+    "w": "está",
+    "start": 400.76,
+    "end": 400.92
+   },
+   {
+    "w": "presionada",
+    "start": 400.92,
+    "end": 401.42
+   },
+   {
+    "w": "yo",
+    "start": 401.42,
+    "end": 401.66
+   },
+   {
+    "w": "esto",
+    "start": 401.66,
+    "end": 401.9
+   },
+   {
+    "w": "igual",
+    "start": 401.9,
+    "end": 402.12
+   },
+   {
+    "w": "lo",
+    "start": 402.12,
+    "end": 402.3
+   },
+   {
+    "w": "puedo",
+    "start": 402.3,
+    "end": 402.52
+   }
+  ]
+ },
+ {
+  "id": 60,
+  "start": 402.52,
+  "end": 408.32,
+  "text": "editar yo que puedo hacer acá en la acción cuando esté activa por ejemplo le puedo poner un",
+  "words": [
+   {
+    "w": "editar",
+    "start": 402.52,
+    "end": 403.02
+   },
+   {
+    "w": "yo",
+    "start": 403.02,
+    "end": 403.74
+   },
+   {
+    "w": "que",
+    "start": 403.74,
+    "end": 403.88
+   },
+   {
+    "w": "puedo",
+    "start": 403.88,
+    "end": 404.04
+   },
+   {
+    "w": "hacer",
+    "start": 404.04,
+    "end": 404.24
+   },
+   {
+    "w": "acá",
+    "start": 404.24,
+    "end": 404.5
+   },
+   {
+    "w": "en",
+    "start": 404.5,
+    "end": 404.82
+   },
+   {
+    "w": "la",
+    "start": 404.82,
+    "end": 404.98
+   },
+   {
+    "w": "acción",
+    "start": 404.98,
+    "end": 405.42
+   },
+   {
+    "w": "cuando",
+    "start": 405.42,
+    "end": 405.7
+   },
+   {
+    "w": "esté",
+    "start": 405.7,
+    "end": 405.98
+   },
+   {
+    "w": "activa",
+    "start": 405.98,
+    "end": 406.88
+   },
+   {
+    "w": "por",
+    "start": 406.88,
+    "end": 407.36
+   },
+   {
+    "w": "ejemplo",
+    "start": 407.36,
+    "end": 407.58
+   },
+   {
+    "w": "le",
+    "start": 407.58,
+    "end": 407.76
+   },
+   {
+    "w": "puedo",
+    "start": 407.76,
+    "end": 407.9
+   },
+   {
+    "w": "poner",
+    "start": 407.9,
+    "end": 408.16
+   },
+   {
+    "w": "un",
+    "start": 408.16,
+    "end": 408.32
+   }
+  ]
+ },
+ {
+  "id": 61,
+  "start": 408.32,
+  "end": 413.16,
+  "text": "verde si lo quiero hacer así o le puedo poner no sé un rojo que quiere decir que estamos",
+  "words": [
+   {
+    "w": "verde",
+    "start": 408.32,
+    "end": 408.6
+   },
+   {
+    "w": "si",
+    "start": 408.6,
+    "end": 409.06
+   },
+   {
+    "w": "lo",
+    "start": 409.06,
+    "end": 409.2
+   },
+   {
+    "w": "quiero",
+    "start": 409.2,
+    "end": 409.3
+   },
+   {
+    "w": "hacer",
+    "start": 409.3,
+    "end": 409.5
+   },
+   {
+    "w": "así",
+    "start": 409.5,
+    "end": 409.74
+   },
+   {
+    "w": "o",
+    "start": 409.74,
+    "end": 410.94
+   },
+   {
+    "w": "le",
+    "start": 410.94,
+    "end": 411.04
+   },
+   {
+    "w": "puedo",
+    "start": 411.04,
+    "end": 411.2
+   },
+   {
+    "w": "poner",
+    "start": 411.2,
+    "end": 411.48
+   },
+   {
+    "w": "no",
+    "start": 411.48,
+    "end": 411.64
+   },
+   {
+    "w": "sé",
+    "start": 411.64,
+    "end": 411.76
+   },
+   {
+    "w": "un",
+    "start": 411.76,
+    "end": 411.98
+   },
+   {
+    "w": "rojo",
+    "start": 411.98,
+    "end": 412.28
+   },
+   {
+    "w": "que",
+    "start": 412.28,
+    "end": 412.46
+   },
+   {
+    "w": "quiere",
+    "start": 412.46,
+    "end": 412.64
+   },
+   {
+    "w": "decir",
+    "start": 412.64,
+    "end": 412.82
+   },
+   {
+    "w": "que",
+    "start": 412.82,
+    "end": 412.96
+   },
+   {
+    "w": "estamos",
+    "start": 412.96,
+    "end": 413.16
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "start": 413.16,
+  "end": 419.1,
+  "text": "al aire y el inactivo puede seguir siendo el mismo gris entonces ahí cuando ya está en rojo sé que",
+  "words": [
+   {
+    "w": "al",
+    "start": 413.16,
+    "end": 413.38
+   },
+   {
+    "w": "aire",
+    "start": 413.38,
+    "end": 413.58
+   },
+   {
+    "w": "y",
+    "start": 413.58,
+    "end": 413.88
+   },
+   {
+    "w": "el",
+    "start": 413.88,
+    "end": 414.0
+   },
+   {
+    "w": "inactivo",
+    "start": 414.0,
+    "end": 414.54
+   },
+   {
+    "w": "puede",
+    "start": 414.54,
+    "end": 414.78
+   },
+   {
+    "w": "seguir",
+    "start": 414.78,
+    "end": 415.08
+   },
+   {
+    "w": "siendo",
+    "start": 415.08,
+    "end": 415.38
+   },
+   {
+    "w": "el",
+    "start": 415.38,
+    "end": 415.5
+   },
+   {
+    "w": "mismo",
+    "start": 415.5,
+    "end": 415.7
+   },
+   {
+    "w": "gris",
+    "start": 415.7,
+    "end": 416.0
+   },
+   {
+    "w": "entonces",
+    "start": 416.0,
+    "end": 417.36
+   },
+   {
+    "w": "ahí",
+    "start": 417.36,
+    "end": 417.74
+   },
+   {
+    "w": "cuando",
+    "start": 417.74,
+    "end": 417.96
+   },
+   {
+    "w": "ya",
+    "start": 417.96,
+    "end": 418.18
+   },
+   {
+    "w": "está",
+    "start": 418.18,
+    "end": 418.32
+   },
+   {
+    "w": "en",
+    "start": 418.32,
+    "end": 418.44
+   },
+   {
+    "w": "rojo",
+    "start": 418.44,
+    "end": 418.7
+   },
+   {
+    "w": "sé",
+    "start": 418.7,
+    "end": 418.96
+   },
+   {
+    "w": "que",
+    "start": 418.96,
+    "end": 419.1
+   }
+  ]
+ },
+ {
+  "id": 63,
+  "start": 419.1,
+  "end": 426.18,
+  "text": "estoy con el micrófono encendido y si lo quito ya sé que el micrófono se silenció voy a mostrarlo",
+  "words": [
+   {
+    "w": "estoy",
+    "start": 419.1,
+    "end": 419.36
+   },
+   {
+    "w": "con",
+    "start": 419.36,
+    "end": 419.56
+   },
+   {
+    "w": "el",
+    "start": 419.56,
+    "end": 419.66
+   },
+   {
+    "w": "micrófono",
+    "start": 419.66,
+    "end": 420.02
+   },
+   {
+    "w": "encendido",
+    "start": 420.02,
+    "end": 420.54
+   },
+   {
+    "w": "y",
+    "start": 420.54,
+    "end": 421.24
+   },
+   {
+    "w": "si",
+    "start": 421.24,
+    "end": 421.3
+   },
+   {
+    "w": "lo",
+    "start": 421.3,
+    "end": 421.46
+   },
+   {
+    "w": "quito",
+    "start": 421.46,
+    "end": 421.76
+   },
+   {
+    "w": "ya",
+    "start": 421.76,
+    "end": 422.68
+   },
+   {
+    "w": "sé",
+    "start": 422.68,
+    "end": 422.86
+   },
+   {
+    "w": "que",
+    "start": 422.86,
+    "end": 423.02
+   },
+   {
+    "w": "el",
+    "start": 423.02,
+    "end": 423.28
+   },
+   {
+    "w": "micrófono",
+    "start": 423.28,
+    "end": 423.72
+   },
+   {
+    "w": "se",
+    "start": 423.72,
+    "end": 423.92
+   },
+   {
+    "w": "silenció",
+    "start": 423.92,
+    "end": 424.4
+   },
+   {
+    "w": "voy",
+    "start": 424.4,
+    "end": 425.34
+   },
+   {
+    "w": "a",
+    "start": 425.34,
+    "end": 425.48
+   },
+   {
+    "w": "mostrarlo",
+    "start": 425.48,
+    "end": 426.18
+   }
+  ]
+ },
+ {
+  "id": 64,
+  "start": 426.18,
+  "end": 436.96,
+  "text": "acá y listo listo amigos eso fue todo por ese tutorial algo muy fácil pero muy efectivo con",
+  "words": [
+   {
+    "w": "acá",
+    "start": 426.18,
+    "end": 426.92
+   },
+   {
+    "w": "y",
+    "start": 426.92,
+    "end": 428.86
+   },
+   {
+    "w": "listo",
+    "start": 428.86,
+    "end": 429.54
+   },
+   {
+    "w": "listo",
+    "start": 430.94,
+    "end": 432.02
+   },
+   {
+    "w": "amigos",
+    "start": 432.02,
+    "end": 432.28
+   },
+   {
+    "w": "eso",
+    "start": 432.28,
+    "end": 432.7
+   },
+   {
+    "w": "fue",
+    "start": 432.7,
+    "end": 432.9
+   },
+   {
+    "w": "todo",
+    "start": 432.9,
+    "end": 433.06
+   },
+   {
+    "w": "por",
+    "start": 433.06,
+    "end": 433.28
+   },
+   {
+    "w": "ese",
+    "start": 433.28,
+    "end": 433.44
+   },
+   {
+    "w": "tutorial",
+    "start": 433.44,
+    "end": 433.78
+   },
+   {
+    "w": "algo",
+    "start": 433.78,
+    "end": 434.32
+   },
+   {
+    "w": "muy",
+    "start": 434.32,
+    "end": 434.72
+   },
+   {
+    "w": "fácil",
+    "start": 434.72,
+    "end": 435.1
+   },
+   {
+    "w": "pero",
+    "start": 435.1,
+    "end": 435.46
+   },
+   {
+    "w": "muy",
+    "start": 435.46,
+    "end": 435.74
+   },
+   {
+    "w": "efectivo",
+    "start": 435.74,
+    "end": 436.32
+   },
+   {
+    "w": "con",
+    "start": 436.32,
+    "end": 436.96
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "start": 436.96,
+  "end": 442.9,
+  "text": "el cual podemos controlar de una manera muy sencilla nuestro obs porque podríamos hacerlo",
+  "words": [
+   {
+    "w": "el",
+    "start": 436.96,
+    "end": 437.06
+   },
+   {
+    "w": "cual",
+    "start": 437.06,
+    "end": 437.22
+   },
+   {
+    "w": "podemos",
+    "start": 437.22,
+    "end": 437.64
+   },
+   {
+    "w": "controlar",
+    "start": 437.64,
+    "end": 438.24
+   },
+   {
+    "w": "de",
+    "start": 438.24,
+    "end": 438.52
+   },
+   {
+    "w": "una",
+    "start": 438.52,
+    "end": 438.6
+   },
+   {
+    "w": "manera",
+    "start": 438.6,
+    "end": 438.78
+   },
+   {
+    "w": "muy",
+    "start": 438.78,
+    "end": 439.1
+   },
+   {
+    "w": "sencilla",
+    "start": 439.1,
+    "end": 439.64
+   },
+   {
+    "w": "nuestro",
+    "start": 439.64,
+    "end": 440.54
+   },
+   {
+    "w": "obs",
+    "start": 440.54,
+    "end": 441.48
+   },
+   {
+    "w": "porque",
+    "start": 441.48,
+    "end": 442.02
+   },
+   {
+    "w": "podríamos",
+    "start": 442.02,
+    "end": 442.52
+   },
+   {
+    "w": "hacerlo",
+    "start": 442.52,
+    "end": 442.9
+   }
+  ]
+ },
+ {
+  "id": 66,
+  "start": 442.9,
+  "end": 447.04,
+  "text": "también desde el teclado pero pues no es lo mismo porque si en algún juego utilizamos estas",
+  "words": [
+   {
+    "w": "también",
+    "start": 442.9,
+    "end": 443.18
+   },
+   {
+    "w": "desde",
+    "start": 443.18,
+    "end": 443.34
+   },
+   {
+    "w": "el",
+    "start": 443.34,
+    "end": 443.46
+   },
+   {
+    "w": "teclado",
+    "start": 443.46,
+    "end": 443.82
+   },
+   {
+    "w": "pero",
+    "start": 443.82,
+    "end": 444.06
+   },
+   {
+    "w": "pues",
+    "start": 444.06,
+    "end": 444.26
+   },
+   {
+    "w": "no",
+    "start": 444.26,
+    "end": 444.44
+   },
+   {
+    "w": "es",
+    "start": 444.44,
+    "end": 444.54
+   },
+   {
+    "w": "lo",
+    "start": 444.54,
+    "end": 444.6
+   },
+   {
+    "w": "mismo",
+    "start": 444.6,
+    "end": 444.84
+   },
+   {
+    "w": "porque",
+    "start": 444.84,
+    "end": 445.16
+   },
+   {
+    "w": "si",
+    "start": 445.16,
+    "end": 445.38
+   },
+   {
+    "w": "en",
+    "start": 445.38,
+    "end": 445.66
+   },
+   {
+    "w": "algún",
+    "start": 445.66,
+    "end": 445.96
+   },
+   {
+    "w": "juego",
+    "start": 445.96,
+    "end": 446.2
+   },
+   {
+    "w": "utilizamos",
+    "start": 446.2,
+    "end": 446.72
+   },
+   {
+    "w": "estas",
+    "start": 446.72,
+    "end": 447.04
+   }
+  ]
+ },
+ {
+  "id": 67,
+  "start": 447.04,
+  "end": 453.14,
+  "text": "teclas nos va a quedar muy incómodo ejemplo yo acá puedo tener por la tecla número 1 2 y 3",
+  "words": [
+   {
+    "w": "teclas",
+    "start": 447.04,
+    "end": 447.54
+   },
+   {
+    "w": "nos",
+    "start": 447.54,
+    "end": 448.2
+   },
+   {
+    "w": "va",
+    "start": 448.2,
+    "end": 448.36
+   },
+   {
+    "w": "a",
+    "start": 448.36,
+    "end": 448.42
+   },
+   {
+    "w": "quedar",
+    "start": 448.42,
+    "end": 448.52
+   },
+   {
+    "w": "muy",
+    "start": 448.52,
+    "end": 448.76
+   },
+   {
+    "w": "incómodo",
+    "start": 448.76,
+    "end": 449.24
+   },
+   {
+    "w": "ejemplo",
+    "start": 449.24,
+    "end": 449.54
+   },
+   {
+    "w": "yo",
+    "start": 449.54,
+    "end": 449.94
+   },
+   {
+    "w": "acá",
+    "start": 449.94,
+    "end": 450.06
+   },
+   {
+    "w": "puedo",
+    "start": 450.06,
+    "end": 450.3
+   },
+   {
+    "w": "tener",
+    "start": 450.3,
+    "end": 450.6
+   },
+   {
+    "w": "por",
+    "start": 450.6,
+    "end": 450.9
+   },
+   {
+    "w": "la",
+    "start": 450.9,
+    "end": 451.32
+   },
+   {
+    "w": "tecla",
+    "start": 451.32,
+    "end": 451.68
+   },
+   {
+    "w": "número",
+    "start": 451.68,
+    "end": 451.86
+   },
+   {
+    "w": "1",
+    "start": 451.86,
+    "end": 452.18
+   },
+   {
+    "w": "2",
+    "start": 452.18,
+    "end": 452.64
+   },
+   {
+    "w": "y",
+    "start": 452.64,
+    "end": 452.82
+   },
+   {
+    "w": "3",
+    "start": 452.82,
+    "end": 453.14
+   }
+  ]
+ },
+ {
+  "id": 68,
+  "start": 453.64,
+  "end": 458.36,
+  "text": "esto se hace muy fácil si de pronto todavía no tienen es un celular aunque no creo que estén",
+  "words": [
+   {
+    "w": "esto",
+    "start": 453.64,
+    "end": 454.12
+   },
+   {
+    "w": "se",
+    "start": 454.12,
+    "end": 454.26
+   },
+   {
+    "w": "hace",
+    "start": 454.26,
+    "end": 454.38
+   },
+   {
+    "w": "muy",
+    "start": 454.38,
+    "end": 454.56
+   },
+   {
+    "w": "fácil",
+    "start": 454.56,
+    "end": 454.84
+   },
+   {
+    "w": "si",
+    "start": 454.84,
+    "end": 455.08
+   },
+   {
+    "w": "de",
+    "start": 455.08,
+    "end": 455.16
+   },
+   {
+    "w": "pronto",
+    "start": 455.16,
+    "end": 455.28
+   },
+   {
+    "w": "todavía",
+    "start": 455.28,
+    "end": 455.8
+   },
+   {
+    "w": "no",
+    "start": 455.8,
+    "end": 455.92
+   },
+   {
+    "w": "tienen",
+    "start": 455.92,
+    "end": 456.14
+   },
+   {
+    "w": "es",
+    "start": 456.14,
+    "end": 456.92
+   },
+   {
+    "w": "un",
+    "start": 456.92,
+    "end": 457.18
+   },
+   {
+    "w": "celular",
+    "start": 457.18,
+    "end": 457.54
+   },
+   {
+    "w": "aunque",
+    "start": 457.54,
+    "end": 457.8
+   },
+   {
+    "w": "no",
+    "start": 457.8,
+    "end": 457.94
+   },
+   {
+    "w": "creo",
+    "start": 457.94,
+    "end": 458.08
+   },
+   {
+    "w": "que",
+    "start": 458.08,
+    "end": 458.22
+   },
+   {
+    "w": "estén",
+    "start": 458.22,
+    "end": 458.36
+   }
+  ]
+ },
+ {
+  "id": 69,
+  "start": 458.36,
+  "end": 465.84,
+  "text": "por acá en este tutorial si no tienen los los equipos pero esto se hace muy fácil yendo",
+  "words": [
+   {
+    "w": "por",
+    "start": 458.36,
+    "end": 458.52
+   },
+   {
+    "w": "acá",
+    "start": 458.52,
+    "end": 458.74
+   },
+   {
+    "w": "en",
+    "start": 458.74,
+    "end": 459.44
+   },
+   {
+    "w": "este",
+    "start": 459.44,
+    "end": 459.6
+   },
+   {
+    "w": "tutorial",
+    "start": 459.6,
+    "end": 459.92
+   },
+   {
+    "w": "si",
+    "start": 459.92,
+    "end": 460.16
+   },
+   {
+    "w": "no",
+    "start": 460.16,
+    "end": 460.24
+   },
+   {
+    "w": "tienen",
+    "start": 460.24,
+    "end": 460.42
+   },
+   {
+    "w": "los",
+    "start": 460.42,
+    "end": 460.74
+   },
+   {
+    "w": "los",
+    "start": 460.74,
+    "end": 461.36
+   },
+   {
+    "w": "equipos",
+    "start": 461.36,
+    "end": 461.86
+   },
+   {
+    "w": "pero",
+    "start": 461.86,
+    "end": 463.22
+   },
+   {
+    "w": "esto",
+    "start": 463.22,
+    "end": 464.12
+   },
+   {
+    "w": "se",
+    "start": 464.12,
+    "end": 464.26
+   },
+   {
+    "w": "hace",
+    "start": 464.26,
+    "end": 464.42
+   },
+   {
+    "w": "muy",
+    "start": 464.42,
+    "end": 464.62
+   },
+   {
+    "w": "fácil",
+    "start": 464.62,
+    "end": 465.02
+   },
+   {
+    "w": "yendo",
+    "start": 465.02,
+    "end": 465.84
+   }
+  ]
+ },
+ {
+  "id": 70,
+  "start": 465.84,
+  "end": 470.96,
+  "text": "acá donde dice atajos ustedes le pueden asignar acá la tecla que necesiten y listo",
+  "words": [
+   {
+    "w": "acá",
+    "start": 465.84,
+    "end": 466.02
+   },
+   {
+    "w": "donde",
+    "start": 466.02,
+    "end": 466.28
+   },
+   {
+    "w": "dice",
+    "start": 466.28,
+    "end": 466.54
+   },
+   {
+    "w": "atajos",
+    "start": 466.54,
+    "end": 467.16
+   },
+   {
+    "w": "ustedes",
+    "start": 467.16,
+    "end": 467.4
+   },
+   {
+    "w": "le",
+    "start": 467.4,
+    "end": 467.58
+   },
+   {
+    "w": "pueden",
+    "start": 467.58,
+    "end": 467.7
+   },
+   {
+    "w": "asignar",
+    "start": 467.7,
+    "end": 468.08
+   },
+   {
+    "w": "acá",
+    "start": 468.08,
+    "end": 468.26
+   },
+   {
+    "w": "la",
+    "start": 468.26,
+    "end": 468.7
+   },
+   {
+    "w": "tecla",
+    "start": 468.7,
+    "end": 469.04
+   },
+   {
+    "w": "que",
+    "start": 469.04,
+    "end": 469.18
+   },
+   {
+    "w": "necesiten",
+    "start": 469.18,
+    "end": 469.78
+   },
+   {
+    "w": "y",
+    "start": 469.78,
+    "end": 470.5
+   },
+   {
+    "w": "listo",
+    "start": 470.5,
+    "end": 470.96
+   }
+  ]
+ },
+ {
+  "id": 71,
+  "start": 470.96,
+  "end": 476.74,
+  "text": "podrían darle acá por ejemplo la tecla 1 2 y 3 entonces listo amigos eso fue todo por este",
+  "words": [
+   {
+    "w": "podrían",
+    "start": 470.96,
+    "end": 471.34
+   },
+   {
+    "w": "darle",
+    "start": 471.34,
+    "end": 471.62
+   },
+   {
+    "w": "acá",
+    "start": 471.62,
+    "end": 471.84
+   },
+   {
+    "w": "por",
+    "start": 471.84,
+    "end": 472.12
+   },
+   {
+    "w": "ejemplo",
+    "start": 472.12,
+    "end": 472.32
+   },
+   {
+    "w": "la",
+    "start": 472.32,
+    "end": 472.5
+   },
+   {
+    "w": "tecla",
+    "start": 472.5,
+    "end": 472.72
+   },
+   {
+    "w": "1",
+    "start": 472.72,
+    "end": 473.0
+   },
+   {
+    "w": "2",
+    "start": 473.0,
+    "end": 473.24
+   },
+   {
+    "w": "y",
+    "start": 473.24,
+    "end": 473.52
+   },
+   {
+    "w": "3",
+    "start": 473.52,
+    "end": 473.8
+   },
+   {
+    "w": "entonces",
+    "start": 473.8,
+    "end": 475.26
+   },
+   {
+    "w": "listo",
+    "start": 475.26,
+    "end": 475.64
+   },
+   {
+    "w": "amigos",
+    "start": 475.64,
+    "end": 475.78
+   },
+   {
+    "w": "eso",
+    "start": 475.78,
+    "end": 476.02
+   },
+   {
+    "w": "fue",
+    "start": 476.02,
+    "end": 476.2
+   },
+   {
+    "w": "todo",
+    "start": 476.2,
+    "end": 476.36
+   },
+   {
+    "w": "por",
+    "start": 476.36,
+    "end": 476.56
+   },
+   {
+    "w": "este",
+    "start": 476.56,
+    "end": 476.74
+   }
+  ]
+ },
+ {
+  "id": 72,
+  "start": 476.74,
+  "end": 481.2,
+  "text": "vídeo algo muy corto pero que puede ser muy práctico nuestro día a día nuestro streaming",
+  "words": [
+   {
+    "w": "vídeo",
+    "start": 476.74,
+    "end": 476.98
+   },
+   {
+    "w": "algo",
+    "start": 476.98,
+    "end": 477.34
+   },
+   {
+    "w": "muy",
+    "start": 477.34,
+    "end": 477.52
+   },
+   {
+    "w": "corto",
+    "start": 477.52,
+    "end": 478.06
+   },
+   {
+    "w": "pero",
+    "start": 478.06,
+    "end": 478.34
+   },
+   {
+    "w": "que",
+    "start": 478.34,
+    "end": 478.48
+   },
+   {
+    "w": "puede",
+    "start": 478.48,
+    "end": 478.66
+   },
+   {
+    "w": "ser",
+    "start": 478.66,
+    "end": 478.84
+   },
+   {
+    "w": "muy",
+    "start": 478.84,
+    "end": 479.18
+   },
+   {
+    "w": "práctico",
+    "start": 479.18,
+    "end": 479.68
+   },
+   {
+    "w": "nuestro",
+    "start": 479.68,
+    "end": 479.98
+   },
+   {
+    "w": "día",
+    "start": 479.98,
+    "end": 480.3
+   },
+   {
+    "w": "a",
+    "start": 480.3,
+    "end": 480.42
+   },
+   {
+    "w": "día",
+    "start": 480.42,
+    "end": 480.5
+   },
+   {
+    "w": "nuestro",
+    "start": 480.5,
+    "end": 480.74
+   },
+   {
+    "w": "streaming",
+    "start": 480.74,
+    "end": 481.2
+   }
+  ]
+ },
+ {
+  "id": 73,
+  "start": 481.2,
+  "end": 487.2,
+  "text": "totalmente gratis hay antes de que se me olviden diferencia con la pro muy básico que simplemente",
+  "words": [
+   {
+    "w": "totalmente",
+    "start": 481.2,
+    "end": 481.64
+   },
+   {
+    "w": "gratis",
+    "start": 481.64,
+    "end": 482.52
+   },
+   {
+    "w": "hay",
+    "start": 482.52,
+    "end": 482.86
+   },
+   {
+    "w": "antes",
+    "start": 482.86,
+    "end": 483.04
+   },
+   {
+    "w": "de",
+    "start": 483.04,
+    "end": 483.18
+   },
+   {
+    "w": "que",
+    "start": 483.18,
+    "end": 483.22
+   },
+   {
+    "w": "se",
+    "start": 483.22,
+    "end": 483.32
+   },
+   {
+    "w": "me",
+    "start": 483.32,
+    "end": 483.4
+   },
+   {
+    "w": "olviden",
+    "start": 483.4,
+    "end": 483.7
+   },
+   {
+    "w": "diferencia",
+    "start": 483.7,
+    "end": 484.44
+   },
+   {
+    "w": "con",
+    "start": 484.44,
+    "end": 484.8
+   },
+   {
+    "w": "la",
+    "start": 484.8,
+    "end": 484.96
+   },
+   {
+    "w": "pro",
+    "start": 484.96,
+    "end": 485.2
+   },
+   {
+    "w": "muy",
+    "start": 485.2,
+    "end": 485.86
+   },
+   {
+    "w": "básico",
+    "start": 485.86,
+    "end": 486.34
+   },
+   {
+    "w": "que",
+    "start": 486.34,
+    "end": 486.74
+   },
+   {
+    "w": "simplemente",
+    "start": 486.74,
+    "end": 487.2
+   }
+  ]
+ },
+ {
+  "id": 74,
+  "start": 487.2,
+  "end": 493.92,
+  "text": "la pro tiene más cuadritos en la pantalla si necesita más acciones pero en lo que nos",
+  "words": [
+   {
+    "w": "la",
+    "start": 487.2,
+    "end": 487.92
+   },
+   {
+    "w": "pro",
+    "start": 487.92,
+    "end": 488.28
+   },
+   {
+    "w": "tiene",
+    "start": 488.28,
+    "end": 489.4
+   },
+   {
+    "w": "más",
+    "start": 489.4,
+    "end": 490.2
+   },
+   {
+    "w": "cuadritos",
+    "start": 490.2,
+    "end": 490.76
+   },
+   {
+    "w": "en",
+    "start": 490.76,
+    "end": 490.96
+   },
+   {
+    "w": "la",
+    "start": 490.96,
+    "end": 491.04
+   },
+   {
+    "w": "pantalla",
+    "start": 491.04,
+    "end": 491.44
+   },
+   {
+    "w": "si",
+    "start": 491.44,
+    "end": 491.66
+   },
+   {
+    "w": "necesita",
+    "start": 491.66,
+    "end": 492.06
+   },
+   {
+    "w": "más",
+    "start": 492.06,
+    "end": 492.28
+   },
+   {
+    "w": "acciones",
+    "start": 492.28,
+    "end": 492.66
+   },
+   {
+    "w": "pero",
+    "start": 492.66,
+    "end": 493.0
+   },
+   {
+    "w": "en",
+    "start": 493.0,
+    "end": 493.56
+   },
+   {
+    "w": "lo",
+    "start": 493.56,
+    "end": 493.66
+   },
+   {
+    "w": "que",
+    "start": 493.66,
+    "end": 493.78
+   },
+   {
+    "w": "nos",
+    "start": 493.78,
+    "end": 493.92
+   }
+  ]
+ },
+ {
+  "id": 75,
+  "start": 493.92,
+  "end": 499.68,
+  "text": "da en la gratis creo que es mucho realmente acá ustedes pueden asignar fuentes como meme es",
+  "words": [
+   {
+    "w": "da",
+    "start": 493.92,
+    "end": 494.06
+   },
+   {
+    "w": "en",
+    "start": 494.06,
+    "end": 494.16
+   },
+   {
+    "w": "la",
+    "start": 494.16,
+    "end": 494.26
+   },
+   {
+    "w": "gratis",
+    "start": 494.26,
+    "end": 494.66
+   },
+   {
+    "w": "creo",
+    "start": 494.66,
+    "end": 494.86
+   },
+   {
+    "w": "que",
+    "start": 494.86,
+    "end": 495.04
+   },
+   {
+    "w": "es",
+    "start": 495.04,
+    "end": 495.2
+   },
+   {
+    "w": "mucho",
+    "start": 495.2,
+    "end": 496.04
+   },
+   {
+    "w": "realmente",
+    "start": 496.04,
+    "end": 496.54
+   },
+   {
+    "w": "acá",
+    "start": 496.54,
+    "end": 497.0
+   },
+   {
+    "w": "ustedes",
+    "start": 497.0,
+    "end": 497.3
+   },
+   {
+    "w": "pueden",
+    "start": 497.3,
+    "end": 497.64
+   },
+   {
+    "w": "asignar",
+    "start": 497.64,
+    "end": 498.18
+   },
+   {
+    "w": "fuentes",
+    "start": 498.18,
+    "end": 498.5
+   },
+   {
+    "w": "como",
+    "start": 498.5,
+    "end": 498.82
+   },
+   {
+    "w": "meme",
+    "start": 498.82,
+    "end": 499.26
+   },
+   {
+    "w": "es",
+    "start": 499.26,
+    "end": 499.68
+   }
+  ]
+ },
+ {
+  "id": 76,
+  "start": 499.68,
+  "end": 505.32,
+  "text": "gif sonidos todo ese tipo de cosas de todas maneras si quieren un vídeo acerca de eso me",
+  "words": [
+   {
+    "w": "gif",
+    "start": 499.68,
+    "end": 500.14
+   },
+   {
+    "w": "sonidos",
+    "start": 500.14,
+    "end": 501.3
+   },
+   {
+    "w": "todo",
+    "start": 501.3,
+    "end": 501.6
+   },
+   {
+    "w": "ese",
+    "start": 501.6,
+    "end": 501.82
+   },
+   {
+    "w": "tipo",
+    "start": 501.82,
+    "end": 502.06
+   },
+   {
+    "w": "de",
+    "start": 502.06,
+    "end": 502.2
+   },
+   {
+    "w": "cosas",
+    "start": 502.2,
+    "end": 502.44
+   },
+   {
+    "w": "de",
+    "start": 502.44,
+    "end": 503.2
+   },
+   {
+    "w": "todas",
+    "start": 503.2,
+    "end": 503.3
+   },
+   {
+    "w": "maneras",
+    "start": 503.3,
+    "end": 503.6
+   },
+   {
+    "w": "si",
+    "start": 503.6,
+    "end": 503.76
+   },
+   {
+    "w": "quieren",
+    "start": 503.76,
+    "end": 503.98
+   },
+   {
+    "w": "un",
+    "start": 503.98,
+    "end": 504.14
+   },
+   {
+    "w": "vídeo",
+    "start": 504.14,
+    "end": 504.32
+   },
+   {
+    "w": "acerca",
+    "start": 504.32,
+    "end": 504.6
+   },
+   {
+    "w": "de",
+    "start": 504.6,
+    "end": 504.86
+   },
+   {
+    "w": "eso",
+    "start": 504.86,
+    "end": 505.0
+   },
+   {
+    "w": "me",
+    "start": 505.0,
+    "end": 505.32
+   }
+  ]
+ },
+ {
+  "id": 77,
+  "start": 505.32,
+  "end": 510.3,
+  "text": "lo dejan ahí en los comentarios dígame qué tal les pareció si lo conectaron a la primera no",
+  "words": [
+   {
+    "w": "lo",
+    "start": 505.32,
+    "end": 505.44
+   },
+   {
+    "w": "dejan",
+    "start": 505.44,
+    "end": 505.64
+   },
+   {
+    "w": "ahí",
+    "start": 505.64,
+    "end": 505.78
+   },
+   {
+    "w": "en",
+    "start": 505.78,
+    "end": 505.84
+   },
+   {
+    "w": "los",
+    "start": 505.84,
+    "end": 505.92
+   },
+   {
+    "w": "comentarios",
+    "start": 505.92,
+    "end": 506.38
+   },
+   {
+    "w": "dígame",
+    "start": 506.38,
+    "end": 507.16
+   },
+   {
+    "w": "qué",
+    "start": 507.16,
+    "end": 507.36
+   },
+   {
+    "w": "tal",
+    "start": 507.36,
+    "end": 507.52
+   },
+   {
+    "w": "les",
+    "start": 507.52,
+    "end": 507.66
+   },
+   {
+    "w": "pareció",
+    "start": 507.66,
+    "end": 508.04
+   },
+   {
+    "w": "si",
+    "start": 508.04,
+    "end": 508.22
+   },
+   {
+    "w": "lo",
+    "start": 508.22,
+    "end": 508.38
+   },
+   {
+    "w": "conectaron",
+    "start": 508.38,
+    "end": 508.96
+   },
+   {
+    "w": "a",
+    "start": 508.96,
+    "end": 509.08
+   },
+   {
+    "w": "la",
+    "start": 509.08,
+    "end": 509.16
+   },
+   {
+    "w": "primera",
+    "start": 509.16,
+    "end": 509.5
+   },
+   {
+    "w": "no",
+    "start": 509.5,
+    "end": 510.3
+   }
+  ]
+ },
+ {
+  "id": 78,
+  "start": 510.3,
+  "end": 514.0,
+  "text": "olviden de todas maneras estar pendientes ahí de lo que vamos a estar subiendo para eso los",
+  "words": [
+   {
+    "w": "olviden",
+    "start": 510.3,
+    "end": 510.62
+   },
+   {
+    "w": "de",
+    "start": 510.62,
+    "end": 510.74
+   },
+   {
+    "w": "todas",
+    "start": 510.74,
+    "end": 510.88
+   },
+   {
+    "w": "maneras",
+    "start": 510.88,
+    "end": 511.22
+   },
+   {
+    "w": "estar",
+    "start": 511.22,
+    "end": 511.58
+   },
+   {
+    "w": "pendientes",
+    "start": 511.58,
+    "end": 512.12
+   },
+   {
+    "w": "ahí",
+    "start": 512.12,
+    "end": 512.3
+   },
+   {
+    "w": "de",
+    "start": 512.3,
+    "end": 512.42
+   },
+   {
+    "w": "lo",
+    "start": 512.42,
+    "end": 512.5
+   },
+   {
+    "w": "que",
+    "start": 512.5,
+    "end": 512.58
+   },
+   {
+    "w": "vamos",
+    "start": 512.58,
+    "end": 512.7
+   },
+   {
+    "w": "a",
+    "start": 512.7,
+    "end": 512.84
+   },
+   {
+    "w": "estar",
+    "start": 512.84,
+    "end": 512.94
+   },
+   {
+    "w": "subiendo",
+    "start": 512.94,
+    "end": 513.34
+   },
+   {
+    "w": "para",
+    "start": 513.34,
+    "end": 513.6
+   },
+   {
+    "w": "eso",
+    "start": 513.6,
+    "end": 513.86
+   },
+   {
+    "w": "los",
+    "start": 513.86,
+    "end": 514.0
+   }
+  ]
+ },
+ {
+  "id": 79,
+  "start": 514.0,
+  "end": 518.96,
+  "text": "invito a que le encliga el botón de suscribirse y ahí activar la campanita para estar pendiente",
+  "words": [
+   {
+    "w": "invito",
+    "start": 514.0,
+    "end": 514.38
+   },
+   {
+    "w": "a",
+    "start": 514.38,
+    "end": 514.46
+   },
+   {
+    "w": "que",
+    "start": 514.46,
+    "end": 514.6
+   },
+   {
+    "w": "le",
+    "start": 514.6,
+    "end": 515.18
+   },
+   {
+    "w": "encliga",
+    "start": 515.18,
+    "end": 515.64
+   },
+   {
+    "w": "el",
+    "start": 515.64,
+    "end": 515.74
+   },
+   {
+    "w": "botón",
+    "start": 515.74,
+    "end": 516.0
+   },
+   {
+    "w": "de",
+    "start": 516.0,
+    "end": 516.1
+   },
+   {
+    "w": "suscribirse",
+    "start": 516.1,
+    "end": 516.68
+   },
+   {
+    "w": "y",
+    "start": 516.68,
+    "end": 516.82
+   },
+   {
+    "w": "ahí",
+    "start": 516.82,
+    "end": 516.98
+   },
+   {
+    "w": "activar",
+    "start": 516.98,
+    "end": 517.5
+   },
+   {
+    "w": "la",
+    "start": 517.5,
+    "end": 517.6
+   },
+   {
+    "w": "campanita",
+    "start": 517.6,
+    "end": 518.12
+   },
+   {
+    "w": "para",
+    "start": 518.12,
+    "end": 518.34
+   },
+   {
+    "w": "estar",
+    "start": 518.34,
+    "end": 518.5
+   },
+   {
+    "w": "pendiente",
+    "start": 518.5,
+    "end": 518.96
+   }
+  ]
+ },
+ {
+  "id": 80,
+  "start": 518.96,
+  "end": 522.0,
+  "text": "de todo lo que vamos a estar subiendo un saludo que estén bien chao",
+  "words": [
+   {
+    "w": "de",
+    "start": 518.96,
+    "end": 519.12
+   },
+   {
+    "w": "todo",
+    "start": 519.12,
+    "end": 519.22
+   },
+   {
+    "w": "lo",
+    "start": 519.22,
+    "end": 519.36
+   },
+   {
+    "w": "que",
+    "start": 519.36,
+    "end": 519.46
+   },
+   {
+    "w": "vamos",
+    "start": 519.46,
+    "end": 519.58
+   },
+   {
+    "w": "a",
+    "start": 519.58,
+    "end": 519.7
+   },
+   {
+    "w": "estar",
+    "start": 519.7,
+    "end": 519.82
+   },
+   {
+    "w": "subiendo",
+    "start": 519.82,
+    "end": 520.26
+   },
+   {
+    "w": "un",
+    "start": 520.26,
+    "end": 520.48
+   },
+   {
+    "w": "saludo",
+    "start": 520.48,
+    "end": 520.84
+   },
+   {
+    "w": "que",
+    "start": 520.84,
+    "end": 521.14
+   },
+   {
+    "w": "estén",
+    "start": 521.14,
+    "end": 521.34
+   },
+   {
+    "w": "bien",
+    "start": 521.34,
+    "end": 521.56
+   },
+   {
+    "w": "chao",
+    "start": 521.56,
+    "end": 522.0
+   }
+  ]
+ }
+]

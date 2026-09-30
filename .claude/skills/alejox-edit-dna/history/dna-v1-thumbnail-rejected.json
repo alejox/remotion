@@ -1,0 +1,322 @@
+{
+  "meta": {
+    "name": "Alejox Gaming — edit identity",
+    "slug": "alejox-edit-dna",
+    "source": [
+      "reference/channel-page.png (YouTube channel banner + 6 recent thumbnails, captured 2026-09-29)"
+    ],
+    "captured": "2026-09-29",
+    "medium_of_origin": "YouTube channel banner and video thumbnails, translated into motion overlays for Remotion",
+    "not_copied": [
+      "The AG triangle logo mark: the kit draws a placeholder monogram; the creator drops the real file at public/logo/alejox-logo.png",
+      "Third-party logos seen in thumbnails (OBS, Razer, StreamElements, Claude, DroidCam) — never baked into the kit"
+    ]
+  },
+  "soul": {
+    "one_line": "Flat grape-and-cyan diagonal, slanted white-and-yellow condensed caps, lots of footage — loud motion, quiet design.",
+    "adjectives": [
+      "loud",
+      "neon",
+      "punchy",
+      "gamer-tech",
+      "direct"
+    ],
+    "lineage": "MrBeast retention editing (punch-ins, word-pop captions, SFX on every hit) on a Twitch-overlay colour system",
+    "read_distance": "phone at arm's length — minimum type 28px at 1080px canvas width",
+    "energy": {
+      "density": 3,
+      "variance": 7,
+      "contrast": 9,
+      "warmth": 4
+    }
+  },
+  "palette": {
+    "colors": [
+      {
+        "name": "deep grape",
+        "hex": "#5A2885",
+        "role": "brand left half, section cards, panel fill tint"
+      },
+      {
+        "name": "electric cyan-blue",
+        "hex": "#25A1DC",
+        "role": "brand right half, progress, secondary lines"
+      },
+      {
+        "name": "highlighter yellow",
+        "hex": "#F7E000",
+        "role": "THE accent: one keyword per frame"
+      },
+      {
+        "name": "studio black",
+        "hex": "#111111",
+        "role": "panels, text outline, background"
+      },
+      {
+        "name": "paper white",
+        "hex": "#FFFFFF",
+        "role": "headline line 1, body text, logo disc"
+      },
+      {
+        "name": "strike red",
+        "hex": "#EF4444",
+        "role": "ONLY the strike-through on an old price / wrong option; never a fill or text"
+      }
+    ],
+    "coverage": {
+      "footage": 72,
+      "studio black panels": 12,
+      "grape+cyan brand fills": 10,
+      "white type": 4,
+      "yellow accent": 2
+    },
+    "mode": "dark",
+    "banned": [
+      "yellow on more than one word per frame",
+      "magenta as a text fill",
+      "any third brand hue (orange, teal, pink fills)",
+      "pastel or desaturated versions of the brand colours"
+    ]
+  },
+  "type": {
+    "families": [
+      {
+        "role": "display",
+        "family": "Anton",
+        "source": "@remotion/google-fonts/Anton",
+        "fallback": "Impact, 'Arial Narrow Bold', sans-serif"
+      },
+      {
+        "role": "body/ui",
+        "family": "Inter",
+        "weights": [
+          600,
+          800
+        ],
+        "source": "@remotion/google-fonts/Inter",
+        "fallback": "Arial, Helvetica, sans-serif"
+      }
+    ],
+    "scale": {
+      "display_to_body_ratio": "5:1 minimum, 7:1 on title cards",
+      "steps": [
+        "display",
+        "label",
+        "body"
+      ],
+      "max_sizes_per_frame": 3
+    },
+    "treatment": {
+      "display_tracking": "0 to +0.01em (Anton is already tight)",
+      "body_leading": 1.2,
+      "case": "display ALL CAPS; labels ALL CAPS letterspaced 0.18em; body sentence case",
+      "measure": "headline max 14 characters per line, max 2 lines",
+      "numerals": "Anton for step numbers inside the logo-disc badge"
+    },
+    "headline_recipe": "skewX(-8deg); white/yellow; stroke 4% of size; hard shadow 4%; zero blur"
+  },
+  "space": {
+    "grid": "no grid; anchor to left or right third, never centre for 16:9 overlays",
+    "margin_pct": 5,
+    "gutter_pct": 2,
+    "alignment": "16:9: left-aligned blocks in the outer third opposite the face; 9:16: centred inside the safe band",
+    "rhythm": "one overlay on screen at a time, 2s minimum between overlays",
+    "negative_space": "the speaker's face — no overlay ever covers it",
+    "safe_area": {
+      "youtube_16x9": "5% all sides",
+      "shorts_9x16": "x 7.4%..87% (80..940 of 1080), y 8%..78%"
+    }
+  },
+  "surface": {
+    "texture": "none — flat fills only (hex pattern removed for minimalism)",
+    "edges": "cards: 10px radius at 1080p; brand splits: hard diagonal, never rounded",
+    "elevation": "flat. Headlines keep a thin black stroke (4% of size) + hard shadow 4%, zero blur; everything else no stroke, no shadow",
+    "imagery": "footage untouched; slow 1.00→1.06 push-in on talking head; screen captures get a 1.15x zoom onto the clicked region",
+    "iconography": "white filled glyphs inside the white logo disc style badges; one stroke weight"
+  },
+  "signatures": [
+    "Diagonal split: grape left, cyan right, seam leans 20° from vertical (top to the right), split near 50/50 — used for section cards and every wipe transition",
+    "Headline = two lines, two colours (white / yellow), Anton caps skewed -8°, stroke 4%, hard shadow 4% — display:body >= 5:1",
+    "White disc badge sitting ON the seam or card corner, holding the logo or a step number (disc diameter = 1.4x headline cap height)",
+    "Yellow covers under 5% of any frame: exactly one keyword",
+    "Slam entrance: scale 1.35→1.0 in 7 frames with one small overshoot + whoosh/stamp; exits in 5 frames (exit faster than entrance)",
+    "MrBeast rhythm: hard-cut punch-in 1.12x on emphasis words + SFX on every visual hit",
+    "Minimal surfaces: solid flat panels (#111111 at 92%), no rims, no textures, no gradients except the brand grape->cyan on bars; max 2 overlay elements on screen"
+  ],
+  "weird_move": {
+    "what": "The yellow keyword punches out of its container",
+    "how": "On every title/section card the yellow line is 8-12% wider than the card and crosses its right edge (or the diagonal seam), rotated an extra -2° vs the rest",
+    "why": "Mirrors the thumbnails where the headline overlaps the subject and the frame edge; it is what makes cards read as 'thumbnail come alive' instead of a lower-third template"
+  },
+  "archetypes": [
+    {
+      "name": "HOOK",
+      "use": "first 1.5s of a video or Short",
+      "layout": "full-frame footage, two-line slam headline in outer third, keyword yellow breaking out"
+    },
+    {
+      "name": "SECTION",
+      "use": "chapter change",
+      "layout": "full-frame diagonal split wipe, big step number in white disc on the seam, 1-2 word title"
+    },
+    {
+      "name": "LOWER_THIRD",
+      "use": "name/handle, first appearance on camera",
+      "layout": "grape→cyan slanted bar bottom-left, logo disc left end, ALEJOXGAMING + tagline"
+    },
+    {
+      "name": "KEYWORD",
+      "use": "caption only on relevant phrases, never full subtitles",
+      "layout": "bottom band, 1-3 words, Anton caps, white + yellow keyword"
+    },
+    {
+      "name": "CALLOUT",
+      "use": "pointing at something on a screen capture",
+      "layout": "black rim panel with number disc + label, connector line to the region, zoom 1.15x"
+    },
+    {
+      "name": "COMPARE",
+      "use": "A vs B, price, before/after",
+      "layout": "two panels on the diagonal split; loser struck through in red"
+    },
+    {
+      "name": "OUTRO",
+      "use": "last 8-12s",
+      "layout": "diagonal split background, logo disc on seam, SUSCRÍBETE pill + next-video slots"
+    }
+  ],
+  "motion": {
+    "easing": "spring damping 12-14 stiffness 180 for entrances (one overshoot); Easing.in(cubic) for exits",
+    "durations": {
+      "entrance": "6-8 frames @30fps",
+      "exit": "4-5 frames",
+      "wipe": "10 frames",
+      "hold_min": "1.2s"
+    },
+    "entrances": [
+      "slam (scale down + stamp sfx)",
+      "slide along the 20° diagonal",
+      "diagonal wipe"
+    ],
+    "never_moves": [
+      "the speaker's face region",
+      "logo disc once landed (only a 1-turn spin on entry)"
+    ],
+    "reduced_motion": "n/a (video)",
+    "toolkit": {
+      "@remotion/transitions": "custom diagonal 20° wipe presentation inside <TransitionSeries>",
+      "@remotion/motion-blur": "<CameraMotionBlur> on slams, punch-ins and fast slides only",
+      "@remotion/layout-utils": "fitText for headline lines and breakout overshoot",
+      "@remotion/noise": "impact shake only, <=6 frames, a few px",
+      "@remotion/paths": "evolvePath for callout connectors and strike-throughs",
+      "not_installed": "@remotion/lottie (template look risk), @remotion/three (heavy peer deps, not needed)"
+    }
+  },
+  "voice": {
+    "register": "direct Latin American Spanish, second person (tú)",
+    "sentence_length": "headlines 2-4 words; labels 1-3 words",
+    "headline_shape": "LINE 1 context (white) / LINE 2 payoff (yellow): 'STREAM DECK' / 'GRATIS'",
+    "banned_words": [
+      "increíble",
+      "épico",
+      "brutal",
+      "definitivo (except in 'guía definitiva')"
+    ]
+  },
+  "bans": [
+    "Never set a headline in Inter or any non-condensed face",
+    "Never use a blurred drop shadow or glow on type — hard offset shadow only",
+    "Never more than one yellow word per frame",
+    "Never centre a 16:9 overlay over the speaker; never cover the face",
+    "Never use emoji — use SVG glyphs",
+    "Never full-sentence subtitles in 16:9 long videos (keywords only); Shorts use 1-3 word pop captions",
+    "Never glassmorphism / backdrop blur panels",
+    "Never ease-in-out fades as entrances; overlays slam or wipe",
+    "Never particles, confetti, lens flares or light leaks",
+    "Never a vertical or horizontal brand split — the seam is always the 20° diagonal",
+    "Never lowercase headlines",
+    "Never translucent/washed fills on the logo disc or brand bars; never a background box behind a single text line",
+    "Never decorative rims, glows, textures or patterns",
+    "Never more than 2 overlay elements on screen at once",
+    "Never stroke or shadow on body/label text"
+  ],
+  "tests": [
+    {
+      "id": "T1",
+      "test": "Yellow (#F7E000 ±30) covers under 5% of the frame",
+      "auto": true
+    },
+    {
+      "id": "T2",
+      "test": "No more than 3 distinct type sizes in one frame",
+      "auto": false
+    },
+    {
+      "id": "T3",
+      "test": "Display cap height / body cap height >= 5",
+      "auto": false
+    },
+    {
+      "id": "T4",
+      "test": "Every headline is Anton, uppercase, skewed, with black stroke and zero-blur shadow",
+      "auto": false
+    },
+    {
+      "id": "T5",
+      "test": "Title/section cards contain the yellow breakout exactly once",
+      "auto": false
+    },
+    {
+      "id": "T6",
+      "test": "Brand split seam angle is 20° ±3° from vertical",
+      "auto": false
+    },
+    {
+      "id": "T7",
+      "test": "All overlay pixels inside the platform safe area",
+      "auto": true
+    },
+    {
+      "id": "T8",
+      "test": "Entrances land in <= 8 frames, exits <= 5 frames",
+      "auto": false
+    },
+    {
+      "id": "T9",
+      "test": "Smallest text >= 28px at 1080px canvas width",
+      "auto": false
+    },
+    {
+      "id": "T10",
+      "test": "Squint test: next to the thumbnails, frame reads as the same channel (dark + grape/cyan + yellow/white slanted caps)",
+      "auto": false
+    },
+    {
+      "id": "T11",
+      "test": "Shorts: no stretch longer than 4s without a punch-in, overlay change or cut",
+      "auto": false
+    }
+  ],
+  "reconstruction": {
+    "attempted": true,
+    "gaps_found": [
+      "LogoDisc rendered translucent pale blue: spec must say SOLID opaque white disc, logo 100% opacity, 3px black ring",
+      "Tagline got a highlight-like box: spec must say tagline sits directly on a bar, no text background boxes",
+      "Name stroke too heavy on a thin bar: lower third is 2-tier (grape->cyan name bar + black 88% tagline bar), padding >= 0.35x cap height",
+      "Critic r1: burned-in source elements (SUSCRITO pill) must never share frame with overlays -> punch-in them out",
+      "Critic r1: breakout needs a card/seam to cross, else it doesn't read",
+      "Critic r1: outro must use the headline recipe, not a generic pill button",
+      "Critic r1: Shorts captions centred on x=540, chunked on phrase boundaries, hidden during hook",
+      "Critic r1: lower-third tier 2 must sit on a #111 strip; tier 1 flat grape + 20deg cyan end cap, ends x<=47% width"
+    ],
+    "passes": 1
+  },
+  "pacing": {
+    "punch_in": "on emphasis words: hard cut zoom 1.00 -> 1.12 (0 frames, no ease), held until next sentence; max 1 per 4s in long videos, 1 per 2s in Shorts",
+    "captions": "long 16:9 videos: KEYWORD archetype only. Shorts: word-pop captions, 1-3 words at a time, each word pops scale 0.6->1 in 3 frames, one yellow keyword per sentence",
+    "counters": "numbers/prices animate as a rolling counter (Anton, 6-10 frames) with a tick sfx",
+    "sfx": "every overlay entrance gets a sound: stamp for slams, whoosh for wipes, pop for words, riser before reveals",
+    "cut_rhythm": "no shot (or static overlay state) longer than ~4s in Shorts without a punch-in, overlay or cut"
+  },
+  "minimal_vs_mrbeast": "Design is quiet (flat, few elements, big negative space); MOTION is loud (slams, punch-ins, motion blur, impact shake, SFX on every hit)."
+}

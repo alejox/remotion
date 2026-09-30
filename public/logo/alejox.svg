@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SUSCRIBETE" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 763.73 766.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_14);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_14" data-name="Degradado sin nombre 14" x1="-45.85" y1="795.89" x2="783.35" y2="238.13" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#662d91"/>
+      <stop offset=".2" stop-color="#643093"/>
+      <stop offset=".38" stop-color="#5f3b9a"/>
+      <stop offset=".54" stop-color="#564ca5"/>
+      <stop offset=".7" stop-color="#4a65b5"/>
+      <stop offset=".86" stop-color="#3a85ca"/>
+      <stop offset="1" stop-color="#29abe2"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="m753.61,766.34H10.12c-7.51,0-12.4-7.9-9.05-14.62L372.82,5.6c3.72-7.47,14.38-7.47,18.1,0l185.74,372.8c3.35,6.72-1.54,14.62-9.05,14.62h-79.34c-3.83,0-7.34-2.17-9.05-5.6l-88.3-177.24c-3.72-7.47-14.38-7.47-18.1,0l-223.29,448.17c-3.35,6.72,1.54,14.62,9.05,14.62h446.58c7.51,0,12.4-7.9,9.05-14.62l-36.34-72.93c-1.71-3.43-5.21-5.6-9.05-5.6h-269.03c-7.51,0-12.4-7.9-9.05-14.62l82.07-164.74c3.72-7.47,14.38-7.47,18.1,0l40.03,80.36c1.71,3.43,5.21,5.6,9.05,5.6h184.22c3.83,0,7.34,2.17,9.05,5.6l129.4,259.71c3.35,6.72-1.54,14.62-9.05,14.62Z"/>
+</svg>
