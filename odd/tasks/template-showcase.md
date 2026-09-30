@@ -32,7 +32,8 @@ Each piece passes Brief, System and Craft critics (binary) on rendered frames; t
 
 ## Progress / evidence
 - T0: tsc + eslint OK, stills render black.
-- T3: clean CTA uses a dark translucent, backdrop-blurred glass pill with a cyan edge/tint, a crisp white label and a subtle specular highlight; the classic variant remains unchanged. Added an 8.2s clean subscribe beat to the 16:9 showcase. `npx tsc --noEmit`, `npx eslint src`, and `git diff --check` passed. Visual check: `PlantillaAlejox` frame 1320 at 50% (`/private/tmp/plantilla-suscribe-glass.png`); Brief/System/Craft pass on the rendered frame. Receipt-driven development was globally off.
+- T3: clean CTA uses a dark translucent, backdrop-blurred glass pill with a cyan edge/tint, a crisp white label and a subtle specular highlight; the classic variant remains unchanged. Added an 8.2s clean subscribe beat to the 16:9 showcase (the new `showcase.config.ts` remains uncommitted with T1's showcase work). `npx tsc --noEmit`, `npx eslint src`, and `git diff --check` passed. Visual check: `PlantillaAlejox` frame 1320 at 50% (`/private/tmp/plantilla-suscribe-glass.png`); Brief/System/Craft pass on the rendered frame. Receipt-driven development was globally off.
+- T3 work-unit commit: `77c5f9a` (`feat(brand): add liquid-glass subscribe CTA`); contains `SubscribeCard.tsx` and the T3 task/review notes.
 
 ## Next step
 T1 round 7: craft fix listed under 'P1 round 6' in design-loop/progress.md (Brief and System pass). T1 changes are uncommitted. Then T4, T2+T5.
