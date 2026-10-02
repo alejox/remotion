@@ -5,8 +5,9 @@
  */
 import React from "react";
 import { Reveal, Rise } from "./Reveal";
+import { TextBlock } from "./TextBlock";
 import { COLUMN_X } from "./tokens";
-import { Column, eyebrowStyle, headStyle, lines } from "./typography";
+import { lines, useTypeStyles } from "./typography";
 
 export type TitleCardProps = {
   start: number;
@@ -15,6 +16,8 @@ export type TitleCardProps = {
   title?: string;
   x?: number;
   y?: number;
+  /** Component label, set as the first line of the group. */
+  tag?: string;
 };
 
 export const TitleCard: React.FC<TitleCardProps> = ({
@@ -24,12 +27,17 @@ export const TitleCard: React.FC<TitleCardProps> = ({
   title = "Título del video",
   x = COLUMN_X,
   y,
-}) => (
+  tag,
+}) => {
+  const { eyebrow: eyebrowStyle, head: headStyle } = useTypeStyles();
+  return (
   <Reveal start={start} duration={duration} staged>
-    <Column x={x} y={y} gap={20}>
-      <Rise index={0} style={eyebrowStyle}>
-        {meta}
-      </Rise>
+    <TextBlock x={x} y={y} tag={tag} gap={20}>
+      {meta ? (
+        <Rise index={0} style={eyebrowStyle}>
+          {meta}
+        </Rise>
+      ) : null}
       <div>
         {lines(title).map((line, i) => (
           <Rise key={i} index={i + 1} style={headStyle}>
@@ -37,6 +45,7 @@ export const TitleCard: React.FC<TitleCardProps> = ({
           </Rise>
         ))}
       </div>
-    </Column>
+    </TextBlock>
   </Reveal>
-);
+  );
+};

@@ -12,6 +12,10 @@ export const COLOR = {
   white: "#FFFFFF",
   /** Secondary text and metadata. */
   fog: "#A1A1AA",
+  /** Fog lifted for text on glass over footage (>= 4.5:1 on the glass; same zinc family). */
+  fogGlass: "#D4D4D8",
+  /** Supporting copy on bare beats (~172): recedes behind the 255 headline/figure, still >= 4.5:1 over the vignette. */
+  fogLead: "#ACACB4",
   /** THE accent: highlight boxes, active word, one emphasised word. Under 2% of the frame. */
   cyan: "#25A1DC",
   /** Brand only: the 20 degree slash, section cards, wipe. */
@@ -32,6 +36,8 @@ export const SLASH_W = 6;
 export const MARGIN = 96;
 /** Showcase column: every text block of a 16:9 frame shares this left edge (10% of 1920). */
 export const COLUMN_X = 192;
+/** Showcase column of a 9:16 Short: 8% of 1080 (88px) side margin, inside the x 80..940 safe area. */
+export const SHORT_COLUMN_X = 88;
 /** Landscape top margin of top-anchored overlays, and bottom margin of bottom-anchored ones. */
 export const EDGE = 64;
 
@@ -63,12 +69,12 @@ export const TYPE = {
   section: 86,
   /** Shorts captions. */
   caption: 62,
-  /** Showcase headline: 9.6% of frame height. */
-  head: 104,
-  /** Showcase body and eyebrow: the only other size on a frame (headline is 3x this). */
+  /** Showcase headline: 8.1% of frame height (fits the 708px left zone with the panel padding). */
+  head: 88,
+  /** Showcase body and eyebrow: the only other size on a frame (headline is at least 2.5x this). */
   body: 34,
   /** Showcase stat figure ("3x"): the loudest thing on a frame that has one (body is the only other size). */
-  figure: 340,
+  figure: 140,
 } as const;
 
 /** Frames at 30 fps. */
@@ -92,7 +98,10 @@ export const MOTION = {
   defaultAudioDelayFrames: 3,
 } as const;
 
+/** Tagline tone shared by the lower third and the subscribe card. */
+export const TAGLINE_COLOR = "#D4D4D8";
+
 export const CHANNEL = {
-  name: "Alejoxgaming",
+  name: "Alejoxtech",
   tagline: "Tutoriales · Tecnología · Streaming",
 } as const;

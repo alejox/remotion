@@ -96,6 +96,7 @@ Last updated: 2026-09-30
 | `source-command-sdd-init` | Initialize SDD context — detects project stack and bootstraps persistence backend | user | `/Users/alejox/.agents/skills/source-command-sdd-init/SKILL.md` |
 | `source-command-sdd-onboard` | Guided SDD walkthrough — onboard a user through the full SDD cycle using their real codebase | user | `/Users/alejox/.agents/skills/source-command-sdd-onboard/SKILL.md` |
 | `spanner-data` | Use these skills when you need to explore the database structure, discover | user | `/Users/alejox/.gemini/skills/spanner-data/SKILL.md` |
+| `typesafe-ai` | Build AI-powered software with TypeSafe: small units of AI intelligence you can use like programming primitives. Its System One models, including Jev, turn natural language and application state into typed judgments and probabilities that code can combine. Use when a feature needs programmable common sense, when brainstorming what AI could make possible in an app, or when an LLM prompt-and-parse step could become a structured decision. Applications include routing, ranking, extraction, verification, and interactive experiences; these are starting points, not the limits. Read live docs and cookbooks to find useful patterns and discover new combinations. | user | `/Users/alejox/.codex/skills/typesafe-ai/SKILL.md` |
 | `work-unit-commits` | Plan commits as reviewable work units. Trigger: implementation, commit splitting, chained PRs, or keeping tests and docs with code. | user | `/Users/alejox/.agents/skills/work-unit-commits/SKILL.md` |
 
 ## Loading protocol

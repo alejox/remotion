@@ -8,8 +8,10 @@ import { useCurrentFrame } from "remotion";
 import { evolvePath } from "@remotion/paths";
 import { drawProgress } from "./motion";
 import { Reveal, Rise } from "./Reveal";
-import { COLOR, COLUMN_X, TYPE } from "./tokens";
-import { bodyStyle, Column, headStyle, lines } from "./typography";
+import { TextPanel } from "./TextPanel";
+import { COLOR, COLUMN_X } from "./tokens";
+import { useIsShort } from "./motion";
+import { lines, useTypeStyles } from "./typography";
 
 export type ChecklistProps = {
   start: number;
@@ -27,10 +29,12 @@ const STEP = 12;
 const DRAW = 12;
 const FIRST = 46;
 
-const Check: React.FC<{ progress: number; size?: number }> = ({ progress, size = TYPE.body + 6 }) => {
+const Check: React.FC<{ progress: number; size: number; pending?: boolean }> = ({ progress, size, pending = false }) => {
   const evolved = evolvePath(progress, CHECK_PATH);
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" style={{ flex: "none" }}>
+      {/* Pending state (Shorts): a dim empty circle that the check then fills in. */}
+      {pending ? <circle cx={12} cy={12} r={10.5} stroke="rgba(255,255,255,0.4)" strokeWidth={1.6} opacity={1 - progress} /> : null}
       <path
         d={CHECK_PATH}
         stroke={COLOR.white}
@@ -44,20 +48,27 @@ const Check: React.FC<{ progress: number; size?: number }> = ({ progress, size =
   );
 };
 
-const Rows: React.FC<{ start: number; items: string[] }> = ({ start, items }) => {
+const Rows: React.FC<{ start: number; items: string[]; topGap: number }> = ({ start, items, topGap }) => {
   const local = useCurrentFrame() - start;
+  const short = useIsShort();
+  const { body, scale } = useTypeStyles();
+  const rowH = Math.round(scale.body * 2);
   return (
-    <div style={{ marginTop: 44 }}>
-      {items.slice(0, 4).map((item, i) => (
-        <Rise
-          key={item}
-          index={i + 2}
-          style={{ display: "flex", alignItems: "center", gap: 20, height: 68, ...bodyStyle }}
-        >
-          <Check progress={drawProgress(local, FIRST + i * STEP, DRAW)} />
-          <span>{item}</span>
-        </Rise>
-      ))}
+    <div style={{ marginTop: topGap }}>
+      {items.slice(0, 4).map((item, i) => {
+        const progress = drawProgress(local, FIRST + i * STEP, DRAW);
+        return (
+          <Rise
+            key={item}
+            index={i + 2}
+            style={{ display: "flex", alignItems: "center", gap: 20, height: short ? rowH : 68, ...body }}
+          >
+            <Check progress={progress} size={scale.body + 6} pending={short} />
+            {/* Until its check draws, the row reads as pending: dimmed. */}
+            <span style={{ opacity: short ? 0.55 + 0.45 * progress : 1 }}>{item}</span>
+          </Rise>
+        );
+      })}
     </div>
   );
 };
@@ -70,8 +81,17 @@ export const Checklist: React.FC<ChecklistProps> = ({
   x = COLUMN_X,
   y,
 }) => (
-  <Reveal start={start} duration={duration} staged>
-    <Column x={x} y={y}>
+  <Reveal start={start} duration={duration} staged fadeLayer={false}>
+    <TextPanel x={x} y={y}>
+      <ChecklistBody start={start} items={items} title={title} />
+    </TextPanel>
+  </Reveal>
+);
+
+const ChecklistBody: React.FC<{ start: number; items: string[]; title?: string }> = ({ start, items, title }) => {
+  const { head: headStyle } = useTypeStyles();
+  return (
+    <>
       {title
         ? lines(title).map((line, i) => (
             <Rise key={i} index={i} style={headStyle}>
@@ -79,7 +99,8 @@ export const Checklist: React.FC<ChecklistProps> = ({
             </Rise>
           ))
         : null}
-      <Rows start={start} items={items} />
-    </Column>
-  </Reveal>
-);
+      {/* Without a title the rows are the panel's only content: no extra space above them. */}
+      <Rows start={start} items={items} topGap={title ? 44 : 0} />
+    </>
+  );
+};

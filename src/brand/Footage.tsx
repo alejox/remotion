@@ -9,7 +9,7 @@ import React from "react";
 import { AbsoluteFill, Audio, Easing, Sequence } from "remotion";
 import { linearTiming, TransitionSeries } from "@remotion/transitions";
 import { SectionCard } from "./SectionCard";
-import { SourcePicture, useSourceFile } from "./Source";
+import { SourcePicture, useSource, useSourceFile } from "./Source";
 import type { BuiltCard, BuiltSegment, Timeline } from "./timeline";
 import { diagonalWipe } from "./transitions/diagonalWipe";
 import { MOTION } from "./tokens";
@@ -19,7 +19,9 @@ export const FootageAudio: React.FC<{ segments: BuiltSegment[]; audioDelayFrames
   audioDelayFrames = MOTION.defaultAudioDelayFrames,
 }) => {
   const src = useSourceFile();
-  if (!src) {
+  const { loop } = useSource();
+  // A looped stand-in clip is picture only.
+  if (!src || loop) {
     return null;
   }
   return (

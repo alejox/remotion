@@ -19,6 +19,8 @@ export type SourceInfo = {
   /** Master pixel size. */
   width: number;
   height: number;
+  /** Stand-in clip shorter than the timeline: loop it (and play no audio). */
+  loop?: boolean;
 };
 
 const SourceContext = createContext<SourceInfo | null>(null);
@@ -58,9 +60,15 @@ export const SourcePicture: React.FC<{
 }> = ({ trimBefore, style }) => {
   const env = useRemotionEnvironment();
   const src = useSourceFile();
+  const source = useSource();
 
   if (!src) {
     return <div style={{ ...style, backgroundColor: "#000" }} />;
+  }
+
+  if (source.loop) {
+    // A looped stand-in always uses the WebCodecs player (OffthreadVideo cannot loop).
+    return <MediaVideo src={src} trimBefore={trimBefore} loop muted objectFit="cover" style={style} />;
   }
 
   if (env.isRendering) {

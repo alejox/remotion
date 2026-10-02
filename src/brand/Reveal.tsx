@@ -4,7 +4,9 @@
  * timeline (composition frames at the top level, scene-local frames inside a scene).
  * Children position themselves absolutely inside the full-frame layer.
  * With `staged`, the layer only fades out and each `<Rise>` child enters on its own,
- * staggered line by line.
+ * staggered line by line. With `fadeLayer={false}` the layer never carries an opacity (a
+ * Backdrop Root would starve the glass inside it): the children fade themselves, reading
+ * `useBeatTiming()`.
  */
 import React, { createContext, useContext } from "react";
 import { AbsoluteFill } from "remotion";
@@ -18,12 +20,28 @@ export type RevealProps = {
   noSlide?: boolean;
   /** Children enter one by one through `<Rise>` instead of as a group. */
   staged?: boolean;
+  /** Fade the whole layer on exit (default). False for layers that hold glass surfaces. */
+  fadeLayer?: boolean;
 };
 
 /** Beat-local frame, provided to `<Rise>` by a staged Reveal. */
 const LocalFrame = createContext(0);
+const BeatDuration = createContext(0);
 
-export const Reveal: React.FC<RevealProps> = ({ start, duration, children, noSlide = false, staged = false }) => {
+/** Beat-local frame and duration inside a `<Reveal>`. */
+export const useBeatTiming = (): { local: number; duration: number } => ({
+  local: useContext(LocalFrame),
+  duration: useContext(BeatDuration),
+});
+
+export const Reveal: React.FC<RevealProps> = ({
+  start,
+  duration,
+  children,
+  noSlide = false,
+  staged = false,
+  fadeLayer = true,
+}) => {
   const { visible, local, opacity, y } = useReveal(start, duration);
   if (!visible) {
     return null;
@@ -31,12 +49,14 @@ export const Reveal: React.FC<RevealProps> = ({ start, duration, children, noSli
   return (
     <AbsoluteFill
       style={{
-        opacity: staged ? exit(local, duration).opacity : opacity,
+        opacity: fadeLayer ? (staged ? exit(local, duration).opacity : opacity) : undefined,
         transform: noSlide || staged ? undefined : `translateY(${y}px)`,
         pointerEvents: "none"
       }}
     >
-      <LocalFrame.Provider value={local}>{children}</LocalFrame.Provider>
+      <BeatDuration.Provider value={duration}>
+        <LocalFrame.Provider value={local}>{children}</LocalFrame.Provider>
+      </BeatDuration.Provider>
     </AbsoluteFill>
   );
 };

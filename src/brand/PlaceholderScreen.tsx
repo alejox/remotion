@@ -1,32 +1,34 @@
 /**
  * Placeholders for footage when a config has no source: `PlaceholderScreen` is a believable
- * dark settings window (title bar, labelled rows, toggles) that gives a Spotlight something
+ * settings window on the shared glass (title bar, labelled rows, toggles) that gives a Spotlight something
  * to point at. It fades in `MOCK_LEAD` frames before its beat and out with it, so the
  * callout arrives on a settled picture.
  */
 import React from "react";
 import { Easing, interpolate, interpolateColors, useCurrentFrame } from "remotion";
 import { SANS } from "./fonts";
+import { GLASS, GLASS_RADIUS, GlassRim } from "./glass";
 import { enter, exit } from "./motion";
 import type { Rect } from "./Spotlight";
-import { COLOR, UI } from "./tokens";
+import { COLOR } from "./tokens";
 
 /** Frames the placeholder is on screen before its beat starts. */
 export const MOCK_LEAD = 24;
 
-const WIN = { x: 670, y: 290, w: 900, h: 500 };
+/** Compact window under the Spotlight headline, on the x = 192 column (right edge x 770, clear of the speaker's glasses). */
+const WIN = { x: 192, y: 420, w: 578, h: 408 };
 /** UI text inside the mock: clearly secondary to the headline (26px is the floor). */
 const UI_TEXT = 28;
-const BAR_H = 72;
-const ROW = { inset: 28, h: 64, gap: 12, top: 96 };
+const BAR_H = 64;
+const ROW = { inset: 20, h: 56, gap: 8, top: 76 };
 
 type MockRow = { label: string; kind: "value" | "off" | "on"; value?: string };
 const ROWS: MockRow[] = [
   { label: "Resolución", kind: "value", value: "4K" },
   { label: "Formato", kind: "value", value: "MP4" },
   { label: "Aceleración por hardware", kind: "off" },
-  { label: "Subtítulos automáticos", kind: "on" },
-  { label: "Avisos al terminar", kind: "on" },
+  { label: "Subtítulos automáticos", kind: "off" },
+  { label: "Avisos al terminar", kind: "off" },
 ];
 
 /** Geometry of the mock, in frame pixels: point a Spotlight at `rows[i]`. */
@@ -40,12 +42,17 @@ export const MOCK_UI: { window: Rect; rows: Rect[] } = {
   })),
 };
 
-/** The row a Spotlight points at: it lifts to a lighter gray, then its toggle switches on (light gray track, white knob). */
+/** The row a Spotlight points at: it lifts to a lighter gray, then its toggle switches on (cyan track, white knob: the frame's only cyan). */
 export const MOCK_TARGET = 2;
 const LIFT_FROM = 16;
 const SWITCH_FROM = 40;
 const SWITCH_FRAMES = 14;
-const ROW_LIFTED = "#3C3C3E";
+const ROW_LIFTED = "rgba(255,255,255,0.16)";
+const ROW_REST = "rgba(255,255,255,0)";
+const HAIRLINE = "rgba(255,255,255,0.16)";
+const TOGGLE_OFF = "rgba(255,255,255,0.30)";
+/** Secondary UI text on glass (fogGlass keeps it >= 4.5:1). */
+const VALUE_TEXT = COLOR.fogGlass;
 
 /** Frame opacity for a placeholder tied to a beat window. Null when it is not on screen. */
 const useLeadOpacity = (start: number, duration: number): number | null => {
@@ -64,7 +71,7 @@ const Toggle: React.FC<{ progress: number; onColor: string }> = ({ progress, onC
       width: 60,
       height: 34,
       borderRadius: 17,
-      background: interpolateColors(progress, [0, 1], [UI.line, onColor]),
+      background: interpolateColors(progress, [0, 1], [TOGGLE_OFF, onColor]),
       flex: "none",
     }}
   >
@@ -103,9 +110,8 @@ export const PlaceholderScreen: React.FC<{ start: number; duration: number }> = 
         width: WIN.w,
         height: WIN.h,
         boxSizing: "border-box",
-        borderRadius: 24,
-        background: UI.pill,
-        border: `1px solid ${UI.row}`,
+        ...GLASS,
+        borderRadius: GLASS_RADIUS,
         fontFamily: SANS,
         fontSize: UI_TEXT,
         opacity,
@@ -117,19 +123,32 @@ export const PlaceholderScreen: React.FC<{ start: number; duration: number }> = 
           height: BAR_H,
           display: "flex",
           alignItems: "center",
-          paddingLeft: 122,
-          borderBottom: `1px solid ${UI.row}`,
+          paddingLeft: 96,
+          borderBottom: `1px solid ${HAIRLINE}`,
           color: COLOR.white,
           fontWeight: 700,
         }}
       >
-        <div style={{ position: "absolute", left: 28, display: "flex", gap: 10 }}>
+        <div style={{ position: "absolute", left: 22, display: "flex", gap: 8 }}>
           {[0, 1, 2].map((i) => (
-            <div key={i} style={{ width: 14, height: 14, borderRadius: "50%", background: "#48484A" }} />
+            <div key={i} style={{ width: 14, height: 14, borderRadius: "50%", background: "rgba(255,255,255,0.34)" }} />
           ))}
         </div>
         Exportación
       </div>
+      {MOCK_UI.rows.slice(0, -1).map((r, i) => (
+        <div
+          key={`rule${i}`}
+          style={{
+            position: "absolute",
+            left: r.x - WIN.x,
+            top: r.y - WIN.y + r.h + ROW.gap / 2,
+            width: r.w,
+            height: 1,
+            background: HAIRLINE,
+          }}
+        />
+      ))}
       {ROWS.map((row, i) => {
         const r = MOCK_UI.rows[i];
         return (
@@ -143,28 +162,29 @@ export const PlaceholderScreen: React.FC<{ start: number; duration: number }> = 
               height: r.h,
               boxSizing: "border-box",
               borderRadius: 14,
-              background: i === MOCK_TARGET ? interpolateColors(lift, [0, 1], [UI.row, ROW_LIFTED]) : UI.row,
+              background: i === MOCK_TARGET ? interpolateColors(lift, [0, 1], [ROW_REST, ROW_LIFTED]) : ROW_REST,
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              padding: "0 22px",
+              padding: "0 18px",
               whiteSpace: "nowrap",
             }}
           >
-            <div style={{ display: "flex", alignItems: "center", gap: 18, color: "#F5F5F7", fontWeight: 500 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 18, color: i === MOCK_TARGET ? COLOR.white : COLOR.fogGlass, fontWeight: 500 }}>
               {row.label}
             </div>
             {row.kind === "value" ? (
-              <div style={{ color: "#C7C7CC", fontWeight: 500 }}>{`${row.value}  ›`}</div>
+              <div style={{ color: i === MOCK_TARGET ? COLOR.white : VALUE_TEXT, fontWeight: 500 }}>{`${row.value}  ›`}</div>
             ) : (
               <Toggle
                 progress={i === MOCK_TARGET ? flip : row.kind === "on" ? 1 : 0}
-                onColor={i === MOCK_TARGET ? "#B4B4BA" : "#636366"}
+                onColor={i === MOCK_TARGET ? COLOR.cyan : "#636366"}
               />
             )}
           </div>
         );
       })}
+      <GlassRim />
     </div>
   );
 };

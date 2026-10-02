@@ -6,8 +6,9 @@
  */
 import React from "react";
 import { Reveal, Rise } from "./Reveal";
-import { COLOR, COLUMN_X, TYPE } from "./tokens";
-import { bodyStyle, Column, eyebrowStyle, headStyle, opticalShift } from "./typography";
+import { TextBlock } from "./TextBlock";
+import { COLOR, COLUMN_X } from "./tokens";
+import { lines, opticalShift, useTypeStyles } from "./typography";
 
 export type ValueCardProps = {
   start: number;
@@ -18,6 +19,8 @@ export type ValueCardProps = {
   suffix?: string;
   x?: number;
   y?: number;
+  /** Component label, set as the first line of the group. */
+  tag?: string;
 };
 
 export const ValueCard: React.FC<ValueCardProps> = ({
@@ -29,39 +32,45 @@ export const ValueCard: React.FC<ValueCardProps> = ({
   suffix,
   x = COLUMN_X,
   y,
-}) => (
+  tag,
+}) => {
+  const { eyebrow: eyebrowStyle, head: headStyle, lead: leadStyle, scale } = useTypeStyles();
+  return (
   <Reveal start={start} duration={duration} staged>
-    <Column x={x} y={y} gap={16}>
+    <TextBlock x={x} y={y} tag={tag} gap={16}>
       {label ? (
         <Rise index={0} style={eyebrowStyle}>
           {label}
         </Rise>
       ) : null}
-      {headline ? (
-        <Rise index={1} style={bodyStyle}>
-          {headline}
-        </Rise>
-      ) : null}
-      <Rise index={3}>
+      {headline
+        ? lines(headline).map((line, i) => (
+            <Rise key={i} index={1 + i} style={{ ...leadStyle, marginTop: i > 0 ? -16 : 0 }}>
+              {line}
+            </Rise>
+          ))
+        : null}
+      <Rise index={9} style={{ marginTop: -13 }}>
         <span
           style={{
             ...headStyle,
             display: "block",
-            fontSize: TYPE.figure,
+            fontSize: scale.figure,
             letterSpacing: "-0.05em",
             lineHeight: 0.95,
             color: COLOR.cyan,
-            marginLeft: opticalShift(value, TYPE.figure),
+            marginLeft: opticalShift(value, scale.figure),
           }}
         >
           {value}
         </span>
       </Rise>
       {suffix ? (
-        <Rise index={5} style={bodyStyle}>
+        <Rise index={10} style={{ ...leadStyle, marginTop: -16 }}>
           {suffix}
         </Rise>
       ) : null}
-    </Column>
+    </TextBlock>
   </Reveal>
-);
+  );
+};

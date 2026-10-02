@@ -6,7 +6,7 @@
  * Brand type system:
  * - Geist ........ all video text (titles, labels, captions, callouts)
  * - Geist Mono ... ports, IPs, file names, values
- * - Jost ......... brand moments (Futura-style, matches the ALEJOXGAMING wordmark)
+ * - Jost ......... brand moments (Futura-style, matches the ALEJOXTECH wordmark)
  * - Anton ........ thumbnails only: shipped in public/fonts, never loaded in video
  */
 import { loadFont } from "@remotion/fonts";

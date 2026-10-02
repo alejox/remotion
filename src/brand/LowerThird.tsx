@@ -1,12 +1,13 @@
 /**
- * LowerThird - the presenter lockup on a restrained frosted panel, with a blue-to-purple
- * accent along its left edge.
+ * LowerThird - the presenter lockup on the shared glass panel with its 1px grape-to-cyan
+ * accent along the left edge.
  */
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { BrandMark } from "./BrandMark";
-import { CHANNEL, COLOR, COLUMN_X } from "./tokens";
-import { bodyStyle, Column } from "./typography";
+import { GLASS, GLASS_RADIUS, GlassRim } from "./glass";
+import { CHANNEL, COLUMN_X, TAGLINE_COLOR } from "./tokens";
+import { bodyStyle, Column, nameStyle } from "./typography";
 
 export type LowerThirdProps = {
   start: number;
@@ -17,12 +18,9 @@ export type LowerThirdProps = {
   y?: number;
 };
 
-/** The name leads the tagline: the lockup's second size (the tagline and the label use body). */
-const NAME_SIZE = 60;
-
 /** Bottom margin: 13% of the frame height. */
 const BOTTOM = 140;
-const RADIUS = 14;
+const RADIUS = GLASS_RADIUS;
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 export const LowerThird: React.FC<LowerThirdProps> = ({
@@ -64,47 +62,32 @@ export const LowerThird: React.FC<LowerThirdProps> = ({
           style={{
             position: "relative",
             display: "inline-flex",
-            padding: "24px 36px 24px 30px",
+            padding: "24px 32px 24px 26px",
             borderRadius: RADIUS,
-            overflow: "hidden",
           }}
         >
+          {/* The glass element carries its own reveal (width + opacity): no Backdrop-Root ancestor. */}
           <div
             aria-hidden="true"
             style={{
-              position: "absolute",
-              inset: 0,
-              boxSizing: "border-box",
-              borderRadius: RADIUS,
-              border: "none",
-              opacity: panelProgress,
-              background: "rgba(24,34,46,0.30)",
-              backdropFilter: "blur(12px) saturate(155%)",
-              WebkitBackdropFilter: "blur(12px) saturate(155%)",
-              clipPath: panelClip,
-            }}
-          />
-          <div
-            aria-hidden="true"
-            style={{
+              ...GLASS,
               position: "absolute",
               left: 0,
               top: 0,
               bottom: 0,
-              width: 6,
-              opacity: edgeOpacity,
-              background: "linear-gradient(180deg, #25A1DC, #756BFF)",
-              zIndex: 2,
+              width: `${panelProgress * 100}%`,
+              borderRadius: RADIUS,
+              opacity: panelProgress,
             }}
-          />
+          >
+            <GlassRim radius={RADIUS} accentOpacity={edgeOpacity} />
+          </div>
           <div style={{ position: "relative", opacity: panelProgress, clipPath: panelClip }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-              <BrandMark height={84} />
+            <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+              <BrandMark height={72} />
               <div>
-                <div style={{ ...bodyStyle, fontSize: NAME_SIZE, lineHeight: 1.15, letterSpacing: "-0.02em", color: COLOR.white, fontWeight: 700 }}>
-                  {name}
-                </div>
-                <div style={bodyStyle}>{tagline}</div>
+                <div style={nameStyle}>{name}</div>
+                <div style={{ ...bodyStyle, color: TAGLINE_COLOR }}>{tagline}</div>
               </div>
             </div>
           </div>

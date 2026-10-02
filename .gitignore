@@ -8,5 +8,4 @@ out
 
 # Source footage and renders (large binaries)
 src/video/
-public/*.mp4
 *_editado*.mp4

@@ -28,6 +28,7 @@ import { ZoomStage, type Rect } from "./Spotlight";
 import type { BuiltSegment } from "./timeline";
 import { Slash } from "./Panel";
 import { COLOR, MOTION } from "./tokens";
+import { TypeScaleProvider } from "./typography";
 
 export const plantillaShortSchema = z.object({ config: shortConfigSchema });
 export type PlantillaShortProps = z.infer<typeof plantillaShortSchema>;
@@ -67,8 +68,9 @@ export const PlantillaAlejoxShort: React.FC<PlantillaShortProps> = ({ config }) 
   const tl = useMemo(() => timelineFromConfig(config), [config]);
   const beats = useMemo(() => mapBeats(tl, config.beats), [tl, config.beats]);
   const words = useMemo(() => tl.mapWords(config.words), [tl, config.words]);
-  const { crop, face } = config.screen;
-  const split = config.screen.split ?? 800;
+  // No `screen` in the config = a camera-only Short: the screen band falls back to the full footage.
+  const { crop, face, split: splitCfg } = config.screen ?? { crop: { x: 0, y: 0, w: SCREEN_SPACE.w }, face: undefined, split: undefined };
+  const split = splitCfg ?? 800;
   // Screen half: full width edge to edge from `split` down (no face -> the full frame).
   const stage: Rect = face ? { x: 0, y: split, w: FRAME_W, h: FRAME_H - split } : { x: 0, y: 0, w: FRAME_W, h: FRAME_H };
   const k = FRAME_W / crop.w;
@@ -89,14 +91,16 @@ export const PlantillaAlejoxShort: React.FC<PlantillaShortProps> = ({ config }) 
     .filter((s) => s.kind === "screen")
     .map((s) => ({ from: s.start, to: s.start + s.length }));
   // Captions hold while a title or a subscribe card is up: never two overlays at once.
+  const hideDuring: string[] = config.captions.hideDuring ?? ["title", "subscribe"];
   const quietWindows = beats
-    .filter((m) => m.beat.type === "title" || m.beat.type === "subscribe")
+    .filter((m) => hideDuring.includes(m.beat.type))
     .map((m) => ({ from: m.start, to: m.start + m.duration }));
   const captionTop = (frame: number): number =>
     screenRanges.some((r) => frame >= r.from && frame < r.to) ? config.captions.screenY : config.captions.cameraY;
 
   return (
     <SourceProvider source={config.source}>
+      <TypeScaleProvider scale={config.type}>
       <AbsoluteFill style={{ backgroundColor: COLOR.panel }}>
         <BrandTimeline
           tl={tl}
@@ -159,8 +163,8 @@ export const PlantillaAlejoxShort: React.FC<PlantillaShortProps> = ({ config }) 
           }
         />
         <FootageAudio segments={tl.segments} audioDelayFrames={config.audioDelayFrames ?? MOTION.defaultAudioDelayFrames} />
-        <Captions words={words} top={captionTop} toFrame={outroAt} hideRanges={quietWindows} />
-        <BeatLayer beats={beats} short stage={stage} mapRect={mapRect} />
+        <Captions words={words} top={captionTop} size={config.captions.size} toFrame={outroAt} hideRanges={quietWindows} />
+        <BeatLayer beats={beats} short labels={config.labels} stage={stage} mapRect={mapRect} />
         <Outro
           start={outroAt}
           duration={Math.round(config.outro.seconds * MOTION.fps)}
@@ -169,6 +173,7 @@ export const PlantillaAlejoxShort: React.FC<PlantillaShortProps> = ({ config }) 
         />
         <BrandSfx cues={cues} />
       </AbsoluteFill>
+      </TypeScaleProvider>
     </SourceProvider>
   );
 };

@@ -120,7 +120,7 @@ export const ZoomStage: React.FC<{
   );
 };
 
-/** The numbered dot: cyan when it stands alone (the frame's one accent), gray inside a pill. */
+/** The numbered dot inside the step pill. */
 const Badge: React.FC<{ step: number; tone: string }> = ({ step, tone }) => (
   <span
     style={{
@@ -167,6 +167,8 @@ export type SpotlightProps = {
   chipGap?: number;
   /** Hard 2px white outline on the target. False = soft focus (dim + rounded hole only). */
   outline?: boolean;
+  /** Dim everything outside the target (default true). Off: the focus is carried by the row lift alone. */
+  dim?: boolean;
 };
 
 const PAD = 6;
@@ -191,6 +193,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({
   chipAt,
   chipGap = 18,
   outline = true,
+  dim: dimOn = true,
 }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
@@ -267,7 +270,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({
       }}
     >
       <svg width={st.w} height={st.h} style={{ position: "absolute", left: 0, top: 0, opacity: layer }}>
-        <path d={dim} fill={`rgba(0,0,0,${1 - MOTION.dimTo})`} fillRule="evenodd" />
+        {dimOn ? <path d={dim} fill={`rgba(0,0,0,${1 - MOTION.dimTo})`} fillRule="evenodd" /> : null}
         <path
           d={boxPath}
           fill="none"
@@ -290,9 +293,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({
             <Badge step={step} tone={UI.line} />
             <span style={{ fontWeight: 500, fontSize: TYPE.body, letterSpacing: "-0.01em" }}>{label}</span>
           </Pill>
-        ) : (
-          <Badge step={step} tone={COLOR.cyan} />
-        )}
+        ) : null}
       </div>
     </div>
   );

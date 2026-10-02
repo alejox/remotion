@@ -24,10 +24,11 @@ There is no source footage anymore; the templates exist to demonstrate how each 
 ## Tasks
 - [x] T0 Footage optional, black fallback (inline; commit "feat(brand): make source footage optional...").
 - [ ] T1 16:9 showcase: restyle shared components + generic showcase config for PlantillaAlejox (delegated writer). Intro LowerThird also needs a frosted backing and blue-to-purple left accent matching the subscribe button's 38px corner curve, 30% fill opacity, and 1px edge; animate edge-in/flicker, content reveal right-to-left, and reverse collapse on exit.
-- [ ] T2 9:16 Short showcase (delegated writer).
+- [ ] T2 9:16 Short showcase (delegated writer). Subscribe CTA in the Short uses the compact TWO-ROW layout from P1 round 9 (row 1: mark + "Alejoxtech" + tagline; row 2: glass button + bell), same glass/typography/animation as the approved horizontal card. Add a `layout: "row" | "stacked"` option to the clean SubscribeCard: 16:9 keeps "row" (owner-approved), 9:16 uses "stacked" (owner request, 2026-09-30).
 - [ ] T3 Restyle the clean subscribe button with a restrained Apple Liquid Glass look and show it inside the 16:9 showcase (delegated direct; this follow-up is delegated because it also touches the non-trivial LowerThird component). Classic stays a replica. Reopened after visual round 3: increase the button's frosted quality and remove the white blemish above the subscribed button while keeping visible footage detail and cyan rim; avoid a blown-out specular streak.
 - [ ] T4 Apple-style transition in brand colours, with a more opaque frosted-glass underlay for the chapter card around second 10 (delegated writer; scene/card backdrop integration). Implementation and functional checks pass; design-loop critic review and an isolated work-unit commit remain pending because the touched template files also contain uncommitted T1 work.
 - [ ] T5 Apple-style captions (subtitles), demoed in the Short (delegated writer; with T2).
+- Next session (owner, 2026-09-30): T2+T5 spec is ready. The Short plays over `public/glass-test.mp4` cropped to 9:16. Captions are bare type (no plate, border or slash), legible through an edgeless darkening. The CTA uses `layout: "stacked"` and generic copy, and follows the 16:9 glass rules. P1 paused after round 15 (Brief PASS; open: "4 horas" contrast on the wall, one rim spec for all glass, value figure as the last beat). Nothing committed (owner commits manually).
 
 ## Acceptance
 Each piece passes Brief, System and Craft critics (binary) on rendered frames; tsc and eslint clean.

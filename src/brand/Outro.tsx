@@ -7,10 +7,10 @@
 import React from "react";
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { BrandMark } from "./BrandMark";
-import { ComponentTag } from "./ComponentTag";
+import { TAG_GAP } from "./TextBlock";
 import { Reveal, Rise } from "./Reveal";
-import { COLUMN_X } from "./tokens";
-import { bodyStyle, Column, headStyle } from "./typography";
+import { COLOR, COLUMN_X } from "./tokens";
+import { bodyStyle, Column, eyebrowStyle, headStyle, lines } from "./typography";
 
 export type OutroProps = {
   start: number;
@@ -39,10 +39,12 @@ export const Outro: React.FC<OutroProps> = ({
         <BrandMark height={short ? 110 : 96} />
       </Rise>
       <div style={short ? { textAlign: "center" } : undefined}>
-        <Rise index={1} style={headStyle}>
-          {title}
-        </Rise>
-        <Rise index={2} style={{ ...bodyStyle, marginTop: 12 }}>
+        {lines(title).map((line, i) => (
+          <Rise key={i} index={i + 1} style={{ ...headStyle, lineHeight: 1 }}>
+            {line}
+          </Rise>
+        ))}
+        <Rise index={lines(title).length + 1} style={{ ...bodyStyle, color: COLOR.fog, marginTop: 28 }}>
           {subtitle}
         </Rise>
       </div>
@@ -67,13 +69,11 @@ export const Outro: React.FC<OutroProps> = ({
           {content}
         </div>
       ) : (
-        <Column x={COLUMN_X} gap={32}>
-          {content}
+        <Column x={COLUMN_X} gap={TAG_GAP}>
+          {tag ? <div style={eyebrowStyle}>{tag}</div> : null}
+          <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>{content}</div>
         </Column>
       )}
-      {tag ? (
-        <ComponentTag start={start} duration={duration} label={tag} />
-      ) : null}
     </Reveal>
   );
 };

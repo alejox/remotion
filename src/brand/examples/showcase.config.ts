@@ -1,13 +1,14 @@
 /**
- * Showcase config for `PlantillaAlejox` (16:9): a black-canvas tour of every component,
- * with no source footage. Times are SOURCE seconds; with no footage the "segments" are
- * just black stretches that carry the beats. Copy this file for a new video.
+ * Showcase config for `PlantillaAlejox` (16:9): a tour of every component over a looping
+ * sample clip (no source footage: the segments are just stretches that carry the beats). Copy this file for a new video.
  */
 import type { VideoConfig } from "../config";
 import { MOCK_UI } from "../PlaceholderScreen";
 
 export const showcaseConfig: VideoConfig = {
   source: {
+    // Demo backdrop looped under the beats. For a real video set `file` (and `preview`) instead.
+    placeholder: "glass-test.mp4",
     width: 1920,
     height: 1080,
   },
@@ -22,36 +23,40 @@ export const showcaseConfig: VideoConfig = {
   beats: [
     {
       type: "title",
+      y: 310,
       at: 0.6,
       dur: 4.2,
-      meta: "Plantilla Alejox",
-      title: "Tu próximo video\nempieza aquí.",
+      // No card eyebrow: the beat's component tag is the single caps line.
+      meta: "",
+      title: "Tu video\nempieza aquí.",
     },
     {
       type: "lowerThird",
       at: 5.2,
       dur: 4,
-      name: "Alejoxgaming.",
+      name: "Alejoxtech",
       tagline: "Tutoriales · Tecnología · Streaming",
     },
-    { type: "keyword", at: 10.6, dur: 4.4, text: "Sin ruido.\nSolo claridad.", accent: "claridad." },
+    { type: "keyword", at: 10.6, dur: 4.4, y: 326, text: "Sin ruido.\nSolo claridad.", accent: "claridad." },
     {
       type: "value",
+      // Top-anchored above the mic boom so the figure clears it.
+      y: 200,
       at: 15.6,
       dur: 4.6,
-      headline: "Exporta tus videos hasta",
+      headline: "Exporta tus videos\nmás rápido, hasta",
       value: "3x",
-      suffix: "más rápido.",
     },
     {
       type: "checklist",
       at: 20.8,
       dur: 6.2,
-      title: "Todo en orden.",
+      title: "Todo listo.",
       items: ["Elige una plantilla", "Escribe tu mensaje", "Exporta en 4K"],
     },
     {
       type: "compare",
+      y: 220,
       at: 27.2,
       dur: 5,
       a: { name: "Editar a mano", value: "4 horas" },
@@ -65,16 +70,17 @@ export const showcaseConfig: VideoConfig = {
       dur: 5.6,
       target: MOCK_UI.rows[2],
       step: 1,
-      // The numbered badge alone, level with the row and 28px left of its box.
+      // No chip: the toggle switching on is the payoff.
       label: "",
-      chipAt: { x: MOCK_UI.rows[2].x - 6 - 28 - 56, y: MOCK_UI.rows[2].y + MOCK_UI.rows[2].h / 2 - 28 },
       outline: false,
       headline: "Un clic\ny listo.",
-      // Cap line of the headline level with the window's top edge.
-      headlineY: MOCK_UI.window.y - 15,
+      // Label + headline group above the compact window (both on the x = 192 column, in the left zone).
+      headlineY: 126,
+      // The window does not cover the speaker, so nothing needs dimming: the row lift carries the focus.
+      dim: false,
     },
     // Liquid-glass subscribe control, shown alone after the component tour.
     { type: "subscribe", at: 39.5, dur: 8.2, variant: "clean" },
   ],
-  outro: { seconds: 5, title: "Gracias por ver." },
+  outro: { seconds: 5, title: "Gracias\npor ver." },
 };

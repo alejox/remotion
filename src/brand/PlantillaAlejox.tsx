@@ -1,6 +1,6 @@
 /**
  * PlantillaAlejox - the 16:9 template (1920x1080, 30 fps). Without source footage,
- * the showcase loops glass-test.mp4 behind the beats and shows a placeholder window
+ * the showcase loops `source.placeholder` (a clip in public/) behind the beats and shows a placeholder window
  * for the Spotlight. Other video-specific values come from `VideoConfig` (see `config.ts` and
  * `examples/showcase.config.ts`), which is also the composition's default props, so it
  * is editable in the Studio props panel. The duration comes from `calculateMetadata`
@@ -27,6 +27,7 @@ export const plantillaDuration = (config: VideoConfig): number => configDuration
 
 export const PlantillaAlejox: React.FC<PlantillaProps> = ({ config }) => {
   const { width, height } = useVideoConfig();
+  const standIn = config.source.placeholder ?? "";
   const tl = useMemo(() => timelineFromConfig(config), [config]);
   const beats = useMemo(() => mapBeats(tl, config.beats), [tl, config.beats]);
   const zooms = useMemo(() => zoomSpecs(beats, (r) => r), [beats]);
@@ -43,7 +44,7 @@ export const PlantillaAlejox: React.FC<PlantillaProps> = ({ config }) => {
           renderCardBackdrop={!config.source.file ? (card) => (
             <AbsoluteFill>
               <Video
-                src={staticFile("glass-test.mp4")}
+                src={staticFile(standIn)}
                 trimBefore={card.start}
                 loop
                 muted
@@ -56,7 +57,7 @@ export const PlantillaAlejox: React.FC<PlantillaProps> = ({ config }) => {
             !config.source.file ? (
               <AbsoluteFill>
                 <Video
-                  src={staticFile("glass-test.mp4")}
+                  src={staticFile(standIn)}
                   trimBefore={s.fromFrame}
                   loop
                   muted
@@ -74,6 +75,8 @@ export const PlantillaAlejox: React.FC<PlantillaProps> = ({ config }) => {
           }
         />
         <FootageAudio segments={tl.segments} audioDelayFrames={config.audioDelayFrames ?? MOTION.defaultAudioDelayFrames} />
+        <BeatLayer beats={beats} stage={stage} labels />
+        {/* The window paints above the headline scrim. */}
         {config.source.file
           ? null
           : beats.map((m, i) =>
@@ -81,7 +84,6 @@ export const PlantillaAlejox: React.FC<PlantillaProps> = ({ config }) => {
                 <PlaceholderScreen key={i} start={m.start} duration={m.duration} />
               ) : null,
             )}
-        <BeatLayer beats={beats} stage={stage} labels />
         <Outro
           start={outroAt}
           duration={Math.round(config.outro.seconds * MOTION.fps)}

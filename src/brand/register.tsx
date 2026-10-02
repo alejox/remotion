@@ -12,9 +12,7 @@ import {
   plantillaShortDuration,
   plantillaShortSchema,
 } from "./PlantillaAlejoxShort";
-import { SubscribeCard, SUBSCRIBE_DURATION } from "./SubscribeCard";
 import { MOTION } from "./tokens";
-import { z } from "zod";
 
 export const BrandVideoComposition: React.FC<{ id: string; config: VideoConfig }> = ({ id, config }) => (
   <Composition
@@ -41,28 +39,5 @@ export const BrandShortComposition: React.FC<{ id: string; config: ShortConfig }
     fps={MOTION.fps}
     durationInFrames={plantillaShortDuration(config)}
     calculateMetadata={({ props }) => ({ durationInFrames: plantillaShortDuration(props.config) })}
-  />
-);
-
-export const subscribeSchema = z.object({ variant: z.enum(["classic", "clean"]) });
-
-/** Transparent overlay (no background) so it can be rendered as ProRes 4444. */
-export const SuscribeteAlejox: React.FC<z.infer<typeof subscribeSchema>> = ({ variant }) => (
-  <SubscribeCard variant={variant} />
-);
-
-export const BrandSubscribeComposition: React.FC<{ id?: string; variant?: "classic" | "clean" }> = ({
-  id = "SuscribeteAlejox",
-  variant = "classic",
-}) => (
-  <Composition
-    id={id}
-    component={SuscribeteAlejox}
-    schema={subscribeSchema}
-    defaultProps={{ variant }}
-    width={1920}
-    height={1080}
-    fps={MOTION.fps}
-    durationInFrames={SUBSCRIBE_DURATION}
   />
 );

@@ -7,9 +7,10 @@
  */
 import React from "react";
 import { AbsoluteFill, useVideoConfig } from "remotion";
-import { ComponentTag } from "./ComponentTag";
 import { Reveal, Rise } from "./Reveal";
 import { BrandSlash } from "./BrandSlash";
+import { GLASS_DENSE } from "./glass";
+import { TAG_GAP } from "./TextBlock";
 import { MOTION } from "./tokens";
 import { Column, eyebrowStyle, headStyle, lines } from "./typography";
 
@@ -20,7 +21,7 @@ export type SectionCardProps = {
   wipe?: number;
   /** Component label at the top (showcase). */
   tag?: string;
-  /** Optional scene backdrop, shown beneath the frosted chapter-card material. */
+  /** Optional scene backdrop, shown beneath the dense glass backing (`GLASS_DENSE`). */
   backdrop?: React.ReactNode;
 };
 
@@ -44,21 +45,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {backdrop}
       {backdrop ? (
-        <AbsoluteFill
-          style={{
-            background: "rgba(9, 14, 21, 0.68)",
-            backdropFilter: "blur(26px) saturate(140%)",
-            WebkitBackdropFilter: "blur(26px) saturate(140%)",
-            borderTop: "1px solid rgba(255, 255, 255, 0.2)",
-            boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.08)",
-          }}
-        />
+        <AbsoluteFill style={GLASS_DENSE} />
       ) : null}
-      {tag ? <ComponentTag start={wipe} duration={hold} label={tag} /> : null}
       <Reveal start={wipe} duration={hold} staged>
-        <Column gap={20}>
-          <Rise index={0} style={{ ...eyebrowStyle, letterSpacing: "0.06em" }}>
-            {num}
+        <Column gap={TAG_GAP}>
+          {/* The component tag, the chapter number and the headline are ONE group, one gap. */}
+          <Rise index={0} style={eyebrowStyle}>
+            {tag ? `${tag} ${num}` : num}
           </Rise>
           <div>
             {rows.map((line, i) => (

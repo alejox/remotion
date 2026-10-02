@@ -1,9 +1,9 @@
 /**
  * Compare (COMPARE) - a before/after told in time, in the shared column. The loser enters
- * first as a large dim-gray display figure with its fog label; a white strike draws across
+ * first as a large dim display figure with its fog label; a white strike draws across
  * it, the frame holds, then the loser fades out and the winner takes its place in cyan at
  * the same display size, the last element to arrive. One display figure is on screen at a
- * time. The strike is drawn with `evolvePath`, clipped to the exact glyph width
+ * time, all inside the shared glass panel. The strike is drawn with `evolvePath`, clipped to the exact glyph width
  * (measureText). Values are strings so a template can show "~$150" or "$0".
  */
 import React from "react";
@@ -13,8 +13,9 @@ import { measureText } from "@remotion/layout-utils";
 import { sansFamily } from "./fonts";
 import { drawProgress } from "./motion";
 import { Reveal, Rise } from "./Reveal";
+import { TextBlock } from "./TextBlock";
 import { COLOR, COLUMN_X, MOTION, TYPE } from "./tokens";
-import { bodyStyle, Column, headStyle, opticalShift } from "./typography";
+import { headStyle, leadStyle, opticalShift } from "./typography";
 
 export type CompareSide = { name: string; value: string };
 
@@ -27,6 +28,8 @@ export type CompareProps = {
   winner?: "a" | "b";
   x?: number;
   y?: number;
+  /** Component label, set as the first line of the group. */
+  tag?: string;
 };
 
 const FIGURE_H = Math.round(TYPE.figure * 0.95);
@@ -53,7 +56,7 @@ const figureStyle: React.CSSProperties = {
 };
 
 const Loser: React.FC<{ side: CompareSide; local: number }> = ({ side, local }) => {
-  const shift = opticalShift(side.value, TYPE.figure);
+  const shift = opticalShift(side.value);
   const glyphW = measureText({ text: side.value, ...FIGURE_STYLE }).width;
   const y = LABEL_H + FIGURE_H * 0.56;
   const strikePath = `M0 ${y} L${glyphW} ${y}`;
@@ -65,8 +68,8 @@ const Loser: React.FC<{ side: CompareSide; local: number }> = ({ side, local }) 
   return (
     <div style={{ position: "absolute", left: 0, top: 0, opacity: out }}>
       <Rise index={0}>
-        <div style={{ ...bodyStyle, marginBottom: 8 }}>{side.name}</div>
-        <div style={{ ...figureStyle, color: COLOR.fog, opacity: 0.55, marginLeft: shift }}>{side.value}</div>
+        <div style={{ ...leadStyle, marginBottom: 8 }}>{side.name}</div>
+        <div style={{ ...figureStyle, color: COLOR.fogGlass, opacity: 0.8, marginLeft: shift }}>{side.value}</div>
         <svg
           width={Math.max(glyphW, 1)}
           height={LABEL_H + FIGURE_H}
@@ -87,16 +90,16 @@ const Loser: React.FC<{ side: CompareSide; local: number }> = ({ side, local }) 
   );
 };
 
-/** "20 min": the number is cyan, the unit stays fog (same size) so cyan covers < 5% of the frame. */
+/** "20 min": the number is cyan, the unit stays fog (same size) so cyan stays small. */
 const Winner: React.FC<{ side: CompareSide }> = ({ side }) => {
   const [num, ...unit] = side.value.split(" ");
   return (
     <div style={{ position: "absolute", left: 0, top: 0 }}>
       <Rise index={WINNER_AT / MOTION.staggerFrames}>
-        <div style={{ ...bodyStyle, color: COLOR.white, marginBottom: 8 }}>{side.name}</div>
-        <div style={{ ...figureStyle, whiteSpace: "pre", marginLeft: opticalShift(side.value, TYPE.figure) }}>
+        <div style={{ ...leadStyle, marginBottom: 8 }}>{side.name}</div>
+        <div style={{ ...figureStyle, whiteSpace: "pre", marginLeft: opticalShift(side.value) }}>
           <span style={{ color: COLOR.cyan }}>{num}</span>
-          {unit.length ? <span style={{ color: COLOR.fog }}>{` ${unit.join(" ")}`}</span> : null}
+          {unit.length ? <span style={{ color: COLOR.fogGlass }}>{` ${unit.join(" ")}`}</span> : null}
         </div>
       </Rise>
     </div>
@@ -111,17 +114,24 @@ export const Compare: React.FC<CompareProps> = ({
   winner = "b",
   x = COLUMN_X,
   y,
+  tag,
 }) => {
   const local = useCurrentFrame() - start;
   const [lose, win] = winner === "b" ? [a, b] : [b, a];
+  // The panel is sized to the widest of the two values (they swap in the same box).
+  const boxWidth = Math.ceil(
+    Math.max(
+      ...[a, b].map((s) => Math.max(measureText({ text: s.value, ...FIGURE_STYLE }).width, measureText({ text: s.name, fontFamily: sansFamily, fontWeight: 500, fontSize: TYPE.body }).width)),
+    ),
+  );
   return (
     <Reveal start={start} duration={duration} staged>
-      <Column x={x} y={y}>
-        <div style={{ position: "relative", height: LABEL_H + FIGURE_H, width: 1300 }}>
+      <TextBlock x={x} y={y} tag={tag}>
+        <div style={{ position: "relative", height: LABEL_H + FIGURE_H, width: boxWidth }}>
           <Loser side={lose} local={local} />
           <Winner side={win} />
         </div>
-      </Column>
+      </TextBlock>
     </Reveal>
   );
 };

@@ -19,11 +19,22 @@ grape-to-cyan slash as the only flourish, footage untouched. Rules:
 The config is the composition's default props with a zod schema, so it is editable in the
 Studio props panel. Templates (`PlantillaAlejox*.tsx`) hold no video-specific values.
 
+## Starting a new video from the template
+Everything clip-specific lives in the config; components hold only format defaults.
+- **16:9**: copy `examples/showcase.config.ts`. Replace `source.placeholder` (demo backdrop) with
+  `source.file` (+ `preview`), set `items` (segments, section cards), `beats` (times in source
+  seconds, copy, optional `x`/`y`) and `outro`.
+- **9:16**: copy `examples/showcase.short.config.ts`. Set `source` (drop `loop` for a real master),
+  `cameraCrop` (9:16 window so the face sits on the centre line), `words` (caption transcript),
+  `captions.cameraY` (just under the chin) and `captions.hideDuring`, then the `beats`
+  (text beats above the head, glass objects below the chin; the subscribe beat uses
+  `layout: "stacked"`). Set `labels` off for a real video.
+- Register with one line in `src/Root.tsx`. Check stills with `npx remotion still <id> out.png --frame=N`.
+
 ## Archetypes (one file each)
 `TitleCard`, `LowerThird`, `SectionCard`, `Keyword`, `Spotlight` (+ `ZoomStage`), `ValueCard`,
 `Checklist`, `Compare`, `Outro`, `Captions` (Shorts only), all built on `Panel` (the slash), plus
-`SubscribeCard` (variants `classic` / `clean`; `subscribe` beat; standalone transparent composition
-`SuscribeteAlejox`, ProRes 4444 friendly).
+`SubscribeCard` (variants `classic` / `clean`, layouts `row` / `stacked`; used through the `subscribe` beat).
 
 ## Rules the kit enforces
 - One overlay at a time; footage is never zoomed except inside a Spotlight (<= 1.8x, 18f).

@@ -56,6 +56,8 @@ export const beatSchema = z.discriminatedUnion("type", [
     chipGap: num.optional(),
     /** Hard 2px white outline on the target (default true). False = soft focus: dim only. */
     outline: z.boolean().optional(),
+    /** Dim everything outside the target (default true). */
+    dim: z.boolean().optional(),
     /** Optional headline (separate lines with "\n") set on the column above the callout. */
     headline: z.string().optional(),
     /** Top of that headline (default 196). */
@@ -69,6 +71,8 @@ export const beatSchema = z.discriminatedUnion("type", [
     scale: num.optional(),
     channelName: z.string().optional(),
     tagline: z.string().optional(),
+    /** Clean card layout: "row" (16:9, default) or "stacked" (two rows, for 9:16). */
+    layout: z.enum(["row", "stacked"]).optional(),
   }),
   z.object({
     type: z.literal("value"),
@@ -125,6 +129,10 @@ export const sourceSchema = z.object({
   preview: z.string().optional(),
   width: num,
   height: num,
+  /** The file is a short stand-in clip: loop it under the whole timeline (its audio is not played). */
+  loop: z.boolean().optional(),
+  /** 16:9 only: clip in `public/` looped under the beats while `file` is omitted (a demo backdrop). */
+  placeholder: z.string().optional(),
 });
 
 export const outroSchema = z.object({
@@ -148,7 +156,9 @@ export const wordSchema = z.object({ w: z.string(), start: num, end: num });
 export const shortConfigSchema = videoConfigSchema.extend({
   /** Camera framing: a 9:16 window of the master, in source pixels (`h` tall, `w = h * 9 / 16`). */
   cameraCrop: z.object({ x: num, y: num, h: num }),
-  screen: z.object({
+  /** Screen recording layout. Omit for a camera-only Short (no screen band). */
+  screen: z
+    .object({
     /** Tight crop of the UI, in footage coordinates (1920 space); scaled to the full 1080 width. */
     crop: z.object({ x: num, y: num, w: num }),
     /**
@@ -159,13 +169,22 @@ export const shortConfigSchema = videoConfigSchema.extend({
     face: z.object({ x: num, y: num, w: num, h: num }).optional(),
     /** Y of the divider between the face half and the screen half (default 800). */
     split: num.optional(),
-  }),
+  })
+    .optional(),
+  /** Type sizes for phone screens (px): headline, body/eyebrow, display figure. Default = 16:9 scale. */
+  type: z.object({ head: num, body: num, figure: num }).partial().optional(),
+  /** Label each beat with its component name (demo showcases; leave off for a real video). */
+  labels: z.boolean().optional(),
   /** Transcript words in SOURCE seconds. */
   words: z.array(wordSchema),
   captions: z.object({
     /** Top of the caption line over camera segments, and over the screen band. */
     cameraY: num,
     screenY: num,
+    /** Caption size in px (default 62; under 60 the text needs 4.5:1 instead of 3:1). */
+    size: num.optional(),
+    /** Beat types that hide the captions while they are up (default: title, subscribe). */
+    hideDuring: z.array(z.enum(["title", "lowerThird", "keyword", "spotlight", "subscribe", "value", "checklist", "compare"])).optional(),
   }),
 });
 export type ShortConfig = z.infer<typeof shortConfigSchema>;

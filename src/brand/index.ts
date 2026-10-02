@@ -23,4 +23,4 @@ export { diagonalWipe } from "./transitions/diagonalWipe";
 export { SourceProvider, SourcePicture, useSource, useSourceFile, type SourceInfo } from "./Source";
 export { BrandSfx, cue, cuesFromBeats, cuesFromTimeline, type BrandCue } from "./BrandSfx";
 export { FootageAudio, BrandTimeline, FullPicture } from "./Footage";
-export { BrandVideoComposition, BrandShortComposition, BrandSubscribeComposition } from "./register";
+export { BrandVideoComposition, BrandShortComposition } from "./register";

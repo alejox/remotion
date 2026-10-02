@@ -4,8 +4,9 @@
  */
 import React from "react";
 import { Reveal, Rise } from "./Reveal";
+import { TextBlock } from "./TextBlock";
 import { COLOR, COLUMN_X } from "./tokens";
-import { Column, headStyle, lines } from "./typography";
+import { lines, useTypeStyles } from "./typography";
 
 export type KeywordProps = {
   start: number;
@@ -15,6 +16,8 @@ export type KeywordProps = {
   accent?: string;
   x?: number;
   y?: number;
+  /** Component label, set as the first line of the group. */
+  tag?: string;
 };
 
 export const Keyword: React.FC<KeywordProps> = ({
@@ -24,12 +27,14 @@ export const Keyword: React.FC<KeywordProps> = ({
   accent,
   x = COLUMN_X,
   y,
+  tag,
 }) => {
+  const { head: headStyle } = useTypeStyles();
   // Colour WHOLE words only.
   const accentWords = new Set((accent ?? "").split(" ").filter(Boolean));
   return (
     <Reveal start={start} duration={duration} staged>
-      <Column x={x} y={y}>
+      <TextBlock x={x} y={y} tag={tag}>
         {lines(text).map((line, li) => (
           <Rise key={li} index={li} style={headStyle}>
             {line.split(" ").map((w, i) => (
@@ -40,7 +45,7 @@ export const Keyword: React.FC<KeywordProps> = ({
             ))}
           </Rise>
         ))}
-      </Column>
+      </TextBlock>
     </Reveal>
   );
 };

@@ -1,16 +1,15 @@
 import "./index.css";
 import React from "react";
 import { Folder } from "remotion";
-import { BrandShortComposition, BrandSubscribeComposition, BrandVideoComposition } from "./brand/register";
+import { BrandShortComposition, BrandVideoComposition } from "./brand/register";
 import { showcaseConfig } from "./brand/examples/showcase.config";
-import { deckboardShortConfig } from "./brand/examples/deckboard.short.config";
+import { showcaseShortConfig } from "./brand/examples/showcase.short.config";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <Folder name="Plantilla">
       <BrandVideoComposition id="PlantillaAlejox" config={showcaseConfig} />
-      <BrandSubscribeComposition />
-      <BrandShortComposition id="PlantillaAlejoxShort" config={deckboardShortConfig} />
+      <BrandShortComposition id="PlantillaAlejoxShort" config={showcaseShortConfig} />
     </Folder>
   );
 };

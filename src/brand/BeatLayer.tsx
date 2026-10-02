@@ -15,11 +15,19 @@ import { Spotlight, type Rect, type ZoomSpec } from "./Spotlight";
 import { TitleCard } from "./TitleCard";
 import type { Timeline } from "./timeline";
 import { ValueCard } from "./ValueCard";
-import { COLUMN_X, MOTION } from "./tokens";
+import { COLUMN_X, MOTION, SHORT_COLUMN_X } from "./tokens";
 
 /** A spotlight headline starts this many frames before the callout and sits at this y. */
 const HEADLINE_LEAD = 24;
 const HEADLINE_Y = 196;
+/** Lower third: its tag sits just above the panel (1080 - 140 bottom - 163 panel - 24 gap - 46 tag). */
+const LT_TAG_Y = 707;
+/** Checklist: its tag sits just above the vertically centred glass panel (title lines, rows, paddings; 24 gap, 46 tag). */
+const checklistTagY = (b: { title?: string; items?: string[]; y?: number }): number => {
+  const titleLines = b.title ? b.title.split("\n").length : 0;
+  const h = titleLines * 93 + (titleLines ? 44 : 0) + 68 * Math.min(4, b.items?.length ?? 2) + 72;
+  return (b.y ?? (1080 - h) / 2) - 24 - 46;
+};
 
 export type MappedBeat = { beat: Beat; start: number; duration: number };
 
@@ -57,13 +65,15 @@ export const SLOTS: { landscape: Slots; short: Slots } = {
     checklist: { x: COLUMN_X, y: undefined },
     compare: { x: COLUMN_X, y: undefined },
   },
+  // Typical talking-head framing: text beats sit above the head, glass objects below the chin.
+  // Override per beat with `x` / `y` when the footage is framed differently.
   short: {
-    title: { x: 80, y: 170 },
-    lowerThird: { x: 80, y: 1250 },
-    keyword: { x: 80, y: 1250 },
-    value: { x: 80, y: 1250 },
-    checklist: { x: 80, y: 1250 },
-    compare: { x: 80, y: 170 },
+    title: { x: SHORT_COLUMN_X, y: 170 },
+    lowerThird: { x: SHORT_COLUMN_X, y: 1330 },
+    keyword: { x: SHORT_COLUMN_X, y: 170 },
+    value: { x: SHORT_COLUMN_X, y: 170 },
+    checklist: { x: SHORT_COLUMN_X, y: 170 },
+    compare: { x: SHORT_COLUMN_X, y: 170 },
   },
 };
 
@@ -98,6 +108,10 @@ const LABELS: Record<Beat["type"], string | undefined> = {
   compare: "Comparación",
 };
 
+/** Types whose label is the first line of their own text group (the rest keep a label above their glass). */
+const inlineTag = (b: Beat): boolean =>
+  b.type === "title" || b.type === "keyword" || b.type === "value" || b.type === "compare" || (b.type === "spotlight" && !!b.headline);
+
 export const BeatLayer: React.FC<{
   beats: MappedBeat[];
   short?: boolean;
@@ -109,14 +123,48 @@ export const BeatLayer: React.FC<{
   mapRect?: (r: Rect) => Rect;
 }> = ({ beats, short = false, labels = false, stage, mapRect = (r) => r }) => {
   const slots = short ? SLOTS.short : SLOTS.landscape;
+  // The tag of a glass object sits 70px above it (24 gap + 46 tag line); landscape has fixed rows.
+  const tagX = short ? SHORT_COLUMN_X : undefined;
+  const glassTagY = (b: Beat): number | undefined => {
+    if (b.type === "lowerThird") {
+      return short ? (b.y ?? slots.lowerThird.y ?? 0) - 70 : LT_TAG_Y;
+    }
+    if (b.type === "checklist") {
+      return short ? (b.y ?? slots.checklist.y ?? 0) - 70 : checklistTagY(b);
+    }
+    return undefined;
+  };
+  const tagFor = (b: Beat): string | undefined => (labels && inlineTag(b) ? LABELS[b.type] : undefined);
   return (
     <>
+      {/* Tag scrims paint under every beat (a beat's text is never dimmed by them). */}
+      {labels
+        ? beats.map(({ beat: b, start, duration }, i) => {
+            const label = inlineTag(b) ? undefined : LABELS[b.type];
+            // A Spotlight's headline and window arrive before its beat: its tag arrives with them.
+            const lead = b.type === "spotlight" && b.headline ? HEADLINE_LEAD : 0;
+            return label ? (
+              <ComponentTag
+                key={`tag-scrim-${i}`}
+                start={start - lead}
+                duration={duration + lead}
+                label={label}
+                layer="scrim"
+                scrim={b.type === "lowerThird" || (short && b.type === "checklist")}
+                y={glassTagY(b)}
+                x={tagX}
+                scrimY={b.type === "lowerThird" ? 60 : undefined}
+              />
+            ) : null;
+          })
+        : null}
       {beats.map(({ beat: b, start, duration }, i) => {
         switch (b.type) {
           case "title":
             return (
               <TitleCard
                 key={i}
+                tag={tagFor(b)}
                 start={start}
                 duration={duration}
                 meta={b.meta}
@@ -141,6 +189,7 @@ export const BeatLayer: React.FC<{
             return (
               <Keyword
                 key={i}
+                tag={tagFor(b)}
                 start={start}
                 duration={duration}
                 text={b.text}
@@ -172,10 +221,12 @@ export const BeatLayer: React.FC<{
                   stage={stage}
                   chipGap={b.chipGap}
                   outline={b.outline}
+                  dim={b.dim}
                 />
                 {b.headline ? (
                   // The headline arrives first, as the placeholder window fades in, and sits above the dim.
                   <Keyword
+                    tag={tagFor(b)}
                     start={start - HEADLINE_LEAD}
                     duration={duration + HEADLINE_LEAD}
                     text={b.headline}
@@ -194,6 +245,7 @@ export const BeatLayer: React.FC<{
                 scale={b.scale}
                 channelName={b.channelName}
                 tagline={b.tagline}
+                layout={b.layout}
                 x={b.x}
                 y={b.y}
               />
@@ -202,6 +254,7 @@ export const BeatLayer: React.FC<{
             return (
               <ValueCard
                 key={i}
+                tag={tagFor(b)}
                 start={start}
                 duration={duration}
                 label={b.label}
@@ -228,6 +281,7 @@ export const BeatLayer: React.FC<{
             return (
               <Compare
                 key={i}
+                tag={tagFor(b)}
                 start={start}
                 duration={duration}
                 a={b.a}
@@ -239,15 +293,21 @@ export const BeatLayer: React.FC<{
             );
         }
       })}
+      {/* Tag text paints above every beat scrim. */}
       {labels
         ? beats.map(({ beat: b, start, duration }, i) => {
-            const label = LABELS[b.type];
+            const label = inlineTag(b) ? undefined : LABELS[b.type];
+            // A Spotlight's headline and window arrive before its beat: its tag arrives with them.
+            const lead = b.type === "spotlight" && b.headline ? HEADLINE_LEAD : 0;
             return label ? (
               <ComponentTag
-                key={`tag${i}`}
-                start={start}
-                duration={duration}
+                key={`tag-text-${i}`}
+                start={start - lead}
+                duration={duration + lead}
                 label={label}
+                layer="text"
+                y={glassTagY(b)}
+                x={tagX}
               />
             ) : null;
           })
