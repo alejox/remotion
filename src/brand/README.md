@@ -47,3 +47,12 @@ Everything clip-specific lives in the config; components hold only format defaul
 ## Fonts
 
 Bundled locally in `public/fonts/` (variable TTFs) and loaded in `src/brand/fonts.ts` with `@remotion/fonts`, so renders work offline. Geist = video text, Geist Mono = values, Jost = brand moments, Anton = thumbnails only (shipped, not loaded). To change a font, drop the file in `public/fonts/` and edit `fonts.ts`.
+
+## Overlays sueltos para DaVinci Resolve
+`Overlay` (carpeta *Overlays* del Studio) renderiza UN beat sobre fondo transparente con el mismo `BeatLayer`
+de las plantillas. `node scripts/render-overlays.mjs <beats.json> [outDir]` renderiza todos los beats de un
+config como ProRes 4444 con alfa y escribe `overlays.manifest.json`; el repo
+[resolve-silence-cutter](https://github.com/alejox/resolve-silence-cutter) los coloca en V2 mapeando cada `at`
+a la timeline recortada. Sin video detrás, el vidrio (lowerThird, checklist, subscribe) pierde el desenfoque y queda
+como panel oscuro translúcido; `spotlight` no se soporta (necesita el video). En una máquina sin Chrome de Remotion:
+`BROWSER_EXECUTABLE=... CHROME_MODE=headless-shell`.
