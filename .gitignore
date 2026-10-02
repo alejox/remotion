@@ -9,3 +9,6 @@ out
 # Source footage and renders (large binaries)
 src/video/
 *_editado*.mp4
+
+# design-loop working captures
+design-loop/frames/
